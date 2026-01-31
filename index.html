@@ -291,10 +291,10 @@
     </div>
 
     <!-- Document Selector -->
-    <div class="lang-selector">
-      <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Privacy Policy</button>
-      <button id="btn-terms" onclick="switchDoc('terms')">Terms of Service</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">Licenses</button>
+    <div class="lang-selector" style="padding-bottom: 12px;">
+      <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Politique de confidentialité</button>
+      <button id="btn-terms" onclick="switchDoc('terms')">Conditions d'utilisation</button>
+      <button id="btn-licenses" onclick="switchDoc('licenses')">Licences</button>
     </div>
 
     <!-- Language Selector -->
@@ -996,8 +996,28 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    const translations = {
+      fr: {
+        privacy: "Politique de confidentialité",
+        terms: "Conditions d'utilisation",
+        licenses: "Licences"
+      },
+      en: {
+        privacy: "Privacy Policy",
+        terms: "Terms of Service",
+        licenses: "Licenses"
+      }
+    };
+
     function switchLang(lang) {
       currentLang = lang;
+      
+      // Update buttons text
+      if (translations[lang]) {
+        document.getElementById('btn-privacy').textContent = translations[lang].privacy;
+        document.getElementById('btn-terms').textContent = translations[lang].terms;
+        document.getElementById('btn-licenses').textContent = translations[lang].licenses;
+      }
       
       // Hide all language contents
       document.querySelectorAll('.lang-content').forEach(function(el) {
