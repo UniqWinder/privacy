@@ -92,6 +92,14 @@
       display: block;
     }
 
+    .doc-content {
+      display: none;
+    }
+
+    .doc-content.active {
+      display: block;
+    }
+
     /* Content Area */
     .content-wrapper {
       padding: 40px;
@@ -282,14 +290,25 @@
       <span class="logo-text">Uniq Winders</span>
     </div>
 
-    <!-- Language Selector -->
+    <!-- Document Selector -->
     <div class="lang-selector">
-      <button id="btn-fr" class="active" onclick="switchLang('fr')">FR</button>
-      <button id="btn-en" onclick="switchLang('en')">EN</button>
+      <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Privacy Policy</button>
+      <button id="btn-terms" onclick="switchDoc('terms')">Terms of Service</button>
+      <button id="btn-licenses" onclick="switchDoc('licenses')">Licenses</button>
+    </div>
+
+    <!-- Language Selector -->
+    <div class="lang-selector" style="padding-top: 8px; border-top: 1px solid #e2e8f0;">
+      <button id="btn-fr" class="active lang-btn" onclick="switchLang('fr')">FR</button>
+      <button id="btn-en" class="lang-btn" onclick="switchLang('en')">EN</button>
     </div>
 
     <!-- Content -->
     <div class="content-wrapper">
+      
+      <!-- ========== PRIVACY POLICY ========== -->
+      <div class="doc-content doc-privacy active">
+      
       <!-- Contenu Français -->
       <div class="lang-content lang-fr active">
         <h1>Politique de confidentialité</h1>
@@ -531,6 +550,421 @@
           <p>Data controller: Uniq Winders, Switzerland.</p>
         </div>
       </div>
+      
+      </div>
+      <!-- END PRIVACY POLICY -->
+      
+      
+      <!-- ========== TERMS OF SERVICE ========== -->
+      <div class="doc-content doc-terms">
+      
+      <!-- Contenu Français -->
+      <div class="lang-content lang-fr active">
+        <h1>Conditions Générales d'Utilisation</h1>
+        <p><em>Dernière mise à jour : 31.01.2026</em></p>
+      
+        <p>Les présentes Conditions Générales d'Utilisation (CGU) régissent l'utilisation de l'application mobile <strong>Uniq Winders</strong> et du produit physique associé (remontoir de montres connecté).</p>
+
+        <div class="section">
+          <h2>1. Acceptation des conditions</h2>
+          <ul>
+            <li><strong>Utilisation de l'application :</strong> En téléchargeant et en utilisant l'application Uniq Winders, vous acceptez d'être lié par les présentes CGU.</li>
+            <li><strong>Modification :</strong> Nous nous réservons le droit de modifier ces CGU à tout moment. Les modifications seront communiquées via l'application ou les stores d'applications.</li>
+            <li><strong>Utilisation du produit physique :</strong> L'utilisation du remontoir de montres est soumise aux présentes CGU ainsi qu'à la garantie légale applicable dans votre pays de résidence.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>2. Licence d'utilisation de l'application</h2>
+          <ul>
+            <li><strong>Licence limitée :</strong> Nous vous accordons une licence personnelle, non exclusive, non transférable et révocable pour utiliser l'application à des fins personnelles et non commerciales.</li>
+            <li><strong>Restrictions :</strong> Vous vous engagez à ne pas décompiler, désassembler, effectuer de l'ingénierie inverse ou tenter d'extraire le code source de l'application.</li>
+            <li><strong>Propriété intellectuelle :</strong> Tous les droits, titres et intérêts relatifs à l'application et au firmware restent notre propriété exclusive.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>3. Utilisation du produit physique</h2>
+          <ul>
+            <li><strong>Usage conforme :</strong> Le remontoir de montres doit être utilisé conformément aux instructions du manuel utilisateur.</li>
+            <li><strong>Limites de responsabilité :</strong> Nous ne sommes pas responsables des dommages causés aux montres par une utilisation inappropriée du produit (réglages inadaptés, montres non compatibles, etc.).</li>
+            <li><strong>Maintenance :</strong> L'utilisateur est responsable du nettoyage et de l'entretien régulier du produit selon les recommandations fournies.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4. Mises à jour du firmware (OTA)</h2>
+          <ul>
+            <li><strong>Consentement requis :</strong> Les mises à jour fonctionnelles du firmware nécessitent votre consentement explicite via l'application.</li>
+            <li><strong>Mises à jour de sécurité :</strong> Les mises à jour critiques de sécurité peuvent être fortement recommandées. Le refus d'installer ces mises à jour peut exposer votre appareil à des vulnérabilités.</li>
+            <li><strong>Processus de mise à jour :</strong> Pendant la mise à jour, ne débranchez pas l'appareil et gardez votre téléphone à proximité. Une interruption peut nécessiter une intervention technique.</li>
+            <li><strong>Firmware non officiel :</strong> L'installation de firmware provenant de sources non officielles annule immédiatement la garantie et peut endommager irréversiblement votre appareil.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>5. Fonctionnalités IoT et connectivité</h2>
+          <ul>
+            <li><strong>Activation optionnelle :</strong> Les fonctionnalités IoT (contrôle à distance, synchronisation cloud) sont optionnelles et nécessitent une connexion Internet.</li>
+            <li><strong>Disponibilité du service :</strong> Nous nous efforçons de maintenir les services cloud disponibles 24/7, mais ne garantissons pas une disponibilité ininterrompue.</li>
+            <li><strong>Fonctionnement hors ligne :</strong> Le produit reste pleinement fonctionnel sans connexion Internet en utilisant les paramètres locaux.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. Garantie et responsabilité</h2>
+          <ul>
+            <li><strong>Garantie légale :</strong> Le produit physique bénéficie de la garantie légale de conformité applicable dans votre pays de résidence (généralement 2 ans en Europe).</li>
+            <li><strong>Garantie commerciale :</strong> Consultez la documentation du produit pour les détails de la garantie commerciale offerte par le fabricant.</li>
+            <li><strong>Exclusions de garantie :</strong> La garantie ne couvre pas :
+              <ul>
+                <li>Les dommages causés par une utilisation inappropriée ou un accident</li>
+                <li>L'usure normale du produit</li>
+                <li>Les modifications non autorisées du firmware ou du matériel</li>
+                <li>Les dommages causés aux montres par des réglages inadaptés</li>
+              </ul>
+            </li>
+            <li><strong>Limitation de responsabilité :</strong> Dans les limites autorisées par la loi, notre responsabilité est limitée au prix d'achat du produit.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. Support technique</h2>
+          <ul>
+            <li><strong>Durée du support :</strong> Nous nous engageons à fournir un support technique et des mises à jour de sécurité pendant au moins 5 ans à compter de la date d'achat.</li>
+            <li><strong>Contact :</strong> Pour toute assistance, contactez-nous à <strong>uniqwinder@gmail.com</strong>.</li>
+            <li><strong>Documentation :</strong> Les manuels d'utilisation et guides de dépannage sont disponibles dans l'application et sur notre site web.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. Sécurité et confidentialité</h2>
+          <ul>
+            <li><strong>Politique de confidentialité :</strong> Votre utilisation de l'application est également régie par notre <a href="#" onclick="switchDoc('privacy'); return false;" style="color: #2c3e50; font-weight: 600;">Politique de Confidentialité</a>.</li>
+            <li><strong>Sécurité des comptes :</strong> Vous êtes responsable de la sécurité de votre appareil mobile et de la configuration de votre réseau Wi-Fi.</li>
+            <li><strong>Signalement de vulnérabilités :</strong> Si vous découvrez une faille de sécurité, veuillez nous en informer immédiatement à <strong>uniqwinder@gmail.com</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>9. Résiliation</h2>
+          <ul>
+            <li><strong>Résiliation par l'utilisateur :</strong> Vous pouvez cesser d'utiliser l'application à tout moment en la désinstallant.</li>
+            <li><strong>Résiliation par nous :</strong> Nous pouvons suspendre ou résilier votre accès aux services cloud en cas de violation des présentes CGU.</li>
+            <li><strong>Effet de la résiliation :</strong> Le produit physique continuera de fonctionner localement même après la résiliation de l'accès aux services cloud.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>10. Droit applicable et juridiction</h2>
+          <ul>
+            <li><strong>Droit suisse :</strong> Les présentes CGU sont régies par le droit suisse.</li>
+            <li><strong>Juridiction :</strong> Tout litige sera soumis à la juridiction exclusive des tribunaux suisses.</li>
+            <li><strong>Droit des consommateurs :</strong> Les consommateurs bénéficient des protections accordées par la législation de leur pays de résidence.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>11. Contact</h2>
+          <p>Pour toute question concernant ces Conditions Générales d'Utilisation, veuillez nous contacter à : <strong>uniqwinder@gmail.com</strong></p>
+          <p>Uniq Winders, Suisse.</p>
+        </div>
+      </div>
+
+      <!-- Contenu Anglais -->
+      <div class="lang-content lang-en">
+        <h1>Terms of Service</h1>
+        <p><em>Last updated: 31.01.2026</em></p>
+      
+        <p>These Terms of Service (ToS) govern the use of the <strong>Uniq Winders</strong> mobile application and the associated physical product (connected watch winder).</p>
+
+        <div class="section">
+          <h2>1. Acceptance of Terms</h2>
+          <ul>
+            <li><strong>Use of the application:</strong> By downloading and using the Uniq Winders application, you agree to be bound by these ToS.</li>
+            <li><strong>Modifications:</strong> We reserve the right to modify these ToS at any time. Changes will be communicated via the application or app stores.</li>
+            <li><strong>Use of the physical product:</strong> Use of the watch winder is subject to these ToS as well as the legal warranty applicable in your country of residence.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>2. Application License</h2>
+          <ul>
+            <li><strong>Limited license:</strong> We grant you a personal, non-exclusive, non-transferable, and revocable license to use the application for personal, non-commercial purposes.</li>
+            <li><strong>Restrictions:</strong> You agree not to decompile, disassemble, reverse engineer, or attempt to extract the source code of the application.</li>
+            <li><strong>Intellectual property:</strong> All rights, title, and interest in the application and firmware remain our exclusive property.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>3. Use of Physical Product</h2>
+          <ul>
+            <li><strong>Proper use:</strong> The watch winder must be used in accordance with the user manual instructions.</li>
+            <li><strong>Liability limits:</strong> We are not responsible for damage to watches caused by improper use of the product (inappropriate settings, incompatible watches, etc.).</li>
+            <li><strong>Maintenance:</strong> The user is responsible for regular cleaning and maintenance of the product according to provided recommendations.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4. Firmware Updates (OTA)</h2>
+          <ul>
+            <li><strong>Consent required:</strong> Functional firmware updates require your explicit consent via the application.</li>
+            <li><strong>Security updates:</strong> Critical security updates may be strongly recommended. Refusing to install these updates may expose your device to vulnerabilities.</li>
+            <li><strong>Update process:</strong> During the update, do not unplug the device and keep your phone nearby. An interruption may require technical intervention.</li>
+            <li><strong>Unofficial firmware:</strong> Installing firmware from unofficial sources immediately voids the warranty and may irreversibly damage your device.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>5. IoT Features and Connectivity</h2>
+          <ul>
+            <li><strong>Optional activation:</strong> IoT features (remote control, cloud synchronization) are optional and require an Internet connection.</li>
+            <li><strong>Service availability:</strong> We strive to maintain cloud services available 24/7, but do not guarantee uninterrupted availability.</li>
+            <li><strong>Offline operation:</strong> The product remains fully functional without Internet connection using local settings.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. Warranty and Liability</h2>
+          <ul>
+            <li><strong>Legal warranty:</strong> The physical product benefits from the legal conformity warranty applicable in your country of residence (typically 2 years in Europe).</li>
+            <li><strong>Commercial warranty:</strong> Consult the product documentation for details of the commercial warranty offered by the manufacturer.</li>
+            <li><strong>Warranty exclusions:</strong> The warranty does not cover:
+              <ul>
+                <li>Damage caused by improper use or accident</li>
+                <li>Normal wear and tear of the product</li>
+                <li>Unauthorized modifications to firmware or hardware</li>
+                <li>Damage to watches caused by inappropriate settings</li>
+              </ul>
+            </li>
+            <li><strong>Limitation of liability:</strong> To the extent permitted by law, our liability is limited to the purchase price of the product.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. Technical Support</h2>
+          <ul>
+            <li><strong>Support duration:</strong> We commit to providing technical support and security updates for at least 5 years from the date of purchase.</li>
+            <li><strong>Contact:</strong> For any assistance, contact us at <strong>uniqwinder@gmail.com</strong>.</li>
+            <li><strong>Documentation:</strong> User manuals and troubleshooting guides are available in the application and on our website.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. Security and Privacy</h2>
+          <ul>
+            <li><strong>Privacy Policy:</strong> Your use of the application is also governed by our <a href="#" onclick="switchDoc('privacy'); return false;" style="color: #2c3e50; font-weight: 600;">Privacy Policy</a>.</li>
+            <li><strong>Account security:</strong> You are responsible for the security of your mobile device and your Wi-Fi network configuration.</li>
+            <li><strong>Vulnerability reporting:</strong> If you discover a security flaw, please inform us immediately at <strong>uniqwinder@gmail.com</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>9. Termination</h2>
+          <ul>
+            <li><strong>User termination:</strong> You may stop using the application at any time by uninstalling it.</li>
+            <li><strong>Termination by us:</strong> We may suspend or terminate your access to cloud services in case of violation of these ToS.</li>
+            <li><strong>Effect of termination:</strong> The physical product will continue to operate locally even after termination of access to cloud services.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>10. Applicable Law and Jurisdiction</h2>
+          <ul>
+            <li><strong>Swiss law:</strong> These ToS are governed by Swiss law.</li>
+            <li><strong>Jurisdiction:</strong> Any dispute will be submitted to the exclusive jurisdiction of Swiss courts.</li>
+            <li><strong>Consumer rights:</strong> Consumers benefit from the protections granted by the legislation of their country of residence.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>11. Contact</h2>
+          <p>For any questions regarding these Terms of Service, please contact us at: <strong>uniqwinder@gmail.com</strong></p>
+          <p>Uniq Winders, Switzerland.</p>
+        </div>
+      </div>
+      
+      </div>
+      <!-- END TERMS OF SERVICE -->
+      
+      
+      <!-- ========== OPEN SOURCE LICENSES ========== -->
+      <div class="doc-content doc-licenses">
+      
+      <!-- Contenu Français -->
+      <div class="lang-content lang-fr active">
+        <h1>Licences Open Source</h1>
+        <p><em>Dernière mise à jour : 31.01.2026</em></p>
+      
+        <p>L'application <strong>Uniq Winders</strong> utilise les bibliothèques et composants open source suivants. Nous remercions leurs auteurs pour leur travail.</p>
+
+        <div class="section">
+          <h2>Frameworks et librairies principales</h2>
+          
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Flutter SDK</h3>
+          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          Licence : BSD 3-Clause License<br>
+          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank" style="color: #2c3e50;">https://github.com/flutter/flutter</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Firebase Flutter Plugins</h3>
+          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          Licence : BSD 3-Clause License<br>
+          Utilisé pour : Cloud Firestore, Firebase Auth, Firebase Storage, Firebase Functions<br>
+          <a href="https://github.com/firebase/flutterfire" target="_blank" style="color: #2c3e50;">https://github.com/firebase/flutterfire</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Flutter Blue Plus</h3>
+          <p style="margin-left: 28px;">Copyright © Flutter Blue Plus contributors<br>
+          Licence : BSD 3-Clause License<br>
+          Utilisé pour : Communication Bluetooth Low Energy (BLE)<br>
+          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank" style="color: #2c3e50;">https://github.com/boskokg/flutter_blue_plus</a></p>
+        </div>
+
+        <div class="section">
+          <h2>Autres dépendances</h2>
+          
+          <p style="margin-left: 28px;"><strong>connectivity_plus</strong> - MIT License - Détection de la connectivité réseau<br>
+          <strong>provider</strong> - MIT License - Gestion d'état<br>
+          <strong>shared_preferences</strong> - BSD 3-Clause - Stockage local de préférences<br>
+          <strong>url_launcher</strong> - BSD 3-Clause - Ouverture de liens externes<br>
+          <strong>package_info_plus</strong> - BSD 3-Clause - Informations sur le package<br>
+          <strong>wakelock_plus</strong> - BSD 3-Clause - Maintien de l'écran allumé pendant les mises à jour<br>
+          <strong>flutter_native_splash</strong> - MIT License - Écran de démarrage natif<br>
+          <strong>flutter_launcher_icons</strong> - MIT License - Génération d'icônes d'application</p>
+        </div>
+
+        <div class="section">
+          <h2>Firmware (ESP32)</h2>
+          
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">ESP-IDF</h3>
+          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          Licence : Apache License 2.0<br>
+          <a href="https://github.com/espressif/esp-idf" target="_blank" style="color: #2c3e50;">https://github.com/espressif/esp-idf</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Arduino Core for ESP32</h3>
+          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          Licence : LGPL 2.1<br>
+          <a href="https://github.com/espressif/arduino-esp32" target="_blank" style="color: #2c3e50;">https://github.com/espressif/arduino-esp32</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">mbedTLS</h3>
+          <p style="margin-left: 28px;">Copyright © Mbed TLS Contributors<br>
+          Licence : Apache License 2.0<br>
+          Utilisé pour : Cryptographie (HMAC-SHA256, TLS)<br>
+          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank" style="color: #2c3e50;">https://github.com/Mbed-TLS/mbedtls</a></p>
+        </div>
+
+        <div class="section">
+          <h2>Licences complètes</h2>
+          <p>Le texte complet de chaque licence est disponible dans l'application via le menu "À propos" ou sur les dépôts GitHub respectifs des projets.</p>
+          
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">BSD 3-Clause License (Résumé)</h3>
+          <p style="margin-left: 28px; font-size: 14px; color: #718096;">Cette licence permet la redistribution et l'utilisation sous forme source et binaire, avec ou sans modification, sous certaines conditions incluant la conservation des mentions de copyright.</p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">MIT License (Résumé)</h3>
+          <p style="margin-left: 28px; font-size: 14px; color: #718096;">Une licence permissive qui autorise la réutilisation avec peu de restrictions, en conservant les mentions de copyright et de licence.</p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Apache License 2.0 (Résumé)</h3>
+          <p style="margin-left: 28px; font-size: 14px; color: #718096;">Une licence permissive qui inclut des dispositions expresses concernant les brevets et les contributions.</p>
+        </div>
+
+        <div class="section">
+          <h2>Propriété intellectuelle</h2>
+          <p>Tous les autres éléments de l'application (design, interface utilisateur, algorithmes propriétaires, logo) sont la propriété exclusive de Uniq Winders et protégés par le droit d'auteur suisse et international.</p>
+        </div>
+
+        <div class="section">
+          <h2>Contact</h2>
+          <p>Pour toute question concernant les licences open source utilisées : <strong>uniqwinder@gmail.com</strong></p>
+        </div>
+      </div>
+
+      <!-- Contenu Anglais -->
+      <div class="lang-content lang-en">
+        <h1>Open Source Licenses</h1>
+        <p><em>Last updated: 31.01.2026</em></p>
+      
+        <p>The <strong>Uniq Winders</strong> application uses the following open source libraries and components. We thank their authors for their work.</p>
+
+        <div class="section">
+          <h2>Main Frameworks and Libraries</h2>
+          
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Flutter SDK</h3>
+          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          License: BSD 3-Clause License<br>
+          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank" style="color: #2c3e50;">https://github.com/flutter/flutter</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Firebase Flutter Plugins</h3>
+          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          License: BSD 3-Clause License<br>
+          Used for: Cloud Firestore, Firebase Auth, Firebase Storage, Firebase Functions<br>
+          <a href="https://github.com/firebase/flutterfire" target="_blank" style="color: #2c3e50;">https://github.com/firebase/flutterfire</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Flutter Blue Plus</h3>
+          <p style="margin-left: 28px;">Copyright © Flutter Blue Plus contributors<br>
+          License: BSD 3-Clause License<br>
+          Used for: Bluetooth Low Energy (BLE) communication<br>
+          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank" style="color: #2c3e50;">https://github.com/boskokg/flutter_blue_plus</a></p>
+        </div>
+
+        <div class="section">
+          <h2>Other Dependencies</h2>
+          
+          <p style="margin-left: 28px;"><strong>connectivity_plus</strong> - MIT License - Network connectivity detection<br>
+          <strong>provider</strong> - MIT License - State management<br>
+          <strong>shared_preferences</strong> - BSD 3-Clause - Local preferences storage<br>
+          <strong>url_launcher</strong> - BSD 3-Clause - Opening external links<br>
+          <strong>package_info_plus</strong> - BSD 3-Clause - Package information<br>
+          <strong>wakelock_plus</strong> - BSD 3-Clause - Keeping screen awake during updates<br>
+          <strong>flutter_native_splash</strong> - MIT License - Native splash screen<br>
+          <strong>flutter_launcher_icons</strong> - MIT License - Application icon generation</p>
+        </div>
+
+        <div class="section">
+          <h2>Firmware (ESP32)</h2>
+          
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">ESP-IDF</h3>
+          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          License: Apache License 2.0<br>
+          <a href="https://github.com/espressif/esp-idf" target="_blank" style="color: #2c3e50;">https://github.com/espressif/esp-idf</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Arduino Core for ESP32</h3>
+          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          License: LGPL 2.1<br>
+          <a href="https://github.com/espressif/arduino-esp32" target="_blank" style="color: #2c3e50;">https://github.com/espressif/arduino-esp32</a></p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">mbedTLS</h3>
+          <p style="margin-left: 28px;">Copyright © Mbed TLS Contributors<br>
+          License: Apache License 2.0<br>
+          Used for: Cryptography (HMAC-SHA256, TLS)<br>
+          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank" style="color: #2c3e50;">https://github.com/Mbed-TLS/mbedtls</a></p>
+        </div>
+
+        <div class="section">
+          <h2>Full Licenses</h2>
+          <p>The full text of each license is available in the application via the "About" menu or on the respective GitHub repositories.</p>
+          
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">BSD 3-Clause License (Summary)</h3>
+          <p style="margin-left: 28px; font-size: 14px; color: #718096;">This license allows redistribution and use in source and binary forms, with or without modification, under certain conditions including retention of copyright notices.</p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">MIT License (Summary)</h3>
+          <p style="margin-left: 28px; font-size: 14px; color: #718096;">A permissive license that allows reuse with few restrictions, while preserving copyright and license notices.</p>
+
+          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Apache License 2.0 (Summary)</h3>
+          <p style="margin-left: 28px; font-size: 14px; color: #718096;">A permissive license that includes express provisions regarding patents and contributions.</p>
+        </div>
+
+        <div class="section">
+          <h2>Intellectual Property</h2>
+          <p>All other elements of the application (design, user interface, proprietary algorithms, logo) are the exclusive property of Uniq Winders and protected by Swiss and international copyright law.</p>
+        </div>
+
+        <div class="section">
+          <h2>Contact</h2>
+          <p>For any questions regarding the open source licenses used: <strong>uniqwinder@gmail.com</strong></p>
+        </div>
+      </div>
+      
+      </div>
+      <!-- END LICENSES -->
     </div>
 
     <footer>
@@ -539,18 +973,43 @@
   </div>
 
   <script>
+    let currentDoc = 'privacy';
+    let currentLang = 'fr';
+
+    function switchDoc(doc) {
+      currentDoc = doc;
+      
+      // Hide all documents
+      document.querySelectorAll('.doc-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      // Deactivate all doc buttons
+      document.querySelectorAll('#btn-privacy, #btn-terms, #btn-licenses').forEach(function(el) {
+        el.classList.remove('active');
+      });
+
+      // Show selected document
+      document.querySelector('.doc-' + doc).classList.add('active');
+      document.getElementById('btn-' + doc).classList.add('active');
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     function switchLang(lang) {
+      currentLang = lang;
+      
       // Hide all language contents
       document.querySelectorAll('.lang-content').forEach(function(el) {
         el.classList.remove('active');
       });
-      // Deactivate all buttons
-      document.querySelectorAll('.lang-selector button').forEach(function(el) {
+      // Deactivate all lang buttons
+      document.querySelectorAll('.lang-btn').forEach(function(el) {
         el.classList.remove('active');
       });
 
-      // Show selected language content
-      document.querySelectorAll('.lang-' + lang).forEach(function(el) {
+      // Show selected language content (within current document)
+      document.querySelectorAll('.doc-' + currentDoc + ' .lang-' + lang).forEach(function(el) {
         el.classList.add('active');
       });
       // Activate selected button
