@@ -293,126 +293,242 @@
       <!-- Contenu Français -->
       <div class="lang-content lang-fr active">
         <h1>Politique de confidentialité</h1>
-        <p><em>Dernière mise à jour : 01.01.2026</em></p>
+        <p><em>Dernière mise à jour : 31.01.2026</em></p>
       
-        <p>Merci d'utiliser <strong>Uniq Winders</strong>. Cette politique de confidentialité vise à vous informer sur la manière dont l'application traite vos données. <strong>Uniq Winders</strong> respecte la vie privée de ses utilisateurs et ne collecte aucune donnée personnelle.</p>
+        <p>Merci d'utiliser <strong>Uniq Winders</strong>. Cette politique de confidentialité vise à vous informer sur la manière dont l'application et le produit physique associé traitent vos données. <strong>Uniq Winders</strong> est édité par une société de droit suisse et respecte la Loi fédérale sur la protection des données (nLPD) ainsi que le Règlement Général sur la Protection des Données (RGPD) pour les utilisateurs de l'Union Européenne.</p>
 
         <div class="section">
           <h2>1. Collecte et utilisation des informations</h2>
           <ul>
             <li><strong>Aucun compte requis :</strong> L'utilisation de l'application ne nécessite pas de création de compte ni la fourniture d'informations personnelles.</li>
-            <li><strong>Aucune donnée personnelle stockée :</strong> L'application ne stocke ni ne conserve de données personnelles sur l'appareil ou sur un serveur externe.</li>
+            <li><strong>Identifiant technique de l'appareil :</strong> Chaque remontoir possède un identifiant unique (généré à partir de l'adresse MAC du composant électronique). Cet identifiant est utilisé exclusivement pour les communications techniques (synchronisation des paramètres, mises à jour). <strong>Cet identifiant n'est pas considéré comme une donnée personnelle</strong> car il n'est pas lié à une personne identifiable et ne permet aucun profilage ou traçage de l'utilisateur.</li>
             <li>
-              <strong>Fonctionnalités IoT (Firebase) :</strong>
+              <strong>Fonctionnalités IoT :</strong>
               <ul>
-                <li>L'application utilise les services cloud de Google (Firebase) uniquement pour fournir certaines fonctionnalités IoT.</li>
+                <li>L'application communique avec notre infrastructure cloud hébergée en Suisse pour fournir certaines fonctionnalités IoT.</li>
                 <li>Ces services ne sont activés que si l'utilisateur choisit explicitement d'activer les fonctions IoT dans l'application.</li>
-                <li>L'identifiant utilisé pour configurer un remontoir à montres est propre au remontoir et indépendant de l'utilisateur ou de l'application.</li>
-                <li>Aucune donnée personnelle ou d'usage n'est liée à cet identifiant.</li>
+                <li>Les données transmises sont exclusivement techniques : identifiant du remontoir, niveau de batterie (en millivolts), paramètres de rotation (nombre de tours, intervalle) et version du firmware.</li>
+                <li>Aucune donnée personnelle, comportementale ou permettant l'identification d'une personne physique n'est collectée ou transmise.</li>
               </ul>
             </li>
+            <li><strong>Connexion Wi-Fi :</strong> Si vous choisissez de connecter votre remontoir à votre réseau Wi-Fi, le nom du réseau (SSID) est stocké localement sur l'appareil. Le mot de passe Wi-Fi n'est jamais transmis à nos serveurs.</li>
             <li><strong>Aucun suivi de l'utilisation :</strong> L'application ne trace ni n'analyse le comportement ou l'utilisation des utilisateurs.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>2. Partage des données</h2>
+          <h2>2. Mises à jour du firmware (OTA)</h2>
           <ul>
-            <li><strong>Aucun partage avec des tiers :</strong> L'application ne partage aucune donnée avec des tiers, sauf pour les communications nécessaires avec les services Firebase lors de l'utilisation des fonctionnalités IoT.</li>
-            <li><strong>Pas d'usage publicitaire ou commercial :</strong> Uniq Winders n'utilise aucune donnée à des fins marketing, publicitaires ou analytiques.</li>
+            <li><strong>Mises à jour via Bluetooth :</strong> Les mises à jour du firmware de votre remontoir sont effectuées via Bluetooth Low Energy (BLE) depuis l'application mobile. Aucun serveur tiers n'intervient dans le transfert du firmware.</li>
+            <li><strong>Données transmises lors d'une mise à jour :</strong> L'identifiant de l'appareil et la version actuelle du firmware sont utilisés pour vérifier la disponibilité et la compatibilité des mises à jour.</li>
+            <li><strong>Consentement :</strong> Les mises à jour fonctionnelles sont proposées à l'utilisateur qui peut choisir de les installer ou non. Les mises à jour de sécurité critiques peuvent être fortement recommandées.</li>
+            <li><strong>Sécurité des mises à jour :</strong> Les fichiers de firmware sont signés cryptographiquement. Votre appareil vérifie l'authenticité de chaque mise à jour avant installation, empêchant toute modification malveillante.</li>
+            <li><strong>Réversibilité :</strong> En cas de problème, le mécanisme de mise à jour intègre une protection permettant de préserver le fonctionnement de l'appareil.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>3. Technologies de suivi et cookies</h2>
+          <h2>3. Durée du support logiciel</h2>
           <ul>
-            <li><strong>Aucun cookie ou suivi :</strong> L'application n'utilise ni cookies ni technologies de suivi.</li>
+            <li><strong>Engagement de maintenance :</strong> Conformément au Cyber Resilience Act européen, nous nous engageons à fournir des mises à jour de sécurité pour votre produit pendant une durée minimale de <strong>5 ans</strong> à compter de la date d'achat, ou jusqu'au 31 décembre 2031 au minimum.</li>
+            <li><strong>Mises à jour fonctionnelles :</strong> Des améliorations fonctionnelles pourront être proposées au-delà de cette période, sans obligation de notre part.</li>
+            <li><strong>Fonctionnement hors ligne :</strong> Votre remontoir reste pleinement fonctionnel même sans connexion Internet ni mises à jour, en utilisant les paramètres locaux.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>4. Sécurité</h2>
+          <h2>4. Partage des données et infrastructure technique</h2>
           <ul>
-            <li><strong>Services sécurisés :</strong> Les échanges avec Firebase sont sécurisés via les protocoles standards fournis par Google.</li>
-            <li><strong>Limitation des communications :</strong> Aucune donnée sensible n'est transmise. Seuls les paramètres techniques liés au remontoir sont communiqués si les fonctionnalités IoT sont activées.</li>
+            <li><strong>Infrastructure Suisse :</strong> L'application communique exclusivement avec notre serveur backend situé en Suisse. Toutes les requêtes de votre appareil passent par cette infrastructure suisse.</li>
+            <li><strong>Sous-traitants techniques :</strong> Notre serveur suisse utilise Google Firebase (hébergé aux États-Unis, région us-central1) uniquement pour la gestion technique de la synchronisation en temps réel. Les données transférées sont exclusivement techniques (identifiant matériel, paramètres de configuration, niveau de batterie, version firmware).</li>
+            <li><strong>Nature des données :</strong> Les informations transmises ne constituent pas des données personnelles au sens du RGPD/nLPD car elles ne permettent pas l'identification d'une personne physique. Il s'agit uniquement d'informations techniques relatives au fonctionnement de l'appareil.</li>
+            <li><strong>Pas d'usage publicitaire ou commercial :</strong> Uniq Winders n'utilise aucune donnée à des fins marketing, publicitaires ou analytiques. Google Firebase est configuré en mode strictement technique sans partage avec d'autres services Google.</li>
+            <li><strong>Pas de vente de données :</strong> Nous ne vendons, ne louons ni n'échangeons aucune donnée avec des tiers.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>5. Consentement et modifications</h2>
+          <h2>5. Transferts internationaux</h2>
           <ul>
-            <li><strong>Activation volontaire des fonctions IoT :</strong> L'utilisation des fonctionnalités IoT vaut consentement à la communication technique avec Firebase.</li>
+            <li><strong>Localisation principale :</strong> Notre serveur backend est hébergé en Suisse.</li>
+            <li><strong>Services tiers :</strong> Pour des raisons d'infrastructure technique (synchronisation en temps réel), notre serveur suisse communique avec Firebase (Google LLC, États-Unis).</li>
+            <li><strong>Minimisation du risque :</strong> Conformément au principe de minimisation des données, seules des informations techniques non-personnelles sont transmises. L'absence de données personnelles dans ces flux rend ce transfert conforme au RGPD.</li>
+            <li><strong>Garanties contractuelles :</strong> Nos contrats avec Google incluent les clauses contractuelles types (SCC) approuvées par la Commission européenne pour encadrer les transferts de données.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. Technologies de suivi et cookies</h2>
+          <ul>
+            <li><strong>Aucun cookie ou suivi :</strong> L'application n'utilise ni cookies ni technologies de suivi ou de profilage.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. Sécurité</h2>
+          <ul>
+            <li><strong>Chiffrement des communications :</strong> Toutes les communications avec nos serveurs sont chiffrées via TLS/HTTPS.</li>
+            <li><strong>Authentification :</strong> Les requêtes vers nos serveurs sont authentifiées par signature cryptographique (HMAC-SHA256).</li>
+            <li><strong>Stockage local sécurisé :</strong> Les données sensibles (identifiant de sécurité de l'appareil) sont stockées de manière sécurisée dans la mémoire de l'appareil.</li>
+            <li><strong>Limitation des données :</strong> Seules les données strictement nécessaires au fonctionnement sont collectées et transmises.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. Vos droits</h2>
+          <ul>
+            <li><strong>Droit d'accès :</strong> Vous pouvez nous demander quelles données sont associées à l'identifiant de votre appareil.</li>
+            <li><strong>Droit de suppression :</strong> Vous pouvez demander la suppression des données associées à votre appareil en nous contactant.</li>
+            <li><strong>Droit d'opposition :</strong> Vous pouvez désactiver les fonctionnalités IoT à tout moment depuis l'application, ce qui stoppe toute communication avec nos serveurs.</li>
+            <li><strong>Portabilité :</strong> Sur demande, nous pouvons vous fournir les données techniques associées à votre appareil dans un format lisible.</li>
+            <li><strong>Réclamation :</strong> Vous avez le droit de déposer une plainte auprès du Préposé fédéral à la protection des données (PFPDT) en Suisse ou de l'autorité de contrôle compétente de votre pays de résidence.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>9. Consentement et modifications</h2>
+          <ul>
+            <li><strong>Activation volontaire des fonctions IoT :</strong> L'utilisation des fonctionnalités IoT vaut consentement à la communication technique avec nos serveurs.</li>
+            <li><strong>Mises à jour optionnelles :</strong> Les mises à jour du firmware sont proposées mais non imposées (sauf correctifs de sécurité critiques).</li>
             <li><strong>Contrôle utilisateur :</strong> L'utilisateur peut désactiver ces fonctionnalités à tout moment depuis les paramètres de l'application.</li>
-            <li><strong>Modifications de la politique :</strong> Toute modification importante de cette politique sera communiquée via une mise à jour de l'application ou via sa page sur le Google Play Store.</li>
+            <li><strong>Modifications de la politique :</strong> Toute modification importante de cette politique sera communiquée via une mise à jour de l'application ou via sa page sur les stores d'applications. La date de dernière mise à jour sera modifiée en conséquence.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>6. Contact</h2>
-          <p>Pour toute question relative à cette politique de confidentialité, vous pouvez nous contacter à l'adresse suivante : <strong>uniqwinder@gmail.com</strong></p>
+          <h2>10. Responsabilité produit</h2>
+          <ul>
+            <li><strong>Garantie légale :</strong> Le produit physique est couvert par la garantie légale de conformité applicable dans votre pays de résidence.</li>
+            <li><strong>Mises à jour et garantie :</strong> Une mise à jour logicielle effectuée via notre application officielle n'annule pas la garantie du produit.</li>
+            <li><strong>Modifications non autorisées :</strong> Toute modification du firmware par des moyens non officiels peut entraîner la perte de la garantie et des dommages irréversibles à l'appareil.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>11. Contact</h2>
+          <p>Pour toute question relative à cette politique de confidentialité, pour exercer vos droits ou pour signaler un problème de sécurité, vous pouvez nous contacter à l'adresse suivante : <strong>uniqwinder@gmail.com</strong></p>
+          <p>Responsable du traitement : Uniq Winders, Suisse.</p>
         </div>
       </div>
 
       <!-- Contenu Anglais -->
       <div class="lang-content lang-en">
         <h1>Privacy Policy</h1>
-        <p><em>Last updated: 01.01.2026</em></p>
+        <p><em>Last updated: 31.01.2026</em></p>
       
-        <p>Thank you for using <strong>Uniq Winders</strong>. This privacy policy aims to inform you about how the application handles your data. <strong>Uniq Winders</strong> respects the privacy of its users and does not collect any personal data.</p>
+        <p>Thank you for using <strong>Uniq Winders</strong>. This privacy policy aims to inform you about how the application and associated physical product handle your data. <strong>Uniq Winders</strong> is published by a Swiss company and complies with the Swiss Federal Act on Data Protection (nFADP) as well as the General Data Protection Regulation (GDPR) for European Union users.</p>
 
         <div class="section">
           <h2>1. Collection and Use of Information</h2>
           <ul>
             <li><strong>No account required:</strong> Using the application does not require creating an account or providing personal information.</li>
-            <li><strong>No personal data stored:</strong> The application does not store or retain personal data on the device or on an external server.</li>
+            <li><strong>Technical device identifier:</strong> Each watch winder has a unique identifier (generated from the electronic component's MAC address). This identifier is used exclusively for technical communications (parameter synchronization, updates). <strong>This identifier is not considered personal data</strong> as it is not linked to an identifiable person and does not allow any profiling or user tracking.</li>
             <li>
-              <strong>IoT Features (Firebase):</strong>
+              <strong>IoT Features:</strong>
               <ul>
-                <li>The application uses Google cloud services (Firebase) solely to provide certain IoT features.</li>
+                <li>The application communicates with our cloud infrastructure hosted in Switzerland to provide certain IoT features.</li>
                 <li>These services are only activated if the user explicitly chooses to enable the IoT functions in the application.</li>
-                <li>The identifier used to configure a watch winder is specific to the winder and independent of the user or the application.</li>
-                <li>No personal or usage data is linked to this identifier.</li>
+                <li>Data transmitted is exclusively technical: winder identifier, battery level (in millivolts), rotation parameters (number of turns, interval), and firmware version.</li>
+                <li>No personal, behavioral, or personally identifiable data is collected or transmitted.</li>
               </ul>
             </li>
+            <li><strong>Wi-Fi connection:</strong> If you choose to connect your winder to your Wi-Fi network, the network name (SSID) is stored locally on the device. The Wi-Fi password is never transmitted to our servers.</li>
             <li><strong>No usage tracking:</strong> The application does not track or analyze user behavior or usage.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>2. Data Sharing</h2>
+          <h2>2. Firmware Updates (OTA)</h2>
           <ul>
-            <li><strong>No sharing with third parties:</strong> The application does not share any data with third parties, except for necessary communications with Firebase services when using IoT features.</li>
-            <li><strong>No advertising or commercial use:</strong> Uniq Winders does not use any data for marketing, advertising, or analytics purposes.</li>
+            <li><strong>Updates via Bluetooth:</strong> Firmware updates for your winder are performed via Bluetooth Low Energy (BLE) from the mobile application. No third-party server is involved in the firmware transfer.</li>
+            <li><strong>Data transmitted during updates:</strong> The device identifier and current firmware version are used to check update availability and compatibility.</li>
+            <li><strong>Consent:</strong> Functional updates are offered to the user who can choose whether to install them. Critical security updates may be strongly recommended.</li>
+            <li><strong>Update security:</strong> Firmware files are cryptographically signed. Your device verifies the authenticity of each update before installation, preventing any malicious modification.</li>
+            <li><strong>Reversibility:</strong> In case of issues, the update mechanism includes protection to preserve device functionality.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>3. Tracking Technologies and Cookies</h2>
+          <h2>3. Software Support Duration</h2>
           <ul>
-            <li><strong>No cookies or tracking:</strong> The application does not use cookies or tracking technologies.</li>
+            <li><strong>Maintenance commitment:</strong> In accordance with the European Cyber Resilience Act, we commit to providing security updates for your product for a minimum period of <strong>5 years</strong> from the date of purchase, or until December 31, 2031 at minimum.</li>
+            <li><strong>Functional updates:</strong> Functional improvements may be offered beyond this period, without obligation on our part.</li>
+            <li><strong>Offline operation:</strong> Your winder remains fully functional even without Internet connection or updates, using local settings.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>4. Security</h2>
+          <h2>4. Data Sharing and Technical Infrastructure</h2>
           <ul>
-            <li><strong>Secure services:</strong> Communications with Firebase are secured via standard protocols provided by Google.</li>
-            <li><strong>Limited communications:</strong> No sensitive data is transmitted. Only technical parameters related to the winder are communicated if IoT features are enabled.</li>
+            <li><strong>Swiss infrastructure:</strong> The application communicates exclusively with our backend server located in Switzerland. All requests from your device pass through this Swiss infrastructure.</li>
+            <li><strong>Technical subcontractors:</strong> Our Swiss server uses Google Firebase (hosted in the United States, us-central1 region) solely for technical real-time synchronization management. Data transferred is exclusively technical (hardware identifier, configuration parameters, battery level, firmware version).</li>
+            <li><strong>Nature of data:</strong> The information transmitted does not constitute personal data under GDPR/nFADP as it does not allow the identification of a natural person. It is solely technical information related to device operation.</li>
+            <li><strong>No advertising or commercial use:</strong> Uniq Winders does not use any data for marketing, advertising, or analytics purposes. Google Firebase is configured in strictly technical mode without sharing with other Google services.</li>
+            <li><strong>No data sales:</strong> We do not sell, rent, or trade any data with third parties.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>5. Consent and Modifications</h2>
+          <h2>5. International Transfers</h2>
           <ul>
-            <li><strong>Voluntary activation of IoT features:</strong> Using the IoT features constitutes consent to technical communication with Firebase.</li>
+            <li><strong>Primary location:</strong> Our backend server is hosted in Switzerland.</li>
+            <li><strong>Third-party services:</strong> For technical infrastructure reasons (real-time synchronization), our Swiss server communicates with Firebase (Google LLC, United States).</li>
+            <li><strong>Risk minimization:</strong> In accordance with the principle of data minimization, only non-personal technical information is transmitted. The absence of personal data in these flows makes this transfer GDPR-compliant.</li>
+            <li><strong>Contractual safeguards:</strong> Our contracts with Google include Standard Contractual Clauses (SCCs) approved by the European Commission to govern data transfers.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. Tracking Technologies and Cookies</h2>
+          <ul>
+            <li><strong>No cookies or tracking:</strong> The application does not use cookies or tracking or profiling technologies.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. Security</h2>
+          <ul>
+            <li><strong>Communication encryption:</strong> All communications with our servers are encrypted via TLS/HTTPS.</li>
+            <li><strong>Authentication:</strong> Requests to our servers are authenticated by cryptographic signature (HMAC-SHA256).</li>
+            <li><strong>Secure local storage:</strong> Sensitive data (device security identifier) is stored securely in the device memory.</li>
+            <li><strong>Data minimization:</strong> Only data strictly necessary for operation is collected and transmitted.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. Your Rights</h2>
+          <ul>
+            <li><strong>Right of access:</strong> You can ask us what data is associated with your device identifier.</li>
+            <li><strong>Right to deletion:</strong> You can request deletion of data associated with your device by contacting us.</li>
+            <li><strong>Right to object:</strong> You can disable IoT features at any time from the application, which stops all communication with our servers.</li>
+            <li><strong>Portability:</strong> Upon request, we can provide you with the technical data associated with your device in a readable format.</li>
+            <li><strong>Complaint:</strong> You have the right to lodge a complaint with the Federal Data Protection and Information Commissioner (FDPIC) in Switzerland or the competent supervisory authority in your country of residence.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>9. Consent and Modifications</h2>
+          <ul>
+            <li><strong>Voluntary activation of IoT features:</strong> Using the IoT features constitutes consent to technical communication with our servers.</li>
+            <li><strong>Optional updates:</strong> Firmware updates are offered but not imposed (except for critical security patches).</li>
             <li><strong>User control:</strong> The user can disable these features at any time from the application settings.</li>
-            <li><strong>Policy modifications:</strong> Any significant changes to this policy will be communicated via an application update or via its page on the Google Play Store.</li>
+            <li><strong>Policy modifications:</strong> Any significant changes to this policy will be communicated via an application update or via its page on application stores. The last update date will be modified accordingly.</li>
           </ul>
         </div>
 
         <div class="section">
-          <h2>6. Contact</h2>
-          <p>For any questions regarding this privacy policy, you can contact us at the following address: <strong>uniqwinder@gmail.com</strong></p>
+          <h2>10. Product Liability</h2>
+          <ul>
+            <li><strong>Legal warranty:</strong> The physical product is covered by the legal conformity warranty applicable in your country of residence.</li>
+            <li><strong>Updates and warranty:</strong> A software update performed via our official application does not void the product warranty.</li>
+            <li><strong>Unauthorized modifications:</strong> Any modification of the firmware by unofficial means may result in loss of warranty and irreversible damage to the device.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>11. Contact</h2>
+          <p>For any questions regarding this privacy policy, to exercise your rights, or to report a security issue, you can contact us at the following address: <strong>uniqwinder@gmail.com</strong></p>
+          <p>Data controller: Uniq Winders, Switzerland.</p>
         </div>
       </div>
     </div>
