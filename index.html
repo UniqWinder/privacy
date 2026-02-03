@@ -12,76 +12,89 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-      line-height: 1.7;
+      font-family: 'Playfair Display', 'Georgia', serif;
+      line-height: 1.8;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
-      color: #2d3748;
+      background: #ffffff;
+      color: #000000;
       min-height: 100vh;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       background: #ffffff;
-      box-shadow: 0 20px 60px rgba(44, 62, 80, 0.08);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-top: 40px;
-      margin-bottom: 40px;
+      min-height: 100vh;
     }
 
-    /* Header with gradient */
+    /* Header with logo */
     .header {
-      background: linear-gradient(135deg, #4A3041 0%, #CE1B2B 100%);
-      padding: 24px 40px;
+      background: #4A3041;
+      padding: 40px 60px;
       color: white;
-      box-shadow: 0 4px 20px rgba(44, 62, 80, 0.2);
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: auto;
+      filter: brightness(0) invert(1);
     }
 
     .logo-text {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
     /* Language Selector */
     .lang-selector {
       display: flex;
-      justify-content: flex-end;
-      gap: 8px;
-      padding: 24px 40px 0;
+      justify-content: center;
+      gap: 12px;
+      padding: 40px 60px 0;
       background: white;
+      border-bottom: 1px solid #f0f0f0;
     }
 
     .lang-selector button {
-      background: #f7fafc;
-      border: 2px solid #e2e8f0;
-      padding: 8px 16px;
+      background: transparent;
+      border: 1px solid #e0e0e0;
+      padding: 10px 24px;
       cursor: pointer;
-      border-radius: 8px;
-      font-weight: 600;
+      border-radius: 0;
+      font-weight: 400;
       font-size: 13px;
-      color: #4a5568;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      letter-spacing: 0.5px;
+      color: #000000;
+      transition: all 0.3s ease;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
     .lang-selector button:hover {
-      background: #edf2f7;
-      border-color: #cbd5e0;
-      transform: translateY(-1px);
+      background: #f8f8f8;
+      border-color: #4A3041;
     }
 
     .lang-selector button.active {
-      background: linear-gradient(135deg, #4A3041 0%, #CE1B2B 100%);
+      background: #4A3041;
       color: white;
       border-color: #4A3041;
-      box-shadow: 0 4px 12px rgba(74, 48, 65, 0.3);
     }
 
     .lang-content {
@@ -102,17 +115,21 @@
 
     /* Content Area */
     .content-wrapper {
-      padding: 40px;
+      padding: 60px 80px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     h1 {
-      color: #1a202c;
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 8px;
+      color: #4A3041;
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 16px;
       line-height: 1.3;
       position: relative;
-      padding-bottom: 16px;
+      padding-bottom: 24px;
+      letter-spacing: 1px;
+      font-family: 'Playfair Display', Georgia, serif;
     }
 
     h1::after {
@@ -120,134 +137,157 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #4A3041 0%, #CE1B2B 100%);
-      border-radius: 2px;
+      width: 60px;
+      height: 1px;
+      background: #4A3041;
     }
 
     h2 {
       color: #4A3041;
-      font-size: 22px;
-      font-weight: 600;
-      margin-top: 32px;
-      margin-bottom: 16px;
+      font-size: 24px;
+      font-weight: 300;
+      margin-top: 48px;
+      margin-bottom: 20px;
       line-height: 1.4;
+      letter-spacing: 0.5px;
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    h3 {
+      color: #4A3041;
+      font-size: 19px;
+      font-weight: 400;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      letter-spacing: 0.3px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
     p {
-      margin-bottom: 16px;
-      color: #4a5568;
-      font-size: 15px;
+      margin-bottom: 20px;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 300;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
     p em {
-      color: #718096;
+      color: #666666;
       font-style: italic;
       font-size: 14px;
     }
 
     p strong {
-      color: #2d3748;
-      font-weight: 600;
+      color: #000000;
+      font-weight: 500;
     }
 
     ul {
       list-style-type: none;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       margin-left: 0;
       padding-left: 0;
     }
 
     ul li {
       position: relative;
-      padding-left: 28px;
-      margin-bottom: 10px;
-      color: #4a5568;
-      font-size: 15px;
-      line-height: 1.6;
+      padding-left: 32px;
+      margin-bottom: 16px;
+      color: #000000;
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 300;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
     ul li::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 8px;
-      width: 8px;
-      height: 8px;
-      background: linear-gradient(135deg, #4A3041 0%, #CE1B2B 100%);
-      border-radius: 50%;
+      top: 12px;
+      width: 4px;
+      height: 4px;
+      background: #4A3041;
+      border-radius: 0;
     }
 
     ul ul {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 12px;
+      margin-bottom: 12px;
     }
 
     ul ul li::before {
-      width: 6px;
-      height: 6px;
-      background: #718096;
+      width: 3px;
+      height: 3px;
+      background: #999999;
     }
 
     .section {
-      margin-bottom: 32px;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      margin-bottom: 48px;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      font-size: 14px;
-      color: #718096;
-      padding: 24px 40px;
-      background: #f7fafc;
-      border-top: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: #666666;
+      padding: 40px 60px;
+      background: #fafafa;
+      border-top: 1px solid #e0e0e0;
       margin-top: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* Links */
+    a {
+      color: #4A3041;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    a:hover {
+      border-bottom-color: #4A3041;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
       .container {
-        margin: 20px;
-        border-radius: 12px;
+        margin: 0;
       }
 
       .header {
-        padding: 24px 24px;
+        padding: 32px 32px;
+      }
+
+      .logo-img {
+        height: 45px;
       }
 
       .logo-text {
         font-size: 24px;
+        letter-spacing: 2px;
       }
 
       .lang-selector {
-        padding: 16px 24px 0;
-        gap: 6px;
+        padding: 24px 32px 0;
+        gap: 8px;
       }
 
       .lang-selector button {
-        padding: 6px 12px;
+        padding: 8px 16px;
         font-size: 12px;
       }
 
       .content-wrapper {
-        padding: 24px;
+        padding: 40px 32px;
       }
 
       h1 {
-        font-size: 26px;
+        font-size: 32px;
       }
 
       h2 {
@@ -255,31 +295,31 @@
       }
 
       p, ul li {
-        font-size: 14px;
+        font-size: 15px;
       }
 
       footer {
-        padding: 20px 24px;
-        font-size: 13px;
+        padding: 32px 32px;
+        font-size: 12px;
       }
     }
 
-    /* Scrollbar styling */
+    /* Remove scrollbar styling for cleaner look */
     ::-webkit-scrollbar {
-      width: 10px;
+      width: 8px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: #ffffff;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #cbd5e0;
-      border-radius: 5px;
+      background: #e0e0e0;
+      border-radius: 0;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: #a0aec0;
+      background: #4A3041;
     }
   </style>
 </head>
@@ -287,18 +327,21 @@
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <span class="logo-text">Uniq Winders</span>
+      <div class="logo-container">
+        <img src="logo.png" alt="Uniq Winders Logo" class="logo-img">
+        <span class="logo-text">Uniq Winders</span>
+      </div>
     </div>
 
     <!-- Document Selector -->
-    <div class="lang-selector" style="padding-bottom: 12px;">
+    <div class="lang-selector" style="padding-bottom: 20px;">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Politique de confidentialité</button>
       <button id="btn-terms" onclick="switchDoc('terms')">Conditions d'utilisation</button>
       <button id="btn-licenses" onclick="switchDoc('licenses')">Licences</button>
     </div>
 
     <!-- Language Selector -->
-    <div class="lang-selector" style="padding-top: 8px; border-top: 1px solid #e2e8f0;">
+    <div class="lang-selector" style="padding-top: 20px; padding-bottom: 0; border-top: 1px solid #f0f0f0; border-bottom: none;">
       <button id="btn-fr" class="active lang-btn" onclick="switchLang('fr')">FR</button>
       <button id="btn-en" class="lang-btn" onclick="switchLang('en')">EN</button>
     </div>
@@ -640,7 +683,7 @@
         <div class="section">
           <h2>8. Sécurité et confidentialité</h2>
           <ul>
-            <li><strong>Politique de confidentialité :</strong> Votre utilisation de l'application est également régie par notre <a href="#" onclick="switchDoc('privacy'); return false;" style="color: #4A3041; font-weight: 600;">Politique de Confidentialité</a>.</li>
+            <li><strong>Politique de confidentialité :</strong> Votre utilisation de l'application est également régie par notre <a href="#" onclick="switchDoc('privacy'); return false;">Politique de Confidentialité</a>.</li>
             <li><strong>Sécurité des comptes :</strong> Vous êtes responsable de la sécurité de votre appareil mobile et de la configuration de votre réseau Wi-Fi.</li>
             <li><strong>Signalement de vulnérabilités :</strong> Si vous découvrez une faille de sécurité, veuillez nous en informer immédiatement à <strong>hello@uniq-luxury.com</strong>.</li>
           </ul>
@@ -753,7 +796,7 @@
         <div class="section">
           <h2>8. Security and Privacy</h2>
           <ul>
-            <li><strong>Privacy Policy:</strong> Your use of the application is also governed by our <a href="#" onclick="switchDoc('privacy'); return false;" style="color: #4A3041; font-weight: 600;">Privacy Policy</a>.</li>
+            <li><strong>Privacy Policy:</strong> Your use of the application is also governed by our <a href="#" onclick="switchDoc('privacy'); return false;">Privacy Policy</a>.</li>
             <li><strong>Account security:</strong> You are responsible for the security of your mobile device and your Wi-Fi network configuration.</li>
             <li><strong>Vulnerability reporting:</strong> If you discover a security flaw, please inform us immediately at <strong>hello@uniq-luxury.com</strong>.</li>
           </ul>
@@ -801,28 +844,28 @@
         <div class="section">
           <h2>Frameworks et librairies principales</h2>
           
-          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Flutter SDK</h3>
-          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          <h3>Flutter SDK</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
           Licence : BSD 3-Clause License<br>
-          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank" style="color: #2c3e50;">https://github.com/flutter/flutter</a></p>
+          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank">https://github.com/flutter/flutter</a></p>
 
-          <h3 style="font-size: 18px; color: #2c3e50; margin-top: 20px;">Firebase Flutter Plugins</h3>
-          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          <h3>Firebase Flutter Plugins</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
           Licence : BSD 3-Clause License<br>
           Utilisé pour : Cloud Firestore, Firebase Auth, Firebase Storage, Firebase Functions<br>
-          <a href="https://github.com/firebase/flutterfire" target="_blank" style="color: #4A3041;">https://github.com/firebase/flutterfire</a></p>
+          <a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Flutter Blue Plus</h3>
-          <p style="margin-left: 28px;">Copyright © Flutter Blue Plus contributors<br>
+          <h3>Flutter Blue Plus</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors<br>
           Licence : BSD 3-Clause License<br>
           Utilisé pour : Communication Bluetooth Low Energy (BLE)<br>
-          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank" style="color: #4A3041;">https://github.com/boskokg/flutter_blue_plus</a></p>
+          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p>
         </div>
 
         <div class="section">
           <h2>Autres dépendances</h2>
           
-          <p style="margin-left: 28px;"><strong>connectivity_plus</strong> - MIT License - Détection de la connectivité réseau<br>
+          <p style="margin-left: 32px;"><strong>connectivity_plus</strong> - MIT License - Détection de la connectivité réseau<br>
           <strong>provider</strong> - MIT License - Gestion d'état<br>
           <strong>shared_preferences</strong> - BSD 3-Clause - Stockage local de préférences<br>
           <strong>url_launcher</strong> - BSD 3-Clause - Ouverture de liens externes<br>
@@ -835,35 +878,35 @@
         <div class="section">
           <h2>Firmware (ESP32)</h2>
           
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">ESP-IDF</h3>
-          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          <h3>ESP-IDF</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
           Licence : Apache License 2.0<br>
-          <a href="https://github.com/espressif/esp-idf" target="_blank" style="color: #4A3041;">https://github.com/espressif/esp-idf</a></p>
+          <a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Arduino Core for ESP32</h3>
-          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          <h3>Arduino Core for ESP32</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
           Licence : LGPL 2.1<br>
-          <a href="https://github.com/espressif/arduino-esp32" target="_blank" style="color: #4A3041;">https://github.com/espressif/arduino-esp32</a></p>
+          <a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">mbedTLS</h3>
-          <p style="margin-left: 28px;">Copyright © Mbed TLS Contributors<br>
+          <h3>mbedTLS</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors<br>
           Licence : Apache License 2.0<br>
           Utilisé pour : Cryptographie (HMAC-SHA256, TLS)<br>
-          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank" style="color: #4A3041;">https://github.com/Mbed-TLS/mbedtls</a></p>
+          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
         </div>
 
         <div class="section">
           <h2>Licences complètes</h2>
           <p>Le texte complet de chaque licence est disponible dans l'application via le menu "À propos" ou sur les dépôts GitHub respectifs des projets.</p>
           
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">BSD 3-Clause License (Résumé)</h3>
-          <p style="margin-left: 28px; font-size: 14px; color: #718096;">Cette licence permet la redistribution et l'utilisation sous forme source et binaire, avec ou sans modification, sous certaines conditions incluant la conservation des mentions de copyright.</p>
+          <h3>BSD 3-Clause License (Résumé)</h3>
+          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">Cette licence permet la redistribution et l'utilisation sous forme source et binaire, avec ou sans modification, sous certaines conditions incluant la conservation des mentions de copyright.</p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">MIT License (Résumé)</h3>
-          <p style="margin-left: 28px; font-size: 14px; color: #718096;">Une licence permissive qui autorise la réutilisation avec peu de restrictions, en conservant les mentions de copyright et de licence.</p>
+          <h3>MIT License (Résumé)</h3>
+          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">Une licence permissive qui autorise la réutilisation avec peu de restrictions, en conservant les mentions de copyright et de licence.</p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Apache License 2.0 (Résumé)</h3>
-          <p style="margin-left: 28px; font-size: 14px; color: #718096;">Une licence permissive qui inclut des dispositions expresses concernant les brevets et les contributions.</p>
+          <h3>Apache License 2.0 (Résumé)</h3>
+          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">Une licence permissive qui inclut des dispositions expresses concernant les brevets et les contributions.</p>
         </div>
 
         <div class="section">
@@ -887,28 +930,28 @@
         <div class="section">
           <h2>Main Frameworks and Libraries</h2>
           
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Flutter SDK</h3>
-          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          <h3>Flutter SDK</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
           License: BSD 3-Clause License<br>
-          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank" style="color: #4A3041;">https://github.com/flutter/flutter</a></p>
+          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank">https://github.com/flutter/flutter</a></p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Firebase Flutter Plugins</h3>
-          <p style="margin-left: 28px;">Copyright © Google LLC<br>
+          <h3>Firebase Flutter Plugins</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
           License: BSD 3-Clause License<br>
           Used for: Cloud Firestore, Firebase Auth, Firebase Storage, Firebase Functions<br>
-          <a href="https://github.com/firebase/flutterfire" target="_blank" style="color: #4A3041;">https://github.com/firebase/flutterfire</a></p>
+          <a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Flutter Blue Plus</h3>
-          <p style="margin-left: 28px;">Copyright © Flutter Blue Plus contributors<br>
+          <h3>Flutter Blue Plus</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors<br>
           License: BSD 3-Clause License<br>
           Used for: Bluetooth Low Energy (BLE) communication<br>
-          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank" style="color: #4A3041;">https://github.com/boskokg/flutter_blue_plus</a></p>
+          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p>
         </div>
 
         <div class="section">
           <h2>Other Dependencies</h2>
           
-          <p style="margin-left: 28px;"><strong>connectivity_plus</strong> - MIT License - Network connectivity detection<br>
+          <p style="margin-left: 32px;"><strong>connectivity_plus</strong> - MIT License - Network connectivity detection<br>
           <strong>provider</strong> - MIT License - State management<br>
           <strong>shared_preferences</strong> - BSD 3-Clause - Local preferences storage<br>
           <strong>url_launcher</strong> - BSD 3-Clause - Opening external links<br>
@@ -921,35 +964,35 @@
         <div class="section">
           <h2>Firmware (ESP32)</h2>
           
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">ESP-IDF</h3>
-          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          <h3>ESP-IDF</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
           License: Apache License 2.0<br>
-          <a href="https://github.com/espressif/esp-idf" target="_blank" style="color: #4A3041;">https://github.com/espressif/esp-idf</a></p>
+          <a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Arduino Core for ESP32</h3>
-          <p style="margin-left: 28px;">Copyright © Espressif Systems<br>
+          <h3>Arduino Core for ESP32</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
           License: LGPL 2.1<br>
-          <a href="https://github.com/espressif/arduino-esp32" target="_blank" style="color: #4A3041;">https://github.com/espressif/arduino-esp32</a></p>
+          <a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">mbedTLS</h3>
-          <p style="margin-left: 28px;">Copyright © Mbed TLS Contributors<br>
+          <h3>mbedTLS</h3>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors<br>
           License: Apache License 2.0<br>
           Used for: Cryptography (HMAC-SHA256, TLS)<br>
-          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank" style="color: #4A3041;">https://github.com/Mbed-TLS/mbedtls</a></p>
+          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
         </div>
 
         <div class="section">
           <h2>Full Licenses</h2>
           <p>The full text of each license is available in the application via the "About" menu or on the respective GitHub repositories.</p>
           
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">BSD 3-Clause License (Summary)</h3>
-          <p style="margin-left: 28px; font-size: 14px; color: #718096;">This license allows redistribution and use in source and binary forms, with or without modification, under certain conditions including retention of copyright notices.</p>
+          <h3>BSD 3-Clause License (Summary)</h3>
+          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">This license allows redistribution and use in source and binary forms, with or without modification, under certain conditions including retention of copyright notices.</p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">MIT License (Summary)</h3>
-          <p style="margin-left: 28px; font-size: 14px; color: #718096;">A permissive license that allows reuse with few restrictions, while preserving copyright and license notices.</p>
+          <h3>MIT License (Summary)</h3>
+          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">A permissive license that allows reuse with few restrictions, while preserving copyright and license notices.</p>
 
-          <h3 style="font-size: 18px; color: #4A3041; margin-top: 20px;">Apache License 2.0 (Summary)</h3>
-          <p style="margin-left: 28px; font-size: 14px; color: #718096;">A permissive license that includes express provisions regarding patents and contributions.</p>
+          <h3>Apache License 2.0 (Summary)</h3>
+          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">A permissive license that includes express provisions regarding patents and contributions.</p>
         </div>
 
         <div class="section">
