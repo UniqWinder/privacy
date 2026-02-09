@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de privacidade – Uniq Winders</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <img src="../logo.png" alt="Uniq Winders Logo" class="logo-img">
+        <span class="logo-text">Uniq Winders</span>
+      </div>
+    </div>
+
+    <div class="doc-selector">
+      <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Política de privacidade</button>
+      <button id="btn-terms" onclick="switchDoc('terms')">Termos de uso</button>
+      <button id="btn-licenses" onclick="switchDoc('licenses')">Licenças</button>
+    </div>
+
+    <div class="lang-selector">
+      <a href="../fr/">FR</a>
+      <a href="../en/">EN</a>
+      <a href="../de/">DE</a>
+      <a href="../es/">ES</a>
+      <a href="../it/">IT</a>
+      <a href="../pt/" class="active">PT</a>
+      <a href="../ja/">JA</a>
+      <a href="../zh/">ZH</a>
+      <a href="../ru/">RU</a>
+      <a href="../ar/">AR</a>
+    </div>
+
+    <div class="content-wrapper">
+
+      <div class="doc-content doc-privacy active">
+        <h1>Política de privacidade</h1>
+        <p><em>Última atualização: 09.02.2026</em></p>
+
+        <p>Obrigado por usar o <strong>Uniq Winders</strong>. Esta política de privacidade tem como objetivo informá-lo sobre como o aplicativo móvel Uniq Winders e o produto físico associado (movimentador de relógios conectado) tratam os seus dados.</p>
+        <p><strong>Uniq Winders</strong> é editado por uma empresa suíça e cumpre a Lei Federal Suíça sobre Proteção de Dados (nLPD), o Regulamento Geral sobre a Proteção de Dados (RGPD) para utilizadores da União Europeia e do Espaço Económico Europeu, bem como as leis de privacidade aplicáveis nos Estados Unidos, incluindo o California Consumer Privacy Act (CCPA/CPRA).</p>
+
+        <div class="section">
+          <h2>1. Responsável pelo tratamento</h2>
+          <p><strong>Uniq Winders</strong><br>Suíça<br>Contacto: <strong>hello@uniq-luxury.com</strong></p>
+        </div>
+
+        <div class="section">
+          <h2>2. Recolha e utilização de informações</h2>
+          <ul>
+            <li><strong>Nenhuma conta de utilizador necessária:</strong> A utilização do aplicativo não requer a criação de uma conta nem o fornecimento de informações pessoais como nome, endereço de e-mail ou número de telefone.</li>
+            <li><strong>Identificador técnico do dispositivo:</strong> Cada movimentador possui um identificador único gerado por hash criptográfico (SHA-256) do endereço MAC do componente eletrónico, combinado com um salt aleatório. <strong>Este identificador não pode ser revertido para o endereço MAC original</strong> devido à natureza unidirecional do hash. É usado exclusivamente para comunicações técnicas. <strong>Este identificador não é considerado dado pessoal</strong> pois não está ligado a nenhuma pessoa identificável.</li>
+            <li>
+              <strong>Funcionalidades IoT (ativação voluntária):</strong>
+              <ul>
+                <li>O aplicativo comunica com a nossa infraestrutura cloud alojada na Suíça para fornecer funcionalidades IoT (controlo remoto, sincronização de parâmetros).</li>
+                <li>Estes serviços só são ativados se o utilizador escolher explicitamente ativá-los após ler e aceitar o diálogo de consentimento IoT.</li>
+                <li>Os dados transmitidos são exclusivamente técnicos: identificador do movimentador, nível de bateria (em milivolts), parâmetros de rotação e versão do firmware.</li>
+                <li>Nenhum dado pessoal, comportamental ou que permita a identificação de uma pessoa física é recolhido ou transmitido.</li>
+              </ul>
+            </li>
+            <li><strong>Conexão Wi-Fi:</strong> Se optar por conectar o seu movimentador à rede Wi-Fi, o nome da rede (SSID) é armazenado localmente no dispositivo. <strong>A password Wi-Fi nunca é transmitida para os nossos servidores</strong>.</li>
+            <li><strong>Sem rastreamento:</strong> O aplicativo não inclui SDKs de análise, rastreadores publicitários ou ferramentas de perfilagem. Nenhum identificador publicitário é recolhido.</li>
+            <li><strong>Permissões mínimas:</strong> O aplicativo apenas solicita permissão Bluetooth. Nenhuma permissão de localização, câmara, microfone ou armazenamento é necessária.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>3. Arquitetura de segurança do dispositivo</h2>
+          <p>O seu movimentador Uniq Winders incorpora uma arquitetura de segurança multicamada de nível profissional:</p>
+          <ul>
+            <li><strong>Comunicação Bluetooth (BLE):</strong> Todas as comunicações utilizam o protocolo Secure Connections com emparelhamento e bonding. As características sensíveis são protegidas por encriptação ao nível da camada de ligação (AES-CCM).</li>
+            <li><strong>Encriptação de dados em repouso:</strong> O firmware é protegido por encriptação hardware do flash (AES-XTS-128). Os segredos na memória não volátil (NVS) também são encriptados.</li>
+            <li><strong>Arranque seguro (Secure Boot V2):</strong> Cada arranque verifica a autenticidade do firmware por assinatura criptográfica ECDSA-256.</li>
+            <li><strong>Segredos únicos por dispositivo:</strong> Cada movimentador possui um segredo criptográfico único de 256 bits gerado durante a fabricação.</li>
+            <li><strong>Proteção anti-rollback:</strong> Um contador hardware (eFuse) impede a instalação de uma versão anterior do firmware.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4. Atualizações de firmware (OTA)</h2>
+          <p>As atualizações de firmware beneficiam de um sistema de proteção em quatro camadas:</p>
+          <ul>
+            <li><strong>Transporte BLE encriptado:</strong> Os dados de atualização viajam por Bluetooth Low Energy numa conexão encriptada.</li>
+            <li><strong>Encriptação com chave única (AES-256-CTR):</strong> O firmware é encriptado no servidor com o algoritmo AES-256-CTR usando o segredo único do dispositivo e um nonce aleatório de 16 bytes.</li>
+            <li><strong>Verificação de assinatura (ECDSA-256):</strong> Após desencriptação, o bootloader seguro verifica a assinatura criptográfica do firmware.</li>
+            <li><strong>Proteção anti-rollback:</strong> O contador hardware impede qualquer downgrade.</li>
+            <li><strong>Consentimento:</strong> As atualizações funcionais são oferecidas ao utilizador. As atualizações críticas de segurança podem ser fortemente recomendadas.</li>
+            <li><strong>Resiliência:</strong> Em caso de problemas, um mecanismo de proteção preserva a funcionalidade do dispositivo.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>5. Duração do suporte de software</h2>
+          <ul>
+            <li><strong>Compromisso de manutenção:</strong> Em conformidade com o Cyber Resilience Act europeu (CRA), comprometemo-nos a fornecer atualizações de segurança durante um mínimo de <strong>5 anos</strong> a partir da data de compra, ou pelo menos até 31 de dezembro de 2031.</li>
+            <li><strong>Atualizações funcionais:</strong> Melhorias funcionais poderão ser oferecidas além deste período, sem obrigação da nossa parte.</li>
+            <li><strong>Funcionamento offline:</strong> O seu movimentador permanece plenamente funcional sem ligação à Internet.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. Partilha de dados e infraestrutura técnica</h2>
+          <ul>
+            <li><strong>Infraestrutura suíça:</strong> O aplicativo comunica exclusivamente com o nosso servidor backend na Suíça.</li>
+            <li><strong>Subcontratantes técnicos:</strong> O nosso servidor suíço utiliza Google Firebase (EUA, região us-central1) apenas para sincronização técnica em tempo real.</li>
+            <li><strong>Proteção do aplicativo:</strong> O aplicativo é protegido por Firebase App Check com Play Integrity (Android) e App Attest (iOS).</li>
+            <li><strong>Nenhum uso publicitário:</strong> Nenhum dado é usado para marketing, publicidade ou análise.</li>
+            <li><strong>Sem venda de dados:</strong> Não vendemos, alugamos nem trocamos dados com terceiros.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. Transferências internacionais</h2>
+          <ul>
+            <li><strong>Localização principal:</strong> Servidor backend na Suíça.</li>
+            <li><strong>Serviços de terceiros:</strong> Firebase (Google LLC, EUA) para infraestrutura técnica.</li>
+            <li><strong>Garantias contratuais:</strong> Cláusulas Contratuais Tipo (SCC) aprovadas pela Comissão Europeia nos contratos com a Google.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. Tecnologias de rastreamento e cookies</h2>
+          <ul><li><strong>Sem cookies ou rastreamento:</strong> O aplicativo não usa cookies, tecnologias de rastreamento ou identificadores publicitários.</li></ul>
+        </div>
+
+        <div class="section">
+          <h2>9. Medidas de segurança</h2>
+          <ul>
+            <li><strong>Encriptação das comunicações:</strong> Todas as comunicações são encriptadas via TLS 1.2/1.3 (HTTPS) com pinning de certificado CA.</li>
+            <li><strong>Autenticação por dispositivo:</strong> Cada pedido é autenticado por assinatura HMAC-SHA256 com proteção contra ataques de replay (janela temporal de 30 segundos).</li>
+            <li><strong>Segurança de hardware:</strong> Secure Boot V2 (ECDSA-256), encriptação flash (AES-XTS-128), encriptação NVS e proteção anti-rollback. JTAG desativado em produção.</li>
+            <li><strong>Limitação de pedidos:</strong> Limitação por dispositivo e por endereço IP nos nossos servidores.</li>
+            <li><strong>Minimização de dados:</strong> Apenas os dados estritamente necessários são recolhidos e transmitidos.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>10. Os seus direitos (RGPD / nLPD)</h2>
+          <ul>
+            <li><strong>Direito de acesso:</strong> Pode consultar quais dados estão associados ao identificador do seu dispositivo.</li>
+            <li><strong>Direito de retificação:</strong> Pode solicitar a correção de dados incorretos.</li>
+            <li><strong>Direito de eliminação:</strong> Pode solicitar a eliminação dos dados contactando-nos.</li>
+            <li><strong>Direito de limitação:</strong> Pode solicitar a limitação do tratamento nos casos previstos por lei.</li>
+            <li><strong>Direito de oposição:</strong> Pode desativar as funcionalidades IoT a qualquer momento a partir do aplicativo.</li>
+            <li><strong>Direito de portabilidade:</strong> Mediante pedido, podemos fornecer os dados técnicos em formato legível e estruturado.</li>
+            <li><strong>Reclamação:</strong> Tem o direito de apresentar reclamação junto da autoridade de supervisão competente do seu país.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>11. Direitos dos residentes da Califórnia (CCPA/CPRA)</h2>
+          <ul>
+            <li><strong>Sem venda de informação pessoal:</strong> Não vendemos informação pessoal.</li>
+            <li><strong>Sem partilha para fins publicitários:</strong> Não partilhamos informação para publicidade comportamental.</li>
+            <li><strong>Direito de saber e de eliminação:</strong> Pode solicitar detalhes e eliminação dos dados recolhidos.</li>
+            <li><strong>Não discriminação:</strong> Não o discriminaremos pelo exercício dos seus direitos.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>12. Privacidade de menores</h2>
+          <ul>
+            <li>O aplicativo e o produto não são destinados a menores de 16 anos.</li>
+            <li>Não recolhemos conscientemente dados de menores. Para reportar: <strong>hello@uniq-luxury.com</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>13. Conservação de dados</h2>
+          <ul>
+            <li>Os dados técnicos são conservados enquanto o dispositivo estiver ativo.</li>
+            <li>Eliminados mediante simples pedido a <strong>hello@uniq-luxury.com</strong>.</li>
+            <li>A desativação das funcionalidades IoT interrompe imediatamente a transmissão de dados.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>14. Consentimento e modificações</h2>
+          <ul>
+            <li><strong>Ativação voluntária das funções IoT:</strong> Sujeita ao seu consentimento explícito.</li>
+            <li><strong>Atualizações opcionais:</strong> Oferecidas mas não impostas, exceto patches de segurança críticos.</li>
+            <li><strong>Controlo do utilizador:</strong> Desativável a qualquer momento nas definições do aplicativo.</li>
+            <li><strong>Alterações à política:</strong> Comunicadas via atualização do aplicativo ou nas lojas de aplicações.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>15. Responsabilidade do produto</h2>
+          <ul>
+            <li><strong>Garantia legal:</strong> Garantia de conformidade do seu país de residência.</li>
+            <li><strong>Atualizações e garantia:</strong> Atualizações oficiais não anulam a garantia.</li>
+            <li><strong>Modificações não autorizadas:</strong> Podem resultar na perda da garantia e danos irreversíveis.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>16. Contacto</h2>
+          <p><strong>hello@uniq-luxury.com</strong></p>
+          <p>Responsável pelo tratamento: Uniq Winders, Suíça.</p>
+        </div>
+      </div>
+
+      <!-- ========== TERMOS DE USO ========== -->
+      <div class="doc-content doc-terms">
+        <h1>Termos de uso</h1>
+        <p><em>Última atualização: 09.02.2026</em></p>
+        <p>Estes Termos de Uso regem a utilização do aplicativo móvel <strong>Uniq Winders</strong> e do produto físico associado.</p>
+
+        <div class="section"><h2>1. Aceitação dos termos</h2><ul><li><strong>Utilização do aplicativo:</strong> Ao descarregar e utilizar o aplicativo, aceita ficar vinculado a estes Termos.</li><li><strong>Modificações:</strong> Reservamo-nos o direito de modificar estes Termos a qualquer momento.</li></ul></div>
+        <div class="section"><h2>2. Licença do aplicativo</h2><ul><li><strong>Licença limitada:</strong> Licença pessoal, não exclusiva, intransferível e revogável para uso pessoal e não comercial.</li><li><strong>Restrições:</strong> Compromete-se a não descompilar, desmontar ou fazer engenharia reversa do aplicativo.</li><li><strong>Propriedade intelectual:</strong> Todos os direitos permanecem como nossa propriedade exclusiva.</li></ul></div>
+        <div class="section"><h2>3. Utilização do produto físico</h2><ul><li><strong>Uso adequado:</strong> Conforme as instruções do manual.</li><li><strong>Limites de responsabilidade:</strong> Não somos responsáveis por danos causados por uso inadequado.</li><li><strong>Manutenção:</strong> O utilizador é responsável pela manutenção regular.</li></ul></div>
+        <div class="section"><h2>4. Atualizações de firmware (OTA)</h2><ul><li><strong>Consentimento necessário:</strong> Atualizações funcionais requerem consentimento explícito.</li><li><strong>Segurança das atualizações:</strong> Encriptadas (AES-256-CTR) e assinadas (ECDSA-256).</li><li><strong>Firmware não oficial:</strong> Anula a garantia imediatamente.</li></ul></div>
+        <div class="section"><h2>5. Funcionalidades IoT</h2><ul><li><strong>Ativação opcional:</strong> Requerem Internet e consentimento.</li><li><strong>Funcionamento offline:</strong> O produto funciona sem Internet.</li></ul></div>
+        <div class="section"><h2>6. Garantia e responsabilidade</h2><ul><li><strong>Garantia legal:</strong> Garantia de conformidade do seu país (geralmente 2 anos na Europa).</li><li><strong>Exclusões:</strong> Uso inadequado, desgaste normal, modificações não autorizadas.</li><li><strong>Limitação:</strong> Responsabilidade limitada ao preço de compra.</li></ul></div>
+        <div class="section"><h2>7. Suporte técnico</h2><ul><li>Mínimo 5 anos de suporte desde a compra.</li><li>Contacto: <strong>hello@uniq-luxury.com</strong>.</li></ul></div>
+        <div class="section"><h2>8. Segurança e privacidade</h2><ul><li>Regido pela nossa <a href="#" onclick="switchDoc('privacy'); return false;">Política de Privacidade</a>.</li><li>Vulnerabilidades: <strong>hello@uniq-luxury.com</strong>.</li></ul></div>
+        <div class="section"><h2>9. Rescisão</h2><ul><li>O utilizador pode desinstalar a qualquer momento.</li><li>O produto continua a funcionar localmente após rescisão.</li></ul></div>
+        <div class="section"><h2>10. Lei aplicável</h2><ul><li>Direito suíço. Tribunais suíços com jurisdição exclusiva, sujeito à proteção do consumidor do seu país.</li></ul></div>
+        <div class="section"><h2>11. Contacto</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders, Suíça.</p></div>
+      </div>
+
+      <!-- ========== LICENÇAS ========== -->
+      <div class="doc-content doc-licenses">
+        <h1>Licenças Open Source</h1>
+        <p><em>Última atualização: 09.02.2026</em></p>
+        <p>O aplicativo <strong>Uniq Winders</strong> utiliza as seguintes bibliotecas e componentes open source.</p>
+
+        <div class="section"><h2>Frameworks e bibliotecas principais</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>Usado para: Cloud Firestore, Firebase Auth, Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>Usado para: Comunicação Bluetooth Low Energy (BLE)<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
+
+        <div class="section"><h2>Outras dependências</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
+
+        <div class="section"><h2>Firmware (ESP32)</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>Usado para: Criptografia (HMAC-SHA256, AES-256-CTR, TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
+
+        <div class="section"><h2>Propriedade intelectual</h2><p>Todos os outros elementos do aplicativo são propriedade exclusiva de Uniq Winders e protegidos pelo direito autoral suíço e internacional.</p></div>
+        <div class="section"><h2>Contacto</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
+      </div>
+
+    </div>
+
+    <footer>&copy; 2026 Uniq Winders. Todos os direitos reservados.</footer>
+  </div>
+
+  <script>
+    function switchDoc(doc) {
+      document.querySelectorAll('.doc-content').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.doc-selector button').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelector('.doc-' + doc).classList.add('active');
+      document.getElementById('btn-' + doc).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

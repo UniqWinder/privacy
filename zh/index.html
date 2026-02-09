@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 – Uniq Winders</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <img src="../logo.png" alt="Uniq Winders Logo" class="logo-img">
+        <span class="logo-text">Uniq Winders</span>
+      </div>
+    </div>
+
+    <div class="doc-selector">
+      <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">隐私政策</button>
+      <button id="btn-terms" onclick="switchDoc('terms')">使用条款</button>
+      <button id="btn-licenses" onclick="switchDoc('licenses')">许可证</button>
+    </div>
+
+    <div class="lang-selector">
+      <a href="../fr/">FR</a>
+      <a href="../en/">EN</a>
+      <a href="../de/">DE</a>
+      <a href="../es/">ES</a>
+      <a href="../it/">IT</a>
+      <a href="../pt/">PT</a>
+      <a href="../ja/">JA</a>
+      <a href="../zh/" class="active">ZH</a>
+      <a href="../ru/">RU</a>
+      <a href="../ar/">AR</a>
+    </div>
+
+    <div class="content-wrapper">
+
+      <div class="doc-content doc-privacy active">
+        <h1>隐私政策</h1>
+        <p><em>最后更新：2026年2月9日</em></p>
+
+        <p>感谢您使用<strong>Uniq Winders</strong>。本隐私政策旨在向您说明Uniq Winders移动应用程序及其关联的物理产品（智能摇表器）如何处理您的数据。</p>
+        <p><strong>Uniq Winders</strong>由一家瑞士公司运营，遵守瑞士联邦《数据保护法》（nFADP）、针对欧盟/欧洲经济区用户的《通用数据保护条例》（GDPR），以及包括《加州消费者隐私法》（CCPA/CPRA）在内的适用美国隐私法律。</p>
+
+        <div class="section">
+          <h2>1. 数据控制者</h2>
+          <p><strong>Uniq Winders</strong><br>瑞士<br>联系方式：<strong>hello@uniq-luxury.com</strong></p>
+        </div>
+
+        <div class="section">
+          <h2>2. 信息的收集和使用</h2>
+          <ul>
+            <li><strong>无需用户账户：</strong>使用本应用程序无需创建账户或提供姓名、电子邮件地址或电话号码等个人信息。</li>
+            <li><strong>技术设备标识符：</strong>每个摇表器拥有一个通过将电子组件MAC地址与随机盐值组合后进行加密哈希（SHA-256）生成的唯一标识符。<strong>由于单向哈希的性质，此标识符无法还原为原始MAC地址。</strong>它仅用于技术通信（参数同步、固件更新）。<strong>此标识符不被视为个人数据</strong>，因为它不与任何可识别的个人相关联。</li>
+            <li>
+              <strong>物联网功能（自愿激活）：</strong>
+              <ul>
+                <li>应用程序与我们托管在瑞士的云基础设施通信，提供物联网功能（远程控制、参数同步）。</li>
+                <li>这些服务仅在用户阅读并接受物联网同意对话框后明确选择启用时才会激活。</li>
+                <li>传输的数据纯粹为技术性质：摇表器标识符、电池电量（毫伏）、旋转参数和固件版本。</li>
+                <li>不收集或传输任何个人数据、行为数据或可识别个人身份的数据。</li>
+              </ul>
+            </li>
+            <li><strong>Wi-Fi连接：</strong>如果您选择将摇表器连接到Wi-Fi网络，网络名称（SSID）将存储在设备本地。<strong>Wi-Fi密码绝不会传输到我们的服务器。</strong></li>
+            <li><strong>无追踪：</strong>应用程序不包含分析SDK、广告追踪器或行为分析工具。不收集广告标识符。</li>
+            <li><strong>最小权限：</strong>应用程序仅请求蓝牙权限。不需要位置、相机、麦克风或存储权限。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>3. 设备安全架构</h2>
+          <p>您的Uniq Winders摇表器采用专业级多层安全架构：</p>
+          <ul>
+            <li><strong>蓝牙（BLE）通信：</strong>所有蓝牙通信使用具有配对和绑定的安全连接协议。敏感特征通过链路层加密（AES-CCM）保护。</li>
+            <li><strong>静态数据加密：</strong>设备固件通过硬件闪存加密（AES-XTS-128）保护。非易失性存储器（NVS）中的密钥也已加密。</li>
+            <li><strong>安全启动（V2）：</strong>每次启动时通过ECDSA-256加密签名验证固件真实性。仅Uniq Winders签名的固件可在设备上运行。</li>
+            <li><strong>每设备唯一密钥：</strong>每个摇表器拥有制造时生成的唯一256位加密密钥。一个设备的泄露不会影响其他设备。</li>
+            <li><strong>防回滚保护：</strong>硬件计数器（eFuse）防止安装旧版本固件。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4. 固件更新（OTA）</h2>
+          <p>固件更新受四层保护系统保护：</p>
+          <ul>
+            <li><strong>加密BLE传输：</strong>更新数据通过配对后的加密蓝牙低功耗连接传输。</li>
+            <li><strong>唯一密钥加密（AES-256-CTR）：</strong>固件在服务器端使用AES-256-CTR算法，以设备唯一密钥和16字节随机数加密。</li>
+            <li><strong>签名验证（ECDSA-256）：</strong>解密后，安全引导程序验证固件的ECDSA-256加密签名。</li>
+            <li><strong>防回滚保护：</strong>硬件计数器防止降级。</li>
+            <li><strong>同意：</strong>功能更新提供给用户选择安装。关键安全更新可能被强烈建议。</li>
+            <li><strong>韧性：</strong>更新过程中出现问题时，保护机制保持设备功能。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>5. 软件支持期限</h2>
+          <ul>
+            <li><strong>维护承诺：</strong>根据欧洲《网络弹性法案》（CRA），我们承诺从购买之日起至少提供<strong>5年</strong>安全更新，或至少到2031年12月31日。</li>
+            <li><strong>功能更新：</strong>超出此期限的功能改进可能会提供，但不承担义务。</li>
+            <li><strong>离线运行：</strong>您的摇表器在没有互联网连接的情况下仍可完全运行。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. 数据共享和技术基础设施</h2>
+          <ul>
+            <li><strong>瑞士基础设施：</strong>应用程序仅与位于瑞士的后端服务器通信。</li>
+            <li><strong>技术分包商：</strong>瑞士服务器仅将Google Firebase（美国us-central1区域）用于技术实时同步管理。</li>
+            <li><strong>应用程序保护：</strong>通过Firebase App Check（Play Integrity / App Attest）保护。</li>
+            <li><strong>无广告或商业用途：</strong>不将数据用于营销、广告或分析目的。</li>
+            <li><strong>不出售数据：</strong>不向第三方出售、出租或交换数据。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. 国际传输</h2>
+          <ul>
+            <li><strong>主要位置：</strong>瑞士后端服务器。</li>
+            <li><strong>第三方服务：</strong>出于技术原因与Firebase（Google LLC，美国）通信。</li>
+            <li><strong>合同保障：</strong>与Google的合同包含欧盟委员会批准的标准合同条款（SCC）。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. 跟踪技术和Cookie</h2>
+          <ul><li><strong>无Cookie或跟踪：</strong>应用程序不使用Cookie、跟踪技术或广告标识符。</li></ul>
+        </div>
+
+        <div class="section">
+          <h2>9. 安全措施</h2>
+          <ul>
+            <li><strong>通信加密：</strong>通过TLS 1.2/1.3（HTTPS）加密并使用CA证书固定。</li>
+            <li><strong>每设备认证：</strong>HMAC-SHA256签名认证，具有重放攻击保护（30秒时间窗口）。</li>
+            <li><strong>硬件安全：</strong>安全启动V2（ECDSA-256）、闪存加密（AES-XTS-128）、NVS加密、eFuse防回滚。生产环境禁用JTAG。</li>
+            <li><strong>速率限制：</strong>按设备和IP地址限制请求。</li>
+            <li><strong>数据最小化：</strong>仅收集和传输运行所必需的数据。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>10. 您的权利（GDPR / nFADP）</h2>
+          <ul>
+            <li><strong>访问权：</strong>您可以查询与设备标识符相关的数据。</li>
+            <li><strong>更正权：</strong>您可以要求更正不准确的数据。</li>
+            <li><strong>删除权：</strong>您可以要求删除相关数据。</li>
+            <li><strong>限制权：</strong>您可以要求限制数据处理。</li>
+            <li><strong>反对权：</strong>您可以随时从应用程序禁用物联网功能。</li>
+            <li><strong>数据可携带权：</strong>应要求，我们可以提供可读格式的技术数据。</li>
+            <li><strong>投诉：</strong>您有权向瑞士FDPIC或您居住国的主管监管机构提出投诉。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>11. 加州居民权利（CCPA/CPRA）</h2>
+          <ul>
+            <li><strong>不出售个人信息：</strong>我们不出售任何个人信息。</li>
+            <li><strong>不用于广告共享：</strong>不共享个人信息用于行为定向广告。</li>
+            <li><strong>知情权和删除权：</strong>您可以要求了解和删除已收集的数据。</li>
+            <li><strong>不歧视：</strong>不因行使权利而受到歧视。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>12. 儿童隐私</h2>
+          <ul>
+            <li>本应用程序和产品不面向16岁以下的儿童。</li>
+            <li>我们不会故意收集儿童数据。如需举报：<strong>hello@uniq-luxury.com</strong></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>13. 数据保留</h2>
+          <ul>
+            <li>技术数据在设备活跃并连接到物联网服务期间保留。</li>
+            <li>可通过向<strong>hello@uniq-luxury.com</strong>发送请求删除。</li>
+            <li>禁用物联网功能将立即停止数据传输。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>14. 同意和修改</h2>
+          <ul>
+            <li><strong>自愿激活物联网功能：</strong>需要您的明确同意。</li>
+            <li><strong>可选更新：</strong>提供但不强制，关键安全补丁除外。</li>
+            <li><strong>用户控制：</strong>可随时在设置中禁用。</li>
+            <li><strong>政策修改：</strong>通过应用更新或商店页面通知。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>15. 产品责任</h2>
+          <ul>
+            <li><strong>法律保修：</strong>适用您居住国的法定合规保修。</li>
+            <li><strong>更新与保修：</strong>官方更新不会使保修失效。</li>
+            <li><strong>未授权修改：</strong>可能导致保修丧失和不可逆损坏。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>16. 联系方式</h2>
+          <p><strong>hello@uniq-luxury.com</strong></p>
+          <p>数据控制者：Uniq Winders，瑞士。</p>
+        </div>
+      </div>
+
+      <!-- ========== 使用条款 ========== -->
+      <div class="doc-content doc-terms">
+        <h1>使用条款</h1>
+        <p><em>最后更新：2026年2月9日</em></p>
+        <p>本使用条款规定<strong>Uniq Winders</strong>移动应用程序及关联产品的使用规则。</p>
+
+        <div class="section"><h2>1. 条款接受</h2><ul><li>下载和使用本应用即表示您同意受本条款约束。</li><li>我们保留随时修改本条款的权利。</li></ul></div>
+        <div class="section"><h2>2. 应用许可</h2><ul><li><strong>有限许可：</strong>个人、非独占、不可转让、可撤销的非商业使用许可。</li><li><strong>限制：</strong>您同意不对应用进行反编译、反汇编或逆向工程。</li><li><strong>知识产权：</strong>所有权利归我们所有。</li></ul></div>
+        <div class="section"><h2>3. 产品使用</h2><ul><li>请按照用户手册使用。</li><li>对不当使用造成的手表损坏不承担责任。</li></ul></div>
+        <div class="section"><h2>4. 固件更新（OTA）</h2><ul><li>功能更新需要明确同意。</li><li>更新使用AES-256-CTR加密和ECDSA-256签名。</li><li>安装非官方固件将立即使保修失效。</li></ul></div>
+        <div class="section"><h2>5. 物联网功能</h2><ul><li>可选功能，需要互联网连接和同意。</li><li>产品可在无互联网的情况下完全运行。</li></ul></div>
+        <div class="section"><h2>6. 保修和责任</h2><ul><li>适用您居住国的法定保修（欧洲通常为2年，美国适用默示保证）。</li><li>不涵盖不当使用、正常磨损、未授权修改。</li><li>责任限于产品购买价格。</li></ul></div>
+        <div class="section"><h2>7. 技术支持</h2><ul><li>自购买之日起至少5年。</li><li>联系方式：<strong>hello@uniq-luxury.com</strong></li></ul></div>
+        <div class="section"><h2>8. 安全和隐私</h2><ul><li>同时适用我们的<a href="#" onclick="switchDoc('privacy'); return false;">隐私政策</a>。</li><li>安全漏洞报告：<strong>hello@uniq-luxury.com</strong></li></ul></div>
+        <div class="section"><h2>9. 终止</h2><ul><li>用户可随时卸载应用。</li><li>产品在云服务终止后仍可本地运行。</li></ul></div>
+        <div class="section"><h2>10. 适用法律</h2><ul><li>适用瑞士法律。瑞士法院拥有专属管辖权（受消费者保护法强制性规定约束）。</li></ul></div>
+        <div class="section"><h2>11. 联系方式</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders，瑞士。</p></div>
+      </div>
+
+      <!-- ========== 许可证 ========== -->
+      <div class="doc-content doc-licenses">
+        <h1>开源许可证</h1>
+        <p><em>最后更新：2026年2月9日</em></p>
+        <p><strong>Uniq Winders</strong>应用程序使用以下开源库和组件。</p>
+
+        <div class="section"><h2>主要框架和库</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>用于：Cloud Firestore、Firebase Auth、Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>用于：蓝牙低功耗（BLE）通信<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
+
+        <div class="section"><h2>其他依赖</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
+
+        <div class="section"><h2>固件（ESP32）</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>用于：加密（HMAC-SHA256、AES-256-CTR、TLS）<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
+
+        <div class="section"><h2>知识产权</h2><p>应用程序的所有其他元素（设计、用户界面、专有算法、标志）均为Uniq Winders的独家财产，受瑞士和国际版权法保护。</p></div>
+        <div class="section"><h2>联系方式</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
+      </div>
+
+    </div>
+
+    <footer>&copy; 2026 Uniq Winders. 保留所有权利。</footer>
+  </div>
+
+  <script>
+    function switchDoc(doc) {
+      document.querySelectorAll('.doc-content').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.doc-selector button').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelector('.doc-' + doc).classList.add('active');
+      document.getElementById('btn-' + doc).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

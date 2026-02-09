@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー – Uniq Winders</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <img src="../logo.png" alt="Uniq Winders Logo" class="logo-img">
+        <span class="logo-text">Uniq Winders</span>
+      </div>
+    </div>
+
+    <div class="doc-selector">
+      <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">プライバシーポリシー</button>
+      <button id="btn-terms" onclick="switchDoc('terms')">利用規約</button>
+      <button id="btn-licenses" onclick="switchDoc('licenses')">ライセンス</button>
+    </div>
+
+    <div class="lang-selector">
+      <a href="../fr/">FR</a>
+      <a href="../en/">EN</a>
+      <a href="../de/">DE</a>
+      <a href="../es/">ES</a>
+      <a href="../it/">IT</a>
+      <a href="../pt/">PT</a>
+      <a href="../ja/" class="active">JA</a>
+      <a href="../zh/">ZH</a>
+      <a href="../ru/">RU</a>
+      <a href="../ar/">AR</a>
+    </div>
+
+    <div class="content-wrapper">
+
+      <div class="doc-content doc-privacy active">
+        <h1>プライバシーポリシー</h1>
+        <p><em>最終更新日：2026年2月9日</em></p>
+
+        <p><strong>Uniq Winders</strong>をご利用いただきありがとうございます。本プライバシーポリシーは、Uniq Windersモバイルアプリケーションおよび関連する物理的製品（コネクテッドウォッチワインダー）がお客様のデータをどのように取り扱うかについてお知らせするものです。</p>
+        <p><strong>Uniq Winders</strong>はスイスの企業により提供されており、スイス連邦データ保護法（nFADP）、EU/EEAユーザー向けの一般データ保護規則（GDPR）、およびカリフォルニア消費者プライバシー法（CCPA/CPRA）を含む米国の適用されるプライバシー法に準拠しています。</p>
+
+        <div class="section">
+          <h2>1. データ管理者</h2>
+          <p><strong>Uniq Winders</strong><br>スイス<br>連絡先：<strong>hello@uniq-luxury.com</strong></p>
+        </div>
+
+        <div class="section">
+          <h2>2. 情報の収集と使用</h2>
+          <ul>
+            <li><strong>ユーザーアカウント不要：</strong>アプリケーションの使用にアカウントの作成や、氏名、メールアドレス、電話番号などの個人情報の提供は必要ありません。</li>
+            <li><strong>技術的デバイス識別子：</strong>各ワインダーは、電子部品のMACアドレスにランダムなソルトを組み合わせた暗号学的ハッシュ（SHA-256）により生成される固有の識別子を持っています。<strong>この識別子は一方向性ハッシュの性質上、元のMACアドレスに逆変換することはできません。</strong>技術的通信（パラメータ同期、ファームウェアアップデート）にのみ使用されます。<strong>この識別子は個人データとはみなされません。</strong></li>
+            <li>
+              <strong>IoT機能（任意の有効化）：</strong>
+              <ul>
+                <li>アプリケーションは、スイスでホストされているクラウドインフラストラクチャと通信し、IoT機能（リモートコントロール、パラメータ同期）を提供します。</li>
+                <li>これらのサービスは、ユーザーがIoT同意ダイアログを読み、同意した後に明示的に有効化した場合にのみアクティブになります。</li>
+                <li>送信されるデータは技術的なもののみです：ワインダー識別子、バッテリーレベル（ミリボルト）、回転パラメータ、ファームウェアバージョン。</li>
+                <li>個人データ、行動データ、または個人を特定できるデータは収集・送信されません。</li>
+              </ul>
+            </li>
+            <li><strong>Wi-Fi接続：</strong>ワインダーをWi-Fiネットワークに接続する場合、ネットワーク名（SSID）はデバイスにローカルに保存されます。<strong>Wi-Fiパスワードは当社のサーバーに送信されることはありません。</strong></li>
+            <li><strong>トラッキングなし：</strong>アプリケーションには分析SDK、広告トラッカー、プロファイリングツールは含まれていません。広告識別子は収集されません。</li>
+            <li><strong>最小限の権限：</strong>アプリケーションはBluetooth権限のみを要求します。位置情報、カメラ、マイク、ストレージの権限は不要です。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>3. デバイスセキュリティアーキテクチャ</h2>
+          <p>お客様のUniq Windersワインダーは、プロフェッショナルレベルの多層セキュリティアーキテクチャを搭載しています：</p>
+          <ul>
+            <li><strong>Bluetooth（BLE）通信：</strong>すべてのBluetooth通信は、ペアリングとボンディングによるSecure Connectionsプロトコルを使用します。機密性の高い特性はリンク層暗号化（AES-CCM）により保護されます。</li>
+            <li><strong>保存データの暗号化：</strong>デバイスファームウェアはハードウェアフラッシュ暗号化（AES-XTS-128）により保護されています。不揮発性メモリ（NVS）のシークレットも暗号化されています。</li>
+            <li><strong>セキュアブート（V2）：</strong>各起動時にECDSA-256暗号署名によりファームウェアの真正性を検証します。Uniq Windersが署名したファームウェアのみがデバイス上で実行可能です。</li>
+            <li><strong>デバイス固有のシークレット：</strong>各ワインダーは製造時に生成される固有の256ビット暗号シークレットを持っています。1台のデバイスの侵害は他のデバイスに影響しません。</li>
+            <li><strong>アンチロールバック保護：</strong>ハードウェアカウンター（eFuse）により、以前のバージョンのファームウェアのインストールを防止します。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4. ファームウェアアップデート（OTA）</h2>
+          <p>ファームウェアアップデートは4層の保護システムにより守られています：</p>
+          <ul>
+            <li><strong>暗号化BLE転送：</strong>アップデートデータはペアリング後の暗号化された接続を介してBluetooth Low Energyで転送されます。</li>
+            <li><strong>固有鍵暗号化（AES-256-CTR）：</strong>ファームウェアはサーバー側でAES-256-CTRアルゴリズムを使用し、デバイス固有のシークレットと16バイトのランダムノンスで暗号化されます。</li>
+            <li><strong>署名検証（ECDSA-256）：</strong>復号後、セキュアブートローダーがECDSA-256暗号署名を検証します。</li>
+            <li><strong>アンチロールバック保護：</strong>ハードウェアカウンターによりダウングレードを防止します。</li>
+            <li><strong>同意：</strong>機能アップデートはユーザーに提案され、インストールするかどうかを選択できます。重要なセキュリティアップデートは強く推奨される場合があります。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>5. ソフトウェアサポート期間</h2>
+          <ul>
+            <li><strong>メンテナンス保証：</strong>欧州サイバーレジリエンス法（CRA）に基づき、購入日から最低<strong>5年間</strong>、または少なくとも2031年12月31日までセキュリティアップデートを提供することを約束します。</li>
+            <li><strong>機能アップデート：</strong>この期間を超えた機能改善は義務なく提供される場合があります。</li>
+            <li><strong>オフライン動作：</strong>ワインダーはインターネット接続やアップデートなしでも完全に機能します。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. データ共有と技術インフラ</h2>
+          <ul>
+            <li><strong>スイスのインフラ：</strong>アプリケーションはスイスにあるバックエンドサーバーとのみ通信します。</li>
+            <li><strong>技術下請業者：</strong>スイスサーバーはGoogle Firebase（米国us-central1リージョン）を技術的リアルタイム同期管理にのみ使用します。</li>
+            <li><strong>アプリケーション保護：</strong>Firebase App Check（Play Integrity / App Attest）により保護されています。</li>
+            <li><strong>広告や商業利用なし：</strong>マーケティング、広告、分析のためにデータを使用しません。</li>
+            <li><strong>データの販売なし：</strong>第三者へのデータの販売、貸し出し、交換は行いません。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. 国際的な移転</h2>
+          <ul>
+            <li><strong>主要拠点：</strong>スイスのバックエンドサーバー。</li>
+            <li><strong>第三者サービス：</strong>Firebase（Google LLC、米国）との技術的通信。</li>
+            <li><strong>契約上の保証：</strong>欧州委員会承認の標準契約条項（SCC）をGoogleとの契約に含んでいます。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>8. トラッキング技術とCookie</h2>
+          <ul><li><strong>Cookieやトラッキングなし：</strong>アプリケーションはCookie、トラッキング技術、広告識別子を使用しません。</li></ul>
+        </div>
+
+        <div class="section">
+          <h2>9. セキュリティ対策</h2>
+          <ul>
+            <li><strong>通信暗号化：</strong>TLS 1.2/1.3（HTTPS）による暗号化とCA証明書ピンニング。</li>
+            <li><strong>デバイスごとの認証：</strong>HMAC-SHA256署名によるリプレイ攻撃保護（30秒タイムウィンドウ）付き認証。</li>
+            <li><strong>ハードウェアセキュリティ：</strong>セキュアブートV2（ECDSA-256）、フラッシュ暗号化（AES-XTS-128）、NVS暗号化、eFuseアンチロールバック。本番環境でJTAG無効化。</li>
+            <li><strong>レート制限：</strong>デバイスおよびIPアドレスごとのリクエスト制限。</li>
+            <li><strong>データ最小化：</strong>動作に必要なデータのみを収集・送信。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>10. お客様の権利（GDPR / nFADP）</h2>
+          <ul>
+            <li><strong>アクセス権：</strong>デバイス識別子に関連するデータについて問い合わせることができます。</li>
+            <li><strong>訂正権：</strong>不正確なデータの訂正を要求できます。</li>
+            <li><strong>削除権：</strong>データの削除を要求できます。</li>
+            <li><strong>制限権：</strong>法律で定められた場合の処理の制限を要求できます。</li>
+            <li><strong>異議権：</strong>アプリケーションからIoT機能をいつでも無効にできます。</li>
+            <li><strong>データポータビリティ権：</strong>読み取り可能な形式で技術データを提供できます。</li>
+            <li><strong>苦情：</strong>スイスのFDPICまたは居住国の管轄監督機関に苦情を申し立てる権利があります。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>11. カリフォルニア州居住者の権利（CCPA/CPRA）</h2>
+          <ul>
+            <li><strong>個人情報の販売なし：</strong>個人情報を販売したことはなく、今後も販売しません。</li>
+            <li><strong>広告目的の共有なし：</strong>行動ターゲティング広告のために個人情報を共有しません。</li>
+            <li><strong>知る権利と削除権：</strong>収集されたデータの詳細と削除を要求できます。</li>
+            <li><strong>非差別：</strong>権利の行使を理由に差別しません。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>12. 子どものプライバシー</h2>
+          <ul>
+            <li>本アプリケーションおよび製品は16歳未満のお子様を対象としていません。</li>
+            <li>お子様からのデータを故意に収集しません。ご報告：<strong>hello@uniq-luxury.com</strong></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>13. データ保持</h2>
+          <ul>
+            <li>技術データはデバイスがアクティブでIoTサービスに接続されている間保持されます。</li>
+            <li><strong>hello@uniq-luxury.com</strong>への簡単な要求で削除されます。</li>
+            <li>IoT機能の無効化によりデータ送信は即座に停止します。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>14. 同意と変更</h2>
+          <ul>
+            <li><strong>IoT機能の任意有効化：</strong>明示的な同意に基づきます。</li>
+            <li><strong>オプションのアップデート：</strong>提案されますが強制されません（重要なセキュリティパッチを除く）。</li>
+            <li><strong>ユーザーコントロール：</strong>設定からいつでも無効化可能。</li>
+            <li><strong>ポリシーの変更：</strong>アプリアップデートまたはストアページにて通知。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>15. 製造物責任</h2>
+          <ul>
+            <li><strong>法的保証：</strong>居住国の法的適合保証が適用されます。</li>
+            <li><strong>アップデートと保証：</strong>公式アップデートにより保証は無効になりません。</li>
+            <li><strong>無許可の変更：</strong>保証の喪失と不可逆的な損傷をもたらす可能性があります。</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>16. お問い合わせ</h2>
+          <p><strong>hello@uniq-luxury.com</strong></p>
+          <p>データ管理者：Uniq Winders、スイス。</p>
+        </div>
+      </div>
+
+      <!-- ========== 利用規約 ========== -->
+      <div class="doc-content doc-terms">
+        <h1>利用規約</h1>
+        <p><em>最終更新日：2026年2月9日</em></p>
+        <p>本利用規約は、<strong>Uniq Winders</strong>モバイルアプリケーションおよび関連製品の使用を規定するものです。</p>
+
+        <div class="section"><h2>1. 規約の承諾</h2><ul><li><strong>アプリケーションの使用：</strong>ダウンロードおよび使用により、本規約に同意したものとみなされます。</li><li><strong>変更：</strong>当社は本規約をいつでも変更する権利を留保します。</li></ul></div>
+        <div class="section"><h2>2. アプリケーションライセンス</h2><ul><li><strong>限定ライセンス：</strong>個人的・非商業的使用のための非独占的、譲渡不可、取消可能なライセンス。</li><li><strong>制限：</strong>逆コンパイル、逆アセンブル、リバースエンジニアリングを行わないことに同意します。</li><li><strong>知的財産権：</strong>すべての権利は当社に帰属します。</li></ul></div>
+        <div class="section"><h2>3. 製品の使用</h2><ul><li><strong>適切な使用：</strong>ユーザーマニュアルに従って使用してください。</li><li><strong>責任の制限：</strong>不適切な使用による時計への損害について責任を負いません。</li></ul></div>
+        <div class="section"><h2>4. ファームウェアアップデート（OTA）</h2><ul><li><strong>同意が必要：</strong>機能アップデートには明示的な同意が必要です。</li><li><strong>アップデートの安全性：</strong>AES-256-CTRで暗号化、ECDSA-256で署名されています。</li><li><strong>非公式ファームウェア：</strong>保証が直ちに無効になります。</li></ul></div>
+        <div class="section"><h2>5. IoT機能</h2><ul><li><strong>オプション：</strong>インターネット接続と同意が必要。</li><li><strong>オフライン動作：</strong>インターネットなしでも完全に機能します。</li></ul></div>
+        <div class="section"><h2>6. 保証と責任</h2><ul><li><strong>法的保証：</strong>居住国の法的適合保証（欧州では通常2年、米国では適用される黙示の保証）。</li><li><strong>除外：</strong>不適切な使用、通常の摩耗、無許可の変更、不適切な設定による時計への損害。</li><li><strong>責任の制限：</strong>法律で許可される範囲で、製品購入価格に制限。</li></ul></div>
+        <div class="section"><h2>7. テクニカルサポート</h2><ul><li>購入日から最低5年間のサポート。</li><li>連絡先：<strong>hello@uniq-luxury.com</strong></li></ul></div>
+        <div class="section"><h2>8. セキュリティとプライバシー</h2><ul><li><a href="#" onclick="switchDoc('privacy'); return false;">プライバシーポリシー</a>も適用されます。</li><li>脆弱性報告：<strong>hello@uniq-luxury.com</strong></li></ul></div>
+        <div class="section"><h2>9. 終了</h2><ul><li>ユーザーはいつでもアンインストールできます。</li><li>製品はクラウドサービス終了後もローカルで動作します。</li></ul></div>
+        <div class="section"><h2>10. 準拠法</h2><ul><li>スイス法。スイスの裁判所が専属管轄権を有します（消費者保護法の強行規定に従います）。</li></ul></div>
+        <div class="section"><h2>11. お問い合わせ</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders、スイス。</p></div>
+      </div>
+
+      <!-- ========== ライセンス ========== -->
+      <div class="doc-content doc-licenses">
+        <h1>オープンソースライセンス</h1>
+        <p><em>最終更新日：2026年2月9日</em></p>
+        <p><strong>Uniq Winders</strong>アプリケーションは以下のオープンソースライブラリおよびコンポーネントを使用しています。</p>
+
+        <div class="section"><h2>主要フレームワークとライブラリ</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>用途：Cloud Firestore、Firebase Auth、Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>用途：Bluetooth Low Energy（BLE）通信<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
+
+        <div class="section"><h2>その他の依存関係</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
+
+        <div class="section"><h2>ファームウェア（ESP32）</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>用途：暗号化（HMAC-SHA256、AES-256-CTR、TLS）<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
+
+        <div class="section"><h2>知的財産権</h2><p>アプリケーションのその他すべての要素（デザイン、UI、独自アルゴリズム、ロゴ）はUniq Windersの独占的財産であり、スイスおよび国際著作権法により保護されています。</p></div>
+        <div class="section"><h2>お問い合わせ</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
+      </div>
+
+    </div>
+
+    <footer>&copy; 2026 Uniq Winders. All rights reserved.</footer>
+  </div>
+
+  <script>
+    function switchDoc(doc) {
+      document.querySelectorAll('.doc-content').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.doc-selector button').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelector('.doc-' + doc).classList.add('active');
+      document.getElementById('btn-' + doc).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
