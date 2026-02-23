@@ -74,9 +74,9 @@
           <h2>3. Sicherheitsarchitektur des Geräts</h2>
           <p>Ihr Uniq Winders Uhrenbeweger verfügt über eine mehrschichtige Sicherheitsarchitektur auf professionellem Niveau:</p>
           <ul>
-            <li><strong>Bluetooth-Kommunikation (BLE):</strong> Alle Bluetooth-Kommunikationen verwenden das Secure-Connections-Protokoll mit Pairing und Bonding. Sensible Eigenschaften (Parameter, WLAN-Zugangsdaten, OTA-Updates) sind durch Verschlüsselung auf Verbindungsebene geschützt und nur für gepaarte Geräte zugänglich. Das Pairing erfordert eine physische Interaktion mit dem Gerät und verhindert so jeden Fernverbindungsversuch.</li>
+            <li><strong>Bluetooth-Kommunikation:</strong> Alle Bluetooth-Kommunikationen verwenden ein sicheres Verbindungsprotokoll mit Kopplung. Sensible Eigenschaften (Parameter, WLAN-Zugangsdaten, OTA-Updates) sind durch Verschlüsselung auf Verbindungsebene geschützt und nur für gepaarte Geräte zugänglich. Das Pairing erfordert das Drücken einer physischen Taste am Gerät und verhindert so jeden Fernverbindungsversuch.</li>
             <li><strong>Datenverschlüsselung im Ruhezustand:</strong> Die Firmware des Geräts ist durch Hardware-Flash-Verschlüsselung (AES-256) geschützt. Geheimnisse im nichtflüchtigen Speicher sind ebenfalls verschlüsselt. Keine sensiblen Daten sind selbst bei physischem Zugang zum Bauteil lesbar.</li>
-            <li><strong>Sicherer Start (Secure Boot):</strong> Bei jedem Gerätestart wird die Authentizität der Firmware durch eine kryptographische Signatur überprüft. Nur von Uniq Winders signierte Firmware kann auf dem Gerät ausgeführt werden.</li>
+            <li><strong>Sicherer Start:</strong> Bei jedem Gerätestart wird die Authentizität der Firmware durch eine kryptographische Signatur überprüft. Nur von Uniq Winders signierte Firmware kann auf dem Gerät ausgeführt werden.</li>
             <li><strong>Einzigartige Geheimnisse pro Gerät:</strong> Jeder Uhrenbeweger besitzt ein einzigartiges kryptographisches 256-Bit-Geheimnis, das bei der Herstellung generiert wird. Dieses wird für die Serverauthentifizierung und die Update-Verschlüsselung verwendet. Die Kompromittierung eines Geräts gefährdet kein anderes.</li>
             <li><strong>Anti-Rollback-Schutz:</strong> Ein Hardware-Zähler verhindert die Installation einer früheren Firmware-Version und schützt vor Downgrade-Angriffen.</li>
           </ul>
@@ -87,7 +87,7 @@
           <p>Firmware-Updates profitieren von einem vierschichtigen Schutzsystem:</p>
           <ul>
             <li><strong>Verschlüsselter BLE-Transport:</strong> Update-Daten werden über Bluetooth Low Energy zwischen Ihrem Telefon und dem Uhrenbeweger über eine verschlüsselte Verbindung nach dem Pairing übertragen.</li>
-            <li><strong>Verschlüsselung mit einzigartigem Schlüssel (AES-256):</strong> Die Firmware wird serverseitig mit dem AES-256-Algorithmus unter Verwendung des einzigartigen Geheimnisses Ihres Geräts und einer zufälligen 16-Byte-Nonce verschlüsselt, die bei jedem Update neu generiert wird. Nur Ihr Gerät kann das für es bestimmte Update entschlüsseln.</li>
+            <li><strong>Verschlüsselung mit einzigartigem Schlüssel (AES-256):</strong> Die Firmware wird serverseitig mit dem AES-256-Algorithmus unter Verwendung eines vom einzigartigen Geheimnis Ihres Geräts abgeleiteten Schlüssels verschlüsselt. Nur Ihr Gerät kann das für es bestimmte Update entschlüsseln.</li>
             <li><strong>Signaturüberprüfung:</strong> Nach der Entschlüsselung überprüft der sichere Bootloader des Geräts die kryptographische Signatur der Firmware. Jede böswillige Änderung wird erkannt und die Firmware abgelehnt.</li>
             <li><strong>Anti-Rollback-Schutz:</strong> Der Hardware-Zähler verhindert jedes Downgrade auf eine frühere Firmware-Version.</li>
             <li><strong>Einwilligung:</strong> Funktionale Updates werden dem Benutzer angeboten, der wählen kann, ob er sie installieren möchte. Kritische Sicherheitsupdates können dringend empfohlen werden.</li>
@@ -108,7 +108,7 @@
           <h2>6. Datenweitergabe und technische Infrastruktur</h2>
           <ul>
             <li><strong>Schweizer Infrastruktur:</strong> Die Anwendung kommuniziert ausschliesslich mit unserem in der Schweiz befindlichen Backend-Server. Alle Anfragen Ihres Geräts laufen über diese Schweizer Infrastruktur.</li>
-            <li><strong>Technische Unterauftragnehmer:</strong> Unser Schweizer Server nutzt Google Firebase (gehostet in den USA, Region us-central1) ausschliesslich für die technische Echtzeit-Synchronisationsverwaltung. Übertragene Daten sind rein technischer Natur (Hardware-Kennung, Konfigurationsparameter, Batteriestand, Firmware-Version).</li>
+            <li><strong>Technische Unterauftragnehmer:</strong> Unser Schweizer Server nutzt Google Firebase (gehostet in den USA) ausschliesslich für die technische Echtzeit-Synchronisationsverwaltung. Übertragene Daten sind rein technischer Natur (Hardware-Kennung, Konfigurationsparameter, Batteriestand, Firmware-Version).</li>
             <li><strong>Anwendungsschutz:</strong> Die mobile Anwendung ist durch Firebase App Check mit Play Integrity (Android) und App Attest (iOS) geschützt, um unbefugten Zugriff auf unsere Infrastruktur zu verhindern.</li>
             <li><strong>Art der Daten:</strong> Die übertragenen Informationen stellen keine personenbezogenen Daten im Sinne der DSGVO/des nDSG dar, da sie keine Identifizierung einer natürlichen Person ermöglichen.</li>
             <li><strong>Keine Werbe- oder kommerzielle Nutzung:</strong> Uniq Winders verwendet keine Daten für Marketing-, Werbe- oder Analysezwecke. Google Firebase ist im rein technischen Modus konfiguriert, ohne Weitergabe an andere Google-Dienste.</li>
@@ -136,9 +136,9 @@
         <div class="section">
           <h2>9. Sicherheitsmassnahmen</h2>
           <ul>
-            <li><strong>Kommunikationsverschlüsselung:</strong> Alle Kommunikationen mit unseren Servern sind über TLS 1.2/1.3 (HTTPS) verschlüsselt. Die Geräte-Firmware enthält ein CA-Zertifikat (CA-Pinning) zur Überprüfung der Serveridentität.</li>
-            <li><strong>Gerätebasierte Authentifizierung:</strong> Jede Anfrage an unsere Server wird durch eine HMAC-SHA256-Signatur mit dem einzigartigen Geheimnis des Geräts authentifiziert, mit Schutz gegen Replay-Angriffe (30-Sekunden-Zeitfenster).</li>
-            <li><strong>Hardware-Sicherheit:</strong> Secure Boot, Flash-Verschlüsselung (AES-256) und Anti-Rollback-Schutz über Hardware-Zähler. Debug-Schnittstellen (JTAG) sind in der Produktion deaktiviert.</li>
+            <li><strong>Kommunikationsverschlüsselung:</strong> Alle Kommunikationen mit unseren Servern sind über TLS 1.2/1.3 (HTTPS) verschlüsselt mit Zertifikats-Pinning zur Überprüfung der Serveridentität.</li>
+            <li><strong>Gerätebasierte Authentifizierung:</strong> Jede Anfrage an unsere Server wird durch eine kryptographische Signatur mit dem einzigartigen Geheimnis des Geräts authentifiziert, mit Schutz gegen Replay-Angriffe.</li>
+            <li><strong>Hardware-Sicherheit:</strong> Sicherer Start, Flash-Verschlüsselung (AES-256) und Anti-Rollback-Schutz über Hardware-Zähler. Debug-Schnittstellen sind dauerhaft deaktiviert.</li>
             <li><strong>Ratenbegrenzung:</strong> Unsere Server setzen eine Anfragebegrenzung pro Gerät und pro IP-Adresse durch, um Missbrauch zu verhindern.</li>
             <li><strong>Datenminimierung:</strong> Es werden nur die für den Betrieb unbedingt erforderlichen Daten erhoben und übertragen.</li>
           </ul>

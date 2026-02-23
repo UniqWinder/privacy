@@ -72,9 +72,9 @@
           <h2>3. Architettura di sicurezza del dispositivo</h2>
           <p>Il vostro carica orologi Uniq Winders incorpora un'architettura di sicurezza multilivello di livello professionale:</p>
           <ul>
-            <li><strong>Comunicazione Bluetooth (BLE):</strong> Tutte le comunicazioni Bluetooth utilizzano il protocollo Secure Connections con pairing e bonding. Le caratteristiche sensibili sono protette da crittografia a livello di collegamento e sono accessibili solo ai dispositivi accoppiati. L'accoppiamento richiede un'interazione fisica con il dispositivo, impedendo qualsiasi tentativo di connessione remota.</li>
+            <li><strong>Comunicazione Bluetooth:</strong> Tutte le comunicazioni Bluetooth utilizzano un protocollo di connessione sicura con accoppiamento. Le caratteristiche sensibili sono protette da crittografia a livello di collegamento e sono accessibili solo ai dispositivi accoppiati. L'accoppiamento richiede la pressione di un pulsante fisico sul dispositivo, impedendo qualsiasi tentativo di connessione remota.</li>
             <li><strong>Crittografia dei dati a riposo:</strong> Il firmware del dispositivo è protetto dalla crittografia hardware della flash (AES-256). I segreti nella memoria non volatile sono anch'essi crittografati.</li>
-            <li><strong>Avvio sicuro (Secure Boot):</strong> Ogni avvio del dispositivo verifica l'autenticità del firmware mediante firma crittografica. Solo il firmware firmato da Uniq Winders può essere eseguito sul dispositivo.</li>
+            <li><strong>Avvio sicuro:</strong> Ogni avvio del dispositivo verifica l'autenticità del firmware mediante firma crittografica. Solo il firmware firmato da Uniq Winders può essere eseguito sul dispositivo.</li>
             <li><strong>Segreti unici per dispositivo:</strong> Ogni carica orologi possiede un segreto crittografico unico a 256 bit generato durante la fabbricazione. La compromissione di un dispositivo non compromette nessun altro.</li>
             <li><strong>Protezione anti-rollback:</strong> Un contatore hardware impedisce l'installazione di una versione precedente del firmware.</li>
           </ul>
@@ -85,7 +85,7 @@
           <p>Gli aggiornamenti firmware beneficiano di un sistema di protezione a quattro livelli:</p>
           <ul>
             <li><strong>Trasporto BLE crittografato:</strong> I dati di aggiornamento viaggiano tramite Bluetooth Low Energy su una connessione crittografata dopo il pairing.</li>
-            <li><strong>Crittografia con chiave unica (AES-256):</strong> Il firmware viene crittografato lato server utilizzando l'algoritmo AES-256 con il segreto unico del dispositivo e un nonce casuale di 16 byte. Solo il vostro dispositivo può decrittografare l'aggiornamento a lui destinato.</li>
+            <li><strong>Crittografia con chiave unica (AES-256):</strong> Il firmware viene crittografato lato server utilizzando l'algoritmo AES-256 con una chiave derivata dal segreto unico del dispositivo. Solo il vostro dispositivo può decrittografare l'aggiornamento a lui destinato.</li>
             <li><strong>Verifica della firma:</strong> Dopo la decrittografia, il bootloader sicuro verifica la firma crittografica del firmware. Qualsiasi modifica malevola viene rilevata e il firmware respinto.</li>
             <li><strong>Protezione anti-rollback:</strong> Il contatore hardware impedisce qualsiasi downgrade a una versione precedente.</li>
             <li><strong>Consenso:</strong> Gli aggiornamenti funzionali vengono proposti all'utente che può scegliere se installarli. Gli aggiornamenti critici di sicurezza possono essere fortemente raccomandati.</li>
@@ -106,7 +106,7 @@
           <h2>6. Condivisione dati e infrastruttura tecnica</h2>
           <ul>
             <li><strong>Infrastruttura svizzera:</strong> L'applicazione comunica esclusivamente con il nostro server backend situato in Svizzera.</li>
-            <li><strong>Subfornitori tecnici:</strong> Il nostro server svizzero utilizza Google Firebase (ospitato negli USA, regione us-central1) unicamente per la sincronizzazione tecnica in tempo reale. I dati trasferiti sono esclusivamente tecnici.</li>
+            <li><strong>Subfornitori tecnici:</strong> Il nostro server svizzero utilizza Google Firebase (ospitato negli USA) unicamente per la sincronizzazione tecnica in tempo reale. I dati trasferiti sono esclusivamente tecnici.</li>
             <li><strong>Protezione dell'applicazione:</strong> L'applicazione è protetta da Firebase App Check con Play Integrity (Android) e App Attest (iOS).</li>
             <li><strong>Natura dei dati:</strong> Le informazioni trasmesse non costituiscono dati personali ai sensi del GDPR/nLPD.</li>
             <li><strong>Nessun uso pubblicitario o commerciale:</strong> Uniq Winders non utilizza alcun dato per finalità di marketing, pubblicità o analisi.</li>
@@ -131,9 +131,9 @@
         <div class="section">
           <h2>9. Misure di sicurezza</h2>
           <ul>
-            <li><strong>Crittografia delle comunicazioni:</strong> Tutte le comunicazioni sono crittografate tramite TLS 1.2/1.3 (HTTPS) con pinning del certificato CA.</li>
-            <li><strong>Autenticazione per dispositivo:</strong> Ogni richiesta è autenticata tramite firma HMAC-SHA256 con il segreto unico del dispositivo e protezione contro attacchi di replay (finestra temporale di 30 secondi).</li>
-            <li><strong>Sicurezza hardware:</strong> Secure Boot, crittografia flash (AES-256) e protezione anti-rollback. Le interfacce di debug (JTAG) sono disabilitate in produzione.</li>
+            <li><strong>Crittografia delle comunicazioni:</strong> Tutte le comunicazioni sono crittografate tramite TLS 1.2/1.3 (HTTPS) con pinning del certificato per verificare l'identità del nostro server.</li>
+            <li><strong>Autenticazione per dispositivo:</strong> Ogni richiesta è autenticata tramite firma crittografica con il segreto unico del dispositivo e protezione contro attacchi di replay.</li>
+            <li><strong>Sicurezza hardware:</strong> Avvio sicuro, crittografia flash (AES-256) e protezione anti-rollback. Le interfacce di debug sono permanentemente disabilitate.</li>
             <li><strong>Limitazione delle richieste:</strong> I nostri server applicano limiti di richieste per dispositivo e per indirizzo IP.</li>
             <li><strong>Minimizzazione dei dati:</strong> Vengono raccolti e trasmessi solo i dati strettamente necessari al funzionamento.</li>
           </ul>

@@ -72,9 +72,9 @@
           <h2>3. Arquitectura de seguridad del dispositivo</h2>
           <p>Su rotador Uniq Winders incorpora una arquitectura de seguridad multicapa de nivel profesional:</p>
           <ul>
-            <li><strong>Comunicación Bluetooth (BLE):</strong> Todas las comunicaciones Bluetooth utilizan el protocolo Secure Connections con emparejamiento y vinculación. Las características sensibles están protegidas por cifrado a nivel de enlace y solo son accesibles para dispositivos emparejados. El emparejamiento requiere interacción física con el dispositivo, impidiendo cualquier intento de vinculación remota.</li>
+            <li><strong>Comunicación Bluetooth:</strong> Todas las comunicaciones Bluetooth utilizan un protocolo de conexión segura con emparejamiento y vinculación. Las características sensibles están protegidas por cifrado a nivel de enlace y solo son accesibles para dispositivos emparejados. El emparejamiento requiere presionar un botón físico en el dispositivo, impidiendo cualquier intento de vinculación remota.</li>
             <li><strong>Cifrado de datos en reposo:</strong> El firmware del dispositivo está protegido por cifrado flash de hardware (AES-256). Los secretos almacenados en memoria no volátil también están cifrados.</li>
-            <li><strong>Arranque seguro (Secure Boot):</strong> Cada inicio del dispositivo verifica la autenticidad del firmware mediante firma criptográfica. Solo el firmware firmado por Uniq Winders puede ejecutarse en el dispositivo.</li>
+            <li><strong>Arranque seguro:</strong> Cada inicio del dispositivo verifica la autenticidad del firmware mediante firma criptográfica. Solo el firmware firmado por Uniq Winders puede ejecutarse en el dispositivo.</li>
             <li><strong>Secretos únicos por dispositivo:</strong> Cada rotador posee un secreto criptográfico único de 256 bits generado durante la fabricación. El compromiso de un dispositivo no compromete a ningún otro.</li>
             <li><strong>Protección anti-reversión:</strong> Un contador de hardware impide la instalación de una versión anterior del firmware.</li>
           </ul>
@@ -85,7 +85,7 @@
           <p>Las actualizaciones de firmware cuentan con un sistema de protección de cuatro capas:</p>
           <ul>
             <li><strong>Transporte BLE cifrado:</strong> Los datos de actualización viajan mediante Bluetooth Low Energy sobre una conexión cifrada tras el emparejamiento.</li>
-            <li><strong>Cifrado con clave única (AES-256):</strong> El firmware se cifra del lado del servidor utilizando el algoritmo AES-256 con el secreto único de su dispositivo y un nonce aleatorio de 16 bytes. Solo su dispositivo puede descifrar la actualización destinada a él.</li>
+            <li><strong>Cifrado con clave única (AES-256):</strong> El firmware se cifra del lado del servidor utilizando el algoritmo AES-256 con una clave derivada del secreto único de su dispositivo. Solo su dispositivo puede descifrar la actualización destinada a él.</li>
             <li><strong>Verificación de firma:</strong> Tras el descifrado, el bootloader seguro verifica la firma criptográfica del firmware. Cualquier modificación maliciosa es detectada y el firmware rechazado.</li>
             <li><strong>Protección anti-reversión:</strong> El contador de hardware impide cualquier degradación a una versión anterior.</li>
             <li><strong>Consentimiento:</strong> Las actualizaciones funcionales se ofrecen al usuario, quien puede elegir si instalarlas. Las actualizaciones críticas de seguridad pueden ser fuertemente recomendadas.</li>
@@ -106,7 +106,7 @@
           <h2>6. Intercambio de datos e infraestructura técnica</h2>
           <ul>
             <li><strong>Infraestructura suiza:</strong> La aplicación se comunica exclusivamente con nuestro servidor backend ubicado en Suiza.</li>
-            <li><strong>Subcontratistas técnicos:</strong> Nuestro servidor suizo utiliza Google Firebase (alojado en EE.UU., región us-central1) únicamente para la gestión técnica de sincronización en tiempo real. Los datos transferidos son exclusivamente técnicos.</li>
+            <li><strong>Subcontratistas técnicos:</strong> Nuestro servidor suizo utiliza Google Firebase (alojado en EE.UU.) únicamente para la gestión técnica de sincronización en tiempo real. Los datos transferidos son exclusivamente técnicos.</li>
             <li><strong>Protección de la aplicación:</strong> La aplicación está protegida por Firebase App Check utilizando Play Integrity (Android) y App Attest (iOS).</li>
             <li><strong>Naturaleza de los datos:</strong> La información transmitida no constituye datos personales según el RGPD/nLPD ya que no permite la identificación de una persona física.</li>
             <li><strong>Sin uso publicitario o comercial:</strong> Uniq Winders no utiliza ningún dato con fines de marketing, publicidad o análisis.</li>
@@ -133,9 +133,9 @@
         <div class="section">
           <h2>9. Medidas de seguridad</h2>
           <ul>
-            <li><strong>Cifrado de comunicaciones:</strong> Todas las comunicaciones con nuestros servidores están cifradas mediante TLS 1.2/1.3 (HTTPS) con anclaje de certificado CA.</li>
-            <li><strong>Autenticación por dispositivo:</strong> Cada solicitud es autenticada mediante firma HMAC-SHA256 con el secreto único del dispositivo, con protección contra ataques de repetición (ventana temporal de 30 segundos).</li>
-            <li><strong>Seguridad de hardware:</strong> Secure Boot, cifrado flash (AES-256) y protección anti-reversión. Las interfaces de depuración (JTAG) están deshabilitadas en producción.</li>
+            <li><strong>Cifrado de comunicaciones:</strong> Todas las comunicaciones con nuestros servidores están cifradas mediante TLS 1.2/1.3 (HTTPS) con anclaje de certificado para verificar la identidad de nuestro servidor.</li>
+            <li><strong>Autenticación por dispositivo:</strong> Cada solicitud es autenticada mediante firma criptográfica con el secreto único del dispositivo, con protección contra ataques de repetición.</li>
+            <li><strong>Seguridad de hardware:</strong> Arranque seguro, cifrado flash (AES-256) y protección anti-reversión. Las interfaces de depuración están permanentemente deshabilitadas.</li>
             <li><strong>Limitación de velocidad:</strong> Nuestros servidores aplican limitación de solicitudes por dispositivo y por dirección IP.</li>
             <li><strong>Minimización de datos:</strong> Solo se recopilan y transmiten los datos estrictamente necesarios para el funcionamiento.</li>
           </ul>
