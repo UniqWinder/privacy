@@ -38,7 +38,7 @@
 
       <div class="doc-content doc-privacy active">
         <h1>Política de privacidad</h1>
-        <p><em>Última actualización: 09.02.2026</em></p>
+        <p><em>Última actualización: 23.02.2026</em></p>
 
         <p>Gracias por usar <strong>Uniq Winders</strong>. Esta política de privacidad tiene como objetivo informarle sobre cómo la aplicación móvil Uniq Winders y el producto físico asociado (rotador de relojes conectado) manejan sus datos.</p>
         <p><strong>Uniq Winders</strong> es editado por una empresa suiza y cumple con la Ley Federal Suiza de Protección de Datos (nLPD), el Reglamento General de Protección de Datos (RGPD) para usuarios de la Unión Europea y el Espacio Económico Europeo, así como las leyes de privacidad aplicables en los Estados Unidos, incluida la California Consumer Privacy Act (CCPA/CPRA).</p>
@@ -62,7 +62,7 @@
                 <li>No se recopila ni transmite ningún dato personal, comportamental o que permita la identificación de una persona física.</li>
               </ul>
             </li>
-            <li><strong>Conexión Wi-Fi:</strong> Si elige conectar su rotador a su red Wi-Fi, el nombre de la red (SSID) se almacena localmente en el dispositivo. <strong>La contraseña Wi-Fi nunca se transmite a nuestros servidores</strong> y solo se utiliza transitoriamente durante la fase de conexión.</li>
+            <li><strong>Conexión Wi-Fi:</strong> Si elige conectar su rotador a su red Wi-Fi, el nombre de la red (SSID) se almacena localmente en el dispositivo. La contraseña Wi-Fi es gestionada internamente por el módulo inalámbrico del dispositivo para la reconexión automática y está protegida por el cifrado de hardware de la flash (AES-256). <strong>La contraseña Wi-Fi nunca se transmite a nuestros servidores.</strong></li>
             <li><strong>Sin seguimiento:</strong> La aplicación no incluye ningún SDK de análisis, rastreador publicitario o herramienta de perfilado. No se recopila ningún identificador publicitario.</li>
             <li><strong>Permisos mínimos:</strong> La aplicación solo solicita permiso de Bluetooth, necesario para comunicarse con su rotador. No se requieren permisos de ubicación, cámara, micrófono ni almacenamiento.</li>
           </ul>
@@ -72,11 +72,11 @@
           <h2>3. Arquitectura de seguridad del dispositivo</h2>
           <p>Su rotador Uniq Winders incorpora una arquitectura de seguridad multicapa de nivel profesional:</p>
           <ul>
-            <li><strong>Comunicación Bluetooth (BLE):</strong> Todas las comunicaciones Bluetooth utilizan el protocolo Secure Connections con emparejamiento y vinculación. Las características sensibles están protegidas por cifrado a nivel de enlace (AES-CCM) y solo son accesibles para dispositivos emparejados.</li>
-            <li><strong>Cifrado de datos en reposo:</strong> El firmware del dispositivo está protegido por cifrado flash de hardware (AES-XTS-128). Los secretos almacenados en memoria no volátil (NVS) también están cifrados.</li>
-            <li><strong>Arranque seguro (Secure Boot V2):</strong> Cada inicio del dispositivo verifica la autenticidad del firmware mediante firma criptográfica ECDSA-256. Solo el firmware firmado por Uniq Winders puede ejecutarse en el dispositivo.</li>
+            <li><strong>Comunicación Bluetooth (BLE):</strong> Todas las comunicaciones Bluetooth utilizan el protocolo Secure Connections con emparejamiento y vinculación. Las características sensibles están protegidas por cifrado a nivel de enlace y solo son accesibles para dispositivos emparejados. El emparejamiento requiere interacción física con el dispositivo, impidiendo cualquier intento de vinculación remota.</li>
+            <li><strong>Cifrado de datos en reposo:</strong> El firmware del dispositivo está protegido por cifrado flash de hardware (AES-256). Los secretos almacenados en memoria no volátil también están cifrados.</li>
+            <li><strong>Arranque seguro (Secure Boot):</strong> Cada inicio del dispositivo verifica la autenticidad del firmware mediante firma criptográfica. Solo el firmware firmado por Uniq Winders puede ejecutarse en el dispositivo.</li>
             <li><strong>Secretos únicos por dispositivo:</strong> Cada rotador posee un secreto criptográfico único de 256 bits generado durante la fabricación. El compromiso de un dispositivo no compromete a ningún otro.</li>
-            <li><strong>Protección anti-reversión:</strong> Un contador de hardware (eFuse) impide la instalación de una versión anterior del firmware.</li>
+            <li><strong>Protección anti-reversión:</strong> Un contador de hardware impide la instalación de una versión anterior del firmware.</li>
           </ul>
         </div>
 
@@ -85,8 +85,8 @@
           <p>Las actualizaciones de firmware cuentan con un sistema de protección de cuatro capas:</p>
           <ul>
             <li><strong>Transporte BLE cifrado:</strong> Los datos de actualización viajan mediante Bluetooth Low Energy sobre una conexión cifrada tras el emparejamiento.</li>
-            <li><strong>Cifrado con clave única (AES-256-CTR):</strong> El firmware se cifra del lado del servidor utilizando el algoritmo AES-256-CTR con el secreto único de su dispositivo y un nonce aleatorio de 16 bytes. Solo su dispositivo puede descifrar la actualización destinada a él.</li>
-            <li><strong>Verificación de firma (ECDSA-256):</strong> Tras el descifrado, el bootloader seguro verifica la firma criptográfica ECDSA-256 del firmware. Cualquier modificación maliciosa es detectada y el firmware rechazado.</li>
+            <li><strong>Cifrado con clave única (AES-256):</strong> El firmware se cifra del lado del servidor utilizando el algoritmo AES-256 con el secreto único de su dispositivo y un nonce aleatorio de 16 bytes. Solo su dispositivo puede descifrar la actualización destinada a él.</li>
+            <li><strong>Verificación de firma:</strong> Tras el descifrado, el bootloader seguro verifica la firma criptográfica del firmware. Cualquier modificación maliciosa es detectada y el firmware rechazado.</li>
             <li><strong>Protección anti-reversión:</strong> El contador de hardware impide cualquier degradación a una versión anterior.</li>
             <li><strong>Consentimiento:</strong> Las actualizaciones funcionales se ofrecen al usuario, quien puede elegir si instalarlas. Las actualizaciones críticas de seguridad pueden ser fuertemente recomendadas.</li>
             <li><strong>Resiliencia:</strong> En caso de problemas durante una actualización, un mecanismo de protección preserva la funcionalidad del dispositivo.</li>
@@ -135,7 +135,7 @@
           <ul>
             <li><strong>Cifrado de comunicaciones:</strong> Todas las comunicaciones con nuestros servidores están cifradas mediante TLS 1.2/1.3 (HTTPS) con anclaje de certificado CA.</li>
             <li><strong>Autenticación por dispositivo:</strong> Cada solicitud es autenticada mediante firma HMAC-SHA256 con el secreto único del dispositivo, con protección contra ataques de repetición (ventana temporal de 30 segundos).</li>
-            <li><strong>Seguridad de hardware:</strong> Secure Boot V2 (ECDSA-256), cifrado flash (AES-XTS-128), cifrado NVS y protección anti-reversión. Las interfaces de depuración (JTAG) están deshabilitadas en producción.</li>
+            <li><strong>Seguridad de hardware:</strong> Secure Boot, cifrado flash (AES-256) y protección anti-reversión. Las interfaces de depuración (JTAG) están deshabilitadas en producción.</li>
             <li><strong>Limitación de velocidad:</strong> Nuestros servidores aplican limitación de solicitudes por dispositivo y por dirección IP.</li>
             <li><strong>Minimización de datos:</strong> Solo se recopilan y transmiten los datos estrictamente necesarios para el funcionamiento.</li>
           </ul>
@@ -212,7 +212,7 @@
       <!-- ========== TÉRMINOS DE USO ========== -->
       <div class="doc-content doc-terms">
         <h1>Términos de uso</h1>
-        <p><em>Última actualización: 09.02.2026</em></p>
+        <p><em>Última actualización: 23.02.2026</em></p>
 
         <p>Estos Términos de uso rigen el uso de la aplicación móvil <strong>Uniq Winders</strong> y del producto físico asociado (rotador de relojes conectado).</p>
 
@@ -249,7 +249,7 @@
             <li><strong>Consentimiento requerido:</strong> Las actualizaciones funcionales requieren su consentimiento explícito.</li>
             <li><strong>Actualizaciones de seguridad:</strong> Las actualizaciones críticas pueden ser fuertemente recomendadas.</li>
             <li><strong>Proceso de actualización:</strong> No desconecte el dispositivo y mantenga su teléfono cerca durante la actualización.</li>
-            <li><strong>Seguridad de las actualizaciones:</strong> Las actualizaciones se cifran (AES-256-CTR) y firman criptográficamente (ECDSA-256).</li>
+            <li><strong>Seguridad de las actualizaciones:</strong> Las actualizaciones se cifran (AES-256) y firman criptográficamente.</li>
             <li><strong>Firmware no oficial:</strong> La instalación de firmware de fuentes no oficiales anula inmediatamente la garantía.</li>
           </ul>
         </div>
@@ -316,7 +316,7 @@
       <!-- ========== LICENCIAS ========== -->
       <div class="doc-content doc-licenses">
         <h1>Licencias de código abierto</h1>
-        <p><em>Última actualización: 09.02.2026</em></p>
+        <p><em>Última actualización: 23.02.2026</em></p>
 
         <p>La aplicación <strong>Uniq Winders</strong> utiliza las siguientes bibliotecas y componentes de código abierto.</p>
 
@@ -336,13 +336,13 @@
         </div>
 
         <div class="section">
-          <h2>Firmware (ESP32)</h2>
+          <h2>Firmware</h2>
           <h3>ESP-IDF</h3>
           <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache License 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p>
           <h3>Arduino Core for ESP32</h3>
           <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p>
           <h3>mbedTLS</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache License 2.0<br>Usado para: Criptografía (HMAC-SHA256, AES-256-CTR, TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
+          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache License 2.0<br>Usado para: Criptografía (HMAC-SHA256, AES-256, TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
         </div>
 
         <div class="section">

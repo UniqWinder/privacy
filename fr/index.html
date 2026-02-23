@@ -41,7 +41,7 @@
       <!-- ========== PRIVACY POLICY ========== -->
       <div class="doc-content doc-privacy active">
         <h1>Politique de confidentialité</h1>
-        <p><em>Dernière mise à jour : 09.02.2026</em></p>
+        <p><em>Dernière mise à jour : 23.02.2026</em></p>
 
         <p>Merci d'utiliser <strong>Uniq Winders</strong>. La présente politique de confidentialité a pour objet de vous informer sur la manière dont l'application mobile Uniq Winders et le produit physique associé (remontoir de montres connecté) traitent vos données.</p>
         <p><strong>Uniq Winders</strong> est édité par une société de droit suisse et respecte la Loi fédérale sur la protection des données (nLPD), le Règlement Général sur la Protection des Données (RGPD) pour les utilisateurs de l'Union européenne et de l'Espace économique européen, ainsi que les lois applicables en matière de protection de la vie privée aux États-Unis, y compris le California Consumer Privacy Act (CCPA/CPRA).</p>
@@ -66,7 +66,7 @@
                 <li>Aucune donnée personnelle, comportementale ou permettant l'identification d'une personne physique n'est collectée ou transmise.</li>
               </ul>
             </li>
-            <li><strong>Connexion Wi-Fi :</strong> Si vous choisissez de connecter votre remontoir à votre réseau Wi-Fi, le nom du réseau (SSID) est stocké localement sur l'appareil. <strong>Le mot de passe Wi-Fi n'est jamais transmis à nos serveurs</strong> et n'est utilisé que de manière transitoire pendant la phase de connexion, puis effacé de la mémoire vive.</li>
+            <li><strong>Connexion Wi-Fi :</strong> Si vous choisissez de connecter votre remontoir à votre réseau Wi-Fi, le nom du réseau (SSID) est stocké localement sur l'appareil. Le mot de passe Wi-Fi est géré en interne par le module sans fil de l'appareil pour la reconnexion automatique et est protégé par le chiffrement matériel du flash (AES-256). <strong>Le mot de passe Wi-Fi n'est jamais transmis à nos serveurs.</strong></li>
             <li><strong>Aucun suivi :</strong> L'application n'intègre aucun SDK d'analyse, de suivi publicitaire ou de profilage comportemental. Aucun identifiant publicitaire n'est collecté.</li>
             <li><strong>Autorisations minimales :</strong> L'application ne demande que l'autorisation Bluetooth, nécessaire à la communication avec votre remontoir. Aucune autorisation de localisation, de caméra, de microphone ou de stockage n'est requise.</li>
           </ul>
@@ -76,11 +76,11 @@
           <h2>3. Architecture de sécurité de l'appareil</h2>
           <p>Votre remontoir Uniq Winders intègre une architecture de sécurité multicouche de niveau professionnel :</p>
           <ul>
-            <li><strong>Communication Bluetooth (BLE) :</strong> Toutes les communications Bluetooth utilisent le protocole Secure Connections avec appairage et liaison (bonding). Les caractéristiques sensibles (paramètres, identifiants Wi-Fi, mises à jour OTA) sont protégées par le chiffrement au niveau de la couche de liaison (AES-CCM) et ne sont accessibles qu'aux appareils appairés.</li>
-            <li><strong>Chiffrement des données au repos :</strong> Le firmware de l'appareil est protégé par le chiffrement matériel du flash (AES-XTS-128). Les secrets stockés dans la mémoire non volatile (NVS) sont également chiffrés. Aucune donnée sensible n'est lisible même avec un accès physique au composant électronique.</li>
-            <li><strong>Démarrage sécurisé (Secure Boot V2) :</strong> Chaque démarrage de l'appareil vérifie l'authenticité du firmware au moyen d'une signature cryptographique ECDSA-256. Seul un firmware signé par Uniq Winders peut s'exécuter sur l'appareil.</li>
+            <li><strong>Communication Bluetooth (BLE) :</strong> Toutes les communications Bluetooth utilisent le protocole Secure Connections avec appairage et liaison (bonding). Les caractéristiques sensibles (paramètres, identifiants Wi-Fi, mises à jour OTA) sont protégées par le chiffrement au niveau de la couche de liaison et ne sont accessibles qu'aux appareils appairés. L'appairage nécessite une interaction physique avec l'appareil, empêchant toute tentative de liaison à distance.</li>
+            <li><strong>Chiffrement des données au repos :</strong> Le firmware de l'appareil est protégé par le chiffrement matériel du flash (AES-256). Les secrets stockés dans la mémoire non volatile sont également chiffrés. Aucune donnée sensible n'est lisible même avec un accès physique au composant électronique.</li>
+            <li><strong>Démarrage sécurisé (Secure Boot) :</strong> Chaque démarrage de l'appareil vérifie l'authenticité du firmware au moyen d'une signature cryptographique. Seul un firmware signé par Uniq Winders peut s'exécuter sur l'appareil.</li>
             <li><strong>Secrets uniques par appareil :</strong> Chaque remontoir possède un secret cryptographique unique de 256 bits, généré lors de la fabrication. Ce secret est utilisé pour l'authentification auprès de nos serveurs et le chiffrement des mises à jour. La compromission d'un appareil ne compromet aucun autre.</li>
-            <li><strong>Protection anti-retour en arrière :</strong> Un compteur matériel (eFuse) empêche l'installation d'une version de firmware antérieure, protégeant contre les attaques par rétrogradation.</li>
+            <li><strong>Protection anti-retour en arrière :</strong> Un compteur matériel empêche l'installation d'une version de firmware antérieure, protégeant contre les attaques par rétrogradation.</li>
           </ul>
         </div>
 
@@ -89,8 +89,8 @@
           <p>Les mises à jour du firmware bénéficient d'un système de protection à quatre couches :</p>
           <ul>
             <li><strong>Transport chiffré BLE :</strong> Les données de mise à jour transitent via Bluetooth Low Energy entre votre téléphone et le remontoir, sur une connexion chiffrée après appairage.</li>
-            <li><strong>Chiffrement par clé unique (AES-256-CTR) :</strong> Le firmware est chiffré côté serveur avec l'algorithme AES-256-CTR en utilisant le secret unique de votre appareil et un nonce aléatoire de 16 octets généré à chaque mise à jour. Seul votre appareil peut déchiffrer la mise à jour qui lui est destinée.</li>
-            <li><strong>Vérification de signature (ECDSA-256) :</strong> Après déchiffrement, le bootloader sécurisé de l'appareil vérifie la signature cryptographique ECDSA-256 du firmware. Toute modification malveillante est détectée et le firmware rejeté.</li>
+            <li><strong>Chiffrement par clé unique (AES-256) :</strong> Le firmware est chiffré côté serveur avec l'algorithme AES-256 en utilisant le secret unique de votre appareil et un nonce aléatoire de 16 octets généré à chaque mise à jour. Seul votre appareil peut déchiffrer la mise à jour qui lui est destinée.</li>
+            <li><strong>Vérification de signature :</strong> Après déchiffrement, le bootloader sécurisé de l'appareil vérifie la signature cryptographique du firmware. Toute modification malveillante est détectée et le firmware rejeté.</li>
             <li><strong>Protection anti-retour en arrière :</strong> Le compteur matériel empêche toute rétrogradation vers une version antérieure du firmware.</li>
             <li><strong>Consentement :</strong> Les mises à jour fonctionnelles sont proposées à l'utilisateur qui peut choisir de les installer ou non. Les mises à jour de sécurité critiques peuvent être fortement recommandées.</li>
             <li><strong>Résilience :</strong> En cas de problème lors d'une mise à jour, un mécanisme de protection permet de préserver le fonctionnement de l'appareil.</li>
@@ -140,7 +140,7 @@
           <ul>
             <li><strong>Chiffrement des communications :</strong> Toutes les communications avec nos serveurs sont chiffrées via TLS 1.2/1.3 (HTTPS). Le firmware de l'appareil intègre un certificat d'autorité de certification (CA pinning) pour vérifier l'identité de notre serveur.</li>
             <li><strong>Authentification par appareil :</strong> Chaque requête vers nos serveurs est authentifiée par signature HMAC-SHA256 utilisant le secret unique de l'appareil, avec protection contre les attaques par rejeu (fenêtre temporelle de 30 secondes).</li>
-            <li><strong>Sécurité matérielle :</strong> Démarrage sécurisé (Secure Boot V2 avec ECDSA-256), chiffrement du flash (AES-XTS-128), chiffrement NVS et protection anti-retour en arrière par compteur eFuse. Les interfaces de débogage (JTAG) sont désactivées en production.</li>
+            <li><strong>Sécurité matérielle :</strong> Démarrage sécurisé (Secure Boot), chiffrement du flash (AES-256) et protection anti-retour en arrière par compteur matériel. Les interfaces de débogage (JTAG) sont désactivées en production.</li>
             <li><strong>Limitation du débit :</strong> Nos serveurs appliquent une limitation du nombre de requêtes par appareil et par adresse IP pour prévenir les abus.</li>
             <li><strong>Minimisation des données :</strong> Seules les données strictement nécessaires au fonctionnement sont collectées et transmises.</li>
           </ul>
@@ -219,7 +219,7 @@
       <!-- ========== TERMS OF SERVICE ========== -->
       <div class="doc-content doc-terms">
         <h1>Conditions Générales d'Utilisation</h1>
-        <p><em>Dernière mise à jour : 09.02.2026</em></p>
+        <p><em>Dernière mise à jour : 23.02.2026</em></p>
 
         <p>Les présentes Conditions Générales d'Utilisation (CGU) régissent l'utilisation de l'application mobile <strong>Uniq Winders</strong> et du produit physique associé (remontoir de montres connecté).</p>
 
@@ -256,7 +256,7 @@
             <li><strong>Consentement requis :</strong> Les mises à jour fonctionnelles du firmware nécessitent votre consentement explicite via l'application.</li>
             <li><strong>Mises à jour de sécurité :</strong> Les mises à jour critiques de sécurité peuvent être fortement recommandées. Le refus d'installer ces mises à jour peut exposer votre appareil à des vulnérabilités.</li>
             <li><strong>Processus de mise à jour :</strong> Pendant la mise à jour, ne débranchez pas l'appareil et gardez votre téléphone à proximité. Une interruption peut nécessiter une intervention technique.</li>
-            <li><strong>Sécurité des mises à jour :</strong> Les mises à jour sont chiffrées (AES-256-CTR) avec une clé unique à votre appareil et signées cryptographiquement (ECDSA-256). Votre appareil vérifie l'authenticité avant installation.</li>
+            <li><strong>Sécurité des mises à jour :</strong> Les mises à jour sont chiffrées (AES-256) avec une clé unique à votre appareil et signées cryptographiquement. Votre appareil vérifie l'authenticité avant installation.</li>
             <li><strong>Firmware non officiel :</strong> L'installation de firmware provenant de sources non officielles annule immédiatement la garantie et peut endommager irréversiblement votre appareil.</li>
           </ul>
         </div>
@@ -333,7 +333,7 @@
       <!-- ========== OPEN SOURCE LICENSES ========== -->
       <div class="doc-content doc-licenses">
         <h1>Licences Open Source</h1>
-        <p><em>Dernière mise à jour : 09.02.2026</em></p>
+        <p><em>Dernière mise à jour : 23.02.2026</em></p>
 
         <p>L'application <strong>Uniq Winders</strong> utilise les bibliothèques et composants open source suivants. Nous remercions leurs auteurs pour leur travail.</p>
 
@@ -375,7 +375,7 @@
         </div>
 
         <div class="section">
-          <h2>Firmware (ESP32)</h2>
+          <h2>Firmware</h2>
 
           <h3>ESP-IDF</h3>
           <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
@@ -390,7 +390,7 @@
           <h3>mbedTLS</h3>
           <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors<br>
           Licence : Apache License 2.0<br>
-          Utilisé pour : Cryptographie (HMAC-SHA256, AES-256-CTR, TLS)<br>
+          Utilisé pour : Cryptographie (HMAC-SHA256, AES-256, TLS)<br>
           <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
         </div>
 

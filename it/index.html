@@ -38,7 +38,7 @@
 
       <div class="doc-content doc-privacy active">
         <h1>Informativa sulla privacy</h1>
-        <p><em>Ultimo aggiornamento: 09.02.2026</em></p>
+        <p><em>Ultimo aggiornamento: 23.02.2026</em></p>
 
         <p>Grazie per aver scelto <strong>Uniq Winders</strong>. La presente informativa sulla privacy ha lo scopo di informarvi su come l'applicazione mobile Uniq Winders e il prodotto fisico associato (carica orologi connesso) trattano i vostri dati.</p>
         <p><strong>Uniq Winders</strong> è pubblicato da una società svizzera e rispetta la Legge federale sulla protezione dei dati (nLPD), il Regolamento Generale sulla Protezione dei Dati (RGPD/GDPR) per gli utenti dell'Unione Europea e dello Spazio Economico Europeo, nonché le leggi sulla privacy applicabili negli Stati Uniti, incluso il California Consumer Privacy Act (CCPA/CPRA).</p>
@@ -62,7 +62,7 @@
                 <li>Nessun dato personale, comportamentale o che permetta l'identificazione di una persona fisica viene raccolto o trasmesso.</li>
               </ul>
             </li>
-            <li><strong>Connessione Wi-Fi:</strong> Se scegliete di connettere il vostro carica orologi alla rete Wi-Fi, il nome della rete (SSID) viene memorizzato localmente sul dispositivo. <strong>La password Wi-Fi non viene mai trasmessa ai nostri server</strong> e viene utilizzata solo transitoriamente durante la fase di connessione.</li>
+            <li><strong>Connessione Wi-Fi:</strong> Se scegliete di connettere il vostro carica orologi alla rete Wi-Fi, il nome della rete (SSID) viene memorizzato localmente sul dispositivo. La password Wi-Fi è gestita internamente dal modulo wireless del dispositivo per la riconnessione automatica ed è protetta dalla crittografia hardware della flash (AES-256). <strong>La password Wi-Fi non viene mai trasmessa ai nostri server.</strong></li>
             <li><strong>Nessun tracciamento:</strong> L'applicazione non include SDK di analisi, tracker pubblicitari o strumenti di profilazione. Nessun identificativo pubblicitario viene raccolto.</li>
             <li><strong>Autorizzazioni minime:</strong> L'applicazione richiede solo l'autorizzazione Bluetooth. Nessuna autorizzazione per posizione, fotocamera, microfono o archiviazione è necessaria.</li>
           </ul>
@@ -72,11 +72,11 @@
           <h2>3. Architettura di sicurezza del dispositivo</h2>
           <p>Il vostro carica orologi Uniq Winders incorpora un'architettura di sicurezza multilivello di livello professionale:</p>
           <ul>
-            <li><strong>Comunicazione Bluetooth (BLE):</strong> Tutte le comunicazioni Bluetooth utilizzano il protocollo Secure Connections con pairing e bonding. Le caratteristiche sensibili sono protette da crittografia a livello di collegamento (AES-CCM) e sono accessibili solo ai dispositivi accoppiati.</li>
-            <li><strong>Crittografia dei dati a riposo:</strong> Il firmware del dispositivo è protetto dalla crittografia hardware della flash (AES-XTS-128). I segreti nella memoria non volatile (NVS) sono anch'essi crittografati.</li>
-            <li><strong>Avvio sicuro (Secure Boot V2):</strong> Ogni avvio del dispositivo verifica l'autenticità del firmware mediante firma crittografica ECDSA-256. Solo il firmware firmato da Uniq Winders può essere eseguito sul dispositivo.</li>
+            <li><strong>Comunicazione Bluetooth (BLE):</strong> Tutte le comunicazioni Bluetooth utilizzano il protocollo Secure Connections con pairing e bonding. Le caratteristiche sensibili sono protette da crittografia a livello di collegamento e sono accessibili solo ai dispositivi accoppiati. L'accoppiamento richiede un'interazione fisica con il dispositivo, impedendo qualsiasi tentativo di connessione remota.</li>
+            <li><strong>Crittografia dei dati a riposo:</strong> Il firmware del dispositivo è protetto dalla crittografia hardware della flash (AES-256). I segreti nella memoria non volatile sono anch'essi crittografati.</li>
+            <li><strong>Avvio sicuro (Secure Boot):</strong> Ogni avvio del dispositivo verifica l'autenticità del firmware mediante firma crittografica. Solo il firmware firmato da Uniq Winders può essere eseguito sul dispositivo.</li>
             <li><strong>Segreti unici per dispositivo:</strong> Ogni carica orologi possiede un segreto crittografico unico a 256 bit generato durante la fabbricazione. La compromissione di un dispositivo non compromette nessun altro.</li>
-            <li><strong>Protezione anti-rollback:</strong> Un contatore hardware (eFuse) impedisce l'installazione di una versione precedente del firmware.</li>
+            <li><strong>Protezione anti-rollback:</strong> Un contatore hardware impedisce l'installazione di una versione precedente del firmware.</li>
           </ul>
         </div>
 
@@ -85,8 +85,8 @@
           <p>Gli aggiornamenti firmware beneficiano di un sistema di protezione a quattro livelli:</p>
           <ul>
             <li><strong>Trasporto BLE crittografato:</strong> I dati di aggiornamento viaggiano tramite Bluetooth Low Energy su una connessione crittografata dopo il pairing.</li>
-            <li><strong>Crittografia con chiave unica (AES-256-CTR):</strong> Il firmware viene crittografato lato server utilizzando l'algoritmo AES-256-CTR con il segreto unico del dispositivo e un nonce casuale di 16 byte. Solo il vostro dispositivo può decrittografare l'aggiornamento a lui destinato.</li>
-            <li><strong>Verifica della firma (ECDSA-256):</strong> Dopo la decrittografia, il bootloader sicuro verifica la firma crittografica ECDSA-256 del firmware. Qualsiasi modifica malevola viene rilevata e il firmware respinto.</li>
+            <li><strong>Crittografia con chiave unica (AES-256):</strong> Il firmware viene crittografato lato server utilizzando l'algoritmo AES-256 con il segreto unico del dispositivo e un nonce casuale di 16 byte. Solo il vostro dispositivo può decrittografare l'aggiornamento a lui destinato.</li>
+            <li><strong>Verifica della firma:</strong> Dopo la decrittografia, il bootloader sicuro verifica la firma crittografica del firmware. Qualsiasi modifica malevola viene rilevata e il firmware respinto.</li>
             <li><strong>Protezione anti-rollback:</strong> Il contatore hardware impedisce qualsiasi downgrade a una versione precedente.</li>
             <li><strong>Consenso:</strong> Gli aggiornamenti funzionali vengono proposti all'utente che può scegliere se installarli. Gli aggiornamenti critici di sicurezza possono essere fortemente raccomandati.</li>
             <li><strong>Resilienza:</strong> In caso di problemi durante un aggiornamento, un meccanismo di protezione preserva la funzionalità del dispositivo.</li>
@@ -133,7 +133,7 @@
           <ul>
             <li><strong>Crittografia delle comunicazioni:</strong> Tutte le comunicazioni sono crittografate tramite TLS 1.2/1.3 (HTTPS) con pinning del certificato CA.</li>
             <li><strong>Autenticazione per dispositivo:</strong> Ogni richiesta è autenticata tramite firma HMAC-SHA256 con il segreto unico del dispositivo e protezione contro attacchi di replay (finestra temporale di 30 secondi).</li>
-            <li><strong>Sicurezza hardware:</strong> Secure Boot V2 (ECDSA-256), crittografia flash (AES-XTS-128), crittografia NVS e protezione anti-rollback. Le interfacce di debug (JTAG) sono disabilitate in produzione.</li>
+            <li><strong>Sicurezza hardware:</strong> Secure Boot, crittografia flash (AES-256) e protezione anti-rollback. Le interfacce di debug (JTAG) sono disabilitate in produzione.</li>
             <li><strong>Limitazione delle richieste:</strong> I nostri server applicano limiti di richieste per dispositivo e per indirizzo IP.</li>
             <li><strong>Minimizzazione dei dati:</strong> Vengono raccolti e trasmessi solo i dati strettamente necessari al funzionamento.</li>
           </ul>
@@ -210,7 +210,7 @@
       <!-- ========== CONDIZIONI D'USO ========== -->
       <div class="doc-content doc-terms">
         <h1>Condizioni d'uso</h1>
-        <p><em>Ultimo aggiornamento: 09.02.2026</em></p>
+        <p><em>Ultimo aggiornamento: 23.02.2026</em></p>
         <p>Le presenti Condizioni d'uso regolano l'utilizzo dell'applicazione mobile <strong>Uniq Winders</strong> e del prodotto fisico associato (carica orologi connesso).</p>
 
         <div class="section"><h2>1. Accettazione delle condizioni</h2><ul><li><strong>Utilizzo dell'applicazione:</strong> Scaricando e utilizzando l'applicazione, accettate di essere vincolati dalle presenti Condizioni.</li><li><strong>Modifiche:</strong> Ci riserviamo il diritto di modificare queste Condizioni in qualsiasi momento.</li><li><strong>Utilizzo del prodotto fisico:</strong> L'uso del carica orologi è soggetto alle presenti Condizioni e alla garanzia legale del vostro paese.</li></ul></div>
@@ -219,7 +219,7 @@
 
         <div class="section"><h2>3. Utilizzo del prodotto fisico</h2><ul><li><strong>Uso conforme:</strong> Il carica orologi deve essere utilizzato secondo le istruzioni del manuale utente.</li><li><strong>Limiti di responsabilità:</strong> Non siamo responsabili per danni agli orologi causati da un uso improprio.</li><li><strong>Manutenzione:</strong> L'utente è responsabile della pulizia e manutenzione regolare del prodotto.</li></ul></div>
 
-        <div class="section"><h2>4. Aggiornamenti firmware (OTA)</h2><ul><li><strong>Consenso richiesto:</strong> Gli aggiornamenti funzionali richiedono il vostro consenso esplicito.</li><li><strong>Aggiornamenti di sicurezza:</strong> Gli aggiornamenti critici possono essere fortemente raccomandati.</li><li><strong>Processo di aggiornamento:</strong> Non scollegate il dispositivo e tenete il telefono vicino durante l'aggiornamento.</li><li><strong>Sicurezza degli aggiornamenti:</strong> Gli aggiornamenti sono crittografati (AES-256-CTR) e firmati (ECDSA-256).</li><li><strong>Firmware non ufficiale:</strong> L'installazione di firmware non ufficiale annulla immediatamente la garanzia.</li></ul></div>
+        <div class="section"><h2>4. Aggiornamenti firmware (OTA)</h2><ul><li><strong>Consenso richiesto:</strong> Gli aggiornamenti funzionali richiedono il vostro consenso esplicito.</li><li><strong>Aggiornamenti di sicurezza:</strong> Gli aggiornamenti critici possono essere fortemente raccomandati.</li><li><strong>Processo di aggiornamento:</strong> Non scollegate il dispositivo e tenete il telefono vicino durante l'aggiornamento.</li><li><strong>Sicurezza degli aggiornamenti:</strong> Gli aggiornamenti sono crittografati (AES-256) e firmati.</li><li><strong>Firmware non ufficiale:</strong> L'installazione di firmware non ufficiale annulla immediatamente la garanzia.</li></ul></div>
 
         <div class="section"><h2>5. Funzionalità IoT e connettività</h2><ul><li><strong>Attivazione opzionale:</strong> Le funzionalità IoT sono opzionali e richiedono connessione Internet e il vostro consenso.</li><li><strong>Disponibilità del servizio:</strong> Ci impegniamo a mantenere i servizi cloud disponibili, senza garantire disponibilità ininterrotta.</li><li><strong>Funzionamento offline:</strong> Il prodotto rimane pienamente funzionante senza Internet.</li></ul></div>
 
@@ -239,14 +239,14 @@
       <!-- ========== LICENZE ========== -->
       <div class="doc-content doc-licenses">
         <h1>Licenze Open Source</h1>
-        <p><em>Ultimo aggiornamento: 09.02.2026</em></p>
+        <p><em>Ultimo aggiornamento: 23.02.2026</em></p>
         <p>L'applicazione <strong>Uniq Winders</strong> utilizza le seguenti librerie e componenti open source.</p>
 
         <div class="section"><h2>Framework e librerie principali</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause License<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause License<br>Usato per: Cloud Firestore, Firebase Auth, Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause License<br>Usato per: Comunicazione Bluetooth Low Energy (BLE)<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
 
         <div class="section"><h2>Altre dipendenze</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT — Rilevamento connettività<br><strong>provider</strong> — MIT — Gestione dello stato<br><strong>hive / hive_flutter</strong> — Apache 2.0 — Database locale<br><strong>shared_preferences</strong> — BSD 3-Clause — Archiviazione preferenze<br><strong>url_launcher</strong> — BSD 3-Clause — Apertura link esterni<br><strong>package_info_plus</strong> — BSD 3-Clause — Informazioni pacchetto<br><strong>wakelock_plus</strong> — BSD 3-Clause — Schermo attivo durante aggiornamenti<br><strong>flutter_native_splash</strong> — MIT — Schermata di avvio<br><strong>flutter_launcher_icons</strong> — MIT — Generazione icone<br><strong>flutter_dotenv</strong> — MIT — Variabili d'ambiente<br><strong>intl</strong> — BSD 3-Clause — Internazionalizzazione</p></div>
 
-        <div class="section"><h2>Firmware (ESP32)</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache License 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache License 2.0<br>Usato per: Crittografia (HMAC-SHA256, AES-256-CTR, TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
+        <div class="section"><h2>Firmware</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache License 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache License 2.0<br>Usato per: Crittografia (HMAC-SHA256, AES-256, TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
 
         <div class="section"><h2>Proprietà intellettuale</h2><p>Tutti gli altri elementi dell'applicazione (design, interfaccia, algoritmi proprietari, logo) sono proprietà esclusiva di Uniq Winders e protetti dal diritto d'autore svizzero e internazionale.</p></div>
 

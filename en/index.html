@@ -41,7 +41,7 @@
       <!-- ========== PRIVACY POLICY ========== -->
       <div class="doc-content doc-privacy active">
         <h1>Privacy Policy</h1>
-        <p><em>Last updated: February 9, 2026</em></p>
+        <p><em>Last updated: February 23, 2026</em></p>
 
         <p>Thank you for using <strong>Uniq Winders</strong>. This privacy policy informs you about how the Uniq Winders mobile application and associated physical product (connected watch winder) handle your data.</p>
         <p><strong>Uniq Winders</strong> is published by a Swiss company and complies with the Swiss Federal Act on Data Protection (nFADP), the General Data Protection Regulation (GDPR) for European Union and European Economic Area users, and applicable U.S. privacy laws including the California Consumer Privacy Act (CCPA/CPRA).</p>
@@ -66,7 +66,7 @@
                 <li>No personal, behavioral, or personally identifiable data is collected or transmitted.</li>
               </ul>
             </li>
-            <li><strong>Wi-Fi connection:</strong> If you choose to connect your winder to your Wi-Fi network, the network name (SSID) is stored locally on the device. <strong>The Wi-Fi password is never transmitted to our servers</strong> and is only used transiently during the connection phase, then cleared from volatile memory.</li>
+            <li><strong>Wi-Fi connection:</strong> If you choose to connect your winder to your Wi-Fi network, the network name (SSID) is stored locally on the device. The Wi-Fi password is handled internally by the device's wireless module for automatic reconnection and is protected by hardware flash encryption (AES-256). <strong>The Wi-Fi password is never transmitted to our servers.</strong></li>
             <li><strong>No tracking:</strong> The application does not include any analytics SDK, advertising tracker, or behavioral profiling tool. No advertising identifier is collected.</li>
             <li><strong>Minimal permissions:</strong> The application only requests Bluetooth permission, necessary for communicating with your winder. No location, camera, microphone, or storage permissions are required.</li>
           </ul>
@@ -76,11 +76,11 @@
           <h2>3. Device Security Architecture</h2>
           <p>Your Uniq Winders watch winder incorporates a professional-grade multi-layered security architecture:</p>
           <ul>
-            <li><strong>Bluetooth (BLE) communication:</strong> All Bluetooth communications use the Secure Connections protocol with pairing and bonding. Sensitive characteristics (parameters, Wi-Fi credentials, OTA updates) are protected by link-layer encryption (AES-CCM) and are only accessible to paired devices.</li>
-            <li><strong>Data encryption at rest:</strong> The device firmware is protected by hardware flash encryption (AES-XTS-128). Secrets stored in non-volatile memory (NVS) are also encrypted. No sensitive data is readable even with physical access to the electronic component.</li>
-            <li><strong>Secure Boot (V2):</strong> Each device startup verifies firmware authenticity through an ECDSA-256 cryptographic signature. Only firmware signed by Uniq Winders can run on the device.</li>
+            <li><strong>Bluetooth (BLE) communication:</strong> All Bluetooth communications use the Secure Connections protocol with pairing and bonding. Sensitive characteristics (parameters, Wi-Fi credentials, OTA updates) are protected by link-layer encryption and are only accessible to paired devices. Pairing requires physical interaction with the device, preventing any remote bonding attempt.</li>
+            <li><strong>Data encryption at rest:</strong> The device firmware is protected by hardware flash encryption (AES-256). Secrets stored in non-volatile memory are also encrypted. No sensitive data is readable even with physical access to the electronic component.</li>
+            <li><strong>Secure Boot:</strong> Each device startup verifies firmware authenticity through a cryptographic signature. Only firmware signed by Uniq Winders can run on the device.</li>
             <li><strong>Unique per-device secrets:</strong> Each winder possesses a unique 256-bit cryptographic secret generated during manufacturing. This secret is used for server authentication and update encryption. Compromising one device does not compromise any other.</li>
-            <li><strong>Anti-rollback protection:</strong> A hardware counter (eFuse) prevents installation of an earlier firmware version, protecting against downgrade attacks.</li>
+            <li><strong>Anti-rollback protection:</strong> A hardware counter prevents installation of an earlier firmware version, protecting against downgrade attacks.</li>
           </ul>
         </div>
 
@@ -89,8 +89,8 @@
           <p>Firmware updates benefit from a four-layer protection system:</p>
           <ul>
             <li><strong>Encrypted BLE transport:</strong> Update data travels via Bluetooth Low Energy between your phone and the winder over an encrypted connection after pairing.</li>
-            <li><strong>Unique key encryption (AES-256-CTR):</strong> The firmware is encrypted server-side using the AES-256-CTR algorithm with your device's unique secret and a random 16-byte nonce generated for each update. Only your device can decrypt the update intended for it.</li>
-            <li><strong>Signature verification (ECDSA-256):</strong> After decryption, the device's secure bootloader verifies the ECDSA-256 cryptographic signature of the firmware. Any malicious modification is detected and the firmware rejected.</li>
+            <li><strong>Unique key encryption (AES-256):</strong> The firmware is encrypted server-side using the AES-256 algorithm with your device's unique secret and a random 16-byte nonce generated for each update. Only your device can decrypt the update intended for it.</li>
+            <li><strong>Signature verification:</strong> After decryption, the device's secure bootloader verifies the cryptographic signature of the firmware. Any malicious modification is detected and the firmware rejected.</li>
             <li><strong>Anti-rollback protection:</strong> The hardware counter prevents any downgrade to a previous firmware version.</li>
             <li><strong>Consent:</strong> Functional updates are offered to the user who can choose whether to install them. Critical security updates may be strongly recommended.</li>
             <li><strong>Resilience:</strong> In case of issues during an update, a protection mechanism preserves device functionality.</li>
@@ -140,7 +140,7 @@
           <ul>
             <li><strong>Communication encryption:</strong> All communications with our servers are encrypted via TLS 1.2/1.3 (HTTPS). The device firmware includes a certificate authority certificate (CA pinning) to verify our server's identity.</li>
             <li><strong>Per-device authentication:</strong> Each request to our servers is authenticated by HMAC-SHA256 signature using the device's unique secret, with replay attack protection (30-second time window).</li>
-            <li><strong>Hardware security:</strong> Secure Boot (V2 with ECDSA-256), flash encryption (AES-XTS-128), NVS encryption, and anti-rollback protection via eFuse counter. Debug interfaces (JTAG) are disabled in production.</li>
+            <li><strong>Hardware security:</strong> Secure Boot, flash encryption (AES-256), and anti-rollback protection via hardware counter. Debug interfaces (JTAG) are disabled in production.</li>
             <li><strong>Rate limiting:</strong> Our servers enforce request rate limiting per device and per IP address to prevent abuse.</li>
             <li><strong>Data minimization:</strong> Only data strictly necessary for operation is collected and transmitted.</li>
           </ul>
@@ -219,7 +219,7 @@
       <!-- ========== TERMS OF SERVICE ========== -->
       <div class="doc-content doc-terms">
         <h1>Terms of Service</h1>
-        <p><em>Last updated: February 9, 2026</em></p>
+        <p><em>Last updated: February 23, 2026</em></p>
 
         <p>These Terms of Service (ToS) govern the use of the <strong>Uniq Winders</strong> mobile application and the associated physical product (connected watch winder).</p>
 
@@ -256,7 +256,7 @@
             <li><strong>Consent required:</strong> Functional firmware updates require your explicit consent via the application.</li>
             <li><strong>Security updates:</strong> Critical security updates may be strongly recommended. Refusing to install these updates may expose your device to vulnerabilities.</li>
             <li><strong>Update process:</strong> During the update, do not unplug the device and keep your phone nearby. An interruption may require technical intervention.</li>
-            <li><strong>Update security:</strong> Updates are encrypted (AES-256-CTR) with a key unique to your device and cryptographically signed (ECDSA-256). Your device verifies authenticity before installation.</li>
+            <li><strong>Update security:</strong> Updates are encrypted (AES-256) with a key unique to your device and cryptographically signed. Your device verifies authenticity before installation.</li>
             <li><strong>Unofficial firmware:</strong> Installing firmware from unofficial sources immediately voids the warranty and may irreversibly damage your device.</li>
           </ul>
         </div>
@@ -333,7 +333,7 @@
       <!-- ========== OPEN SOURCE LICENSES ========== -->
       <div class="doc-content doc-licenses">
         <h1>Open Source Licenses</h1>
-        <p><em>Last updated: February 9, 2026</em></p>
+        <p><em>Last updated: February 23, 2026</em></p>
 
         <p>The <strong>Uniq Winders</strong> application uses the following open source libraries and components. We thank their authors for their work.</p>
 
@@ -375,7 +375,7 @@
         </div>
 
         <div class="section">
-          <h2>Firmware (ESP32)</h2>
+          <h2>Firmware</h2>
 
           <h3>ESP-IDF</h3>
           <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
@@ -390,7 +390,7 @@
           <h3>mbedTLS</h3>
           <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors<br>
           License: Apache License 2.0<br>
-          Used for: Cryptography (HMAC-SHA256, AES-256-CTR, TLS)<br>
+          Used for: Cryptography (HMAC-SHA256, AES-256, TLS)<br>
           <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
         </div>
 

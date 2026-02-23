@@ -38,7 +38,7 @@
 
       <div class="doc-content doc-privacy active">
         <h1>سياسة الخصوصية</h1>
-        <p><em>آخر تحديث: 09.02.2026</em></p>
+        <p><em>آخر تحديث: 23.02.2026</em></p>
 
         <p>شكراً لاستخدامك <strong>Uniq Winders</strong>. تهدف سياسة الخصوصية هذه إلى إعلامك بكيفية تعامل تطبيق Uniq Winders للهاتف المحمول والمنتج المادي المرتبط به (دوّار ساعات متصل) مع بياناتك.</p>
         <p>يتم نشر <strong>Uniq Winders</strong> من قبل شركة سويسرية ويمتثل للقانون الفيدرالي السويسري لحماية البيانات (nFADP)، واللائحة العامة لحماية البيانات (GDPR) لمستخدمي الاتحاد الأوروبي والمنطقة الاقتصادية الأوروبية، وكذلك قوانين الخصوصية المعمول بها في الولايات المتحدة بما في ذلك قانون خصوصية المستهلك في كاليفورنيا (CCPA/CPRA).</p>
@@ -62,7 +62,7 @@
                 <li>لا يتم جمع أو إرسال أي بيانات شخصية أو سلوكية أو تعريفية.</li>
               </ul>
             </li>
-            <li><strong>اتصال Wi-Fi:</strong> إذا اخترت توصيل الدوّار بشبكة Wi-Fi، يتم تخزين اسم الشبكة (SSID) محلياً على الجهاز. <strong>لا يتم إرسال كلمة مرور Wi-Fi أبداً إلى خوادمنا.</strong></li>
+            <li><strong>اتصال Wi-Fi:</strong> إذا اخترت توصيل الدوّار بشبكة Wi-Fi، يتم تخزين اسم الشبكة (SSID) محلياً على الجهاز. تتم إدارة كلمة مرور Wi-Fi داخلياً بواسطة الوحدة اللاسلكية للجهاز لإعادة الاتصال التلقائي وهي محمية بتشفير الفلاش على مستوى العتاد (AES-256). <strong>لا يتم إرسال كلمة مرور Wi-Fi أبداً إلى خوادمنا.</strong></li>
             <li><strong>بدون تتبع:</strong> لا يتضمن التطبيق أدوات تحليل أو متتبعات إعلانية أو أدوات تنميط. لا يتم جمع معرّفات إعلانية.</li>
             <li><strong>أذونات الحد الأدنى:</strong> يطلب التطبيق إذن البلوتوث فقط. لا حاجة لأذونات الموقع أو الكاميرا أو الميكروفون أو التخزين.</li>
           </ul>
@@ -72,11 +72,11 @@
           <h2>3. بنية أمان الجهاز</h2>
           <p>يتضمن دوّار Uniq Winders الخاص بك بنية أمان متعددة الطبقات من المستوى المهني:</p>
           <ul>
-            <li><strong>اتصال البلوتوث (BLE):</strong> تستخدم جميع اتصالات البلوتوث بروتوكول Secure Connections مع الإقران والربط. تُحمى الخصائص الحساسة بتشفير طبقة الارتباط (AES-CCM).</li>
-            <li><strong>تشفير البيانات في حالة السكون:</strong> البرنامج الثابت للجهاز محمي بتشفير فلاش على مستوى العتاد (AES-XTS-128). الأسرار في الذاكرة غير المتطايرة (NVS) مشفرة أيضاً.</li>
-            <li><strong>التمهيد الآمن (Secure Boot V2):</strong> عند كل تشغيل، يتم التحقق من أصالة البرنامج الثابت بواسطة توقيع تشفيري ECDSA-256. فقط البرنامج الثابت الموقّع من Uniq Winders يمكن تشغيله على الجهاز.</li>
+            <li><strong>اتصال البلوتوث (BLE):</strong> تستخدم جميع اتصالات البلوتوث بروتوكول Secure Connections مع الإقران والربط. تُحمى الخصائص الحساسة بتشفير طبقة الارتباط. يتطلب الإقران تفاعلاً فعلياً مع الجهاز، مما يمنع أي محاولة ربط عن بُعد.</li>
+            <li><strong>تشفير البيانات في حالة السكون:</strong> البرنامج الثابت للجهاز محمي بتشفير فلاش على مستوى العتاد (AES-256). الأسرار في الذاكرة غير المتطايرة مشفرة أيضاً.</li>
+            <li><strong>التمهيد الآمن (Secure Boot):</strong> عند كل تشغيل، يتم التحقق من أصالة البرنامج الثابت بواسطة توقيع تشفيري. فقط البرنامج الثابت الموقّع من Uniq Winders يمكن تشغيله على الجهاز.</li>
             <li><strong>أسرار فريدة لكل جهاز:</strong> يمتلك كل دوّار سر تشفيري فريد بطول 256 بت يتم إنشاؤه أثناء التصنيع. اختراق جهاز واحد لا يؤثر على الأجهزة الأخرى.</li>
-            <li><strong>حماية ضد التراجع:</strong> يمنع عدّاد العتاد (eFuse) تثبيت إصدار سابق من البرنامج الثابت.</li>
+            <li><strong>حماية ضد التراجع:</strong> يمنع عدّاد العتاد تثبيت إصدار سابق من البرنامج الثابت.</li>
           </ul>
         </div>
 
@@ -85,8 +85,8 @@
           <p>تستفيد تحديثات البرنامج الثابت من نظام حماية رباعي الطبقات:</p>
           <ul>
             <li><strong>نقل BLE مشفر:</strong> يتم نقل بيانات التحديث عبر Bluetooth Low Energy على اتصال مشفر بعد الإقران.</li>
-            <li><strong>تشفير بمفتاح فريد (AES-256-CTR):</strong> يتم تشفير البرنامج الثابت على الخادم بخوارزمية AES-256-CTR باستخدام السر الفريد للجهاز ورقم عشوائي بطول 16 بايت.</li>
-            <li><strong>التحقق من التوقيع (ECDSA-256):</strong> بعد فك التشفير، يتحقق محمّل الإقلاع الآمن من التوقيع التشفيري ECDSA-256.</li>
+            <li><strong>تشفير بمفتاح فريد (AES-256):</strong> يتم تشفير البرنامج الثابت على الخادم بخوارزمية AES-256 باستخدام السر الفريد للجهاز ورقم عشوائي بطول 16 بايت.</li>
+            <li><strong>التحقق من التوقيع:</strong> بعد فك التشفير، يتحقق محمّل الإقلاع الآمن من التوقيع التشفيري.</li>
             <li><strong>حماية ضد التراجع:</strong> يمنع عدّاد العتاد أي تخفيض للإصدار.</li>
             <li><strong>الموافقة:</strong> يتم عرض التحديثات الوظيفية على المستخدم. قد تُوصى التحديثات الأمنية الحرجة بشدة.</li>
             <li><strong>المرونة:</strong> في حالة حدوث مشاكل، تحافظ آلية الحماية على وظائف الجهاز.</li>
@@ -132,7 +132,7 @@
           <ul>
             <li><strong>تشفير الاتصالات:</strong> جميع الاتصالات مشفرة عبر TLS 1.2/1.3 (HTTPS) مع تثبيت شهادة الجهة المصدّقة.</li>
             <li><strong>مصادقة كل جهاز:</strong> يتم مصادقة كل طلب بتوقيع HMAC-SHA256 مع حماية من هجمات إعادة التشغيل (نافذة زمنية 30 ثانية).</li>
-            <li><strong>أمان العتاد:</strong> Secure Boot V2 (ECDSA-256)، تشفير الفلاش (AES-XTS-128)، تشفير NVS، حماية eFuse ضد التراجع. JTAG معطل في بيئة الإنتاج.</li>
+            <li><strong>أمان العتاد:</strong> Secure Boot، تشفير الفلاش (AES-256) وحماية ضد التراجع. JTAG معطل في بيئة الإنتاج.</li>
             <li><strong>تحديد معدل الطلبات:</strong> تحديد حسب الجهاز وعنوان IP.</li>
             <li><strong>تقليل البيانات:</strong> يتم جمع ونقل البيانات الضرورية للتشغيل فقط.</li>
           </ul>
@@ -207,13 +207,13 @@
       <!-- ========== شروط الاستخدام ========== -->
       <div class="doc-content doc-terms">
         <h1>شروط الاستخدام</h1>
-        <p><em>آخر تحديث: 09.02.2026</em></p>
+        <p><em>آخر تحديث: 23.02.2026</em></p>
         <p>تحكم شروط الاستخدام هذه استخدام تطبيق <strong>Uniq Winders</strong> للهاتف المحمول والمنتج المادي المرتبط به.</p>
 
         <div class="section"><h2>1. قبول الشروط</h2><ul><li><strong>استخدام التطبيق:</strong> بتنزيل واستخدام التطبيق، فإنك توافق على الالتزام بهذه الشروط.</li><li><strong>التعديلات:</strong> نحتفظ بالحق في تعديل هذه الشروط في أي وقت.</li></ul></div>
         <div class="section"><h2>2. ترخيص التطبيق</h2><ul><li><strong>ترخيص محدود:</strong> ترخيص شخصي غير حصري وغير قابل للتحويل وقابل للإلغاء للاستخدام الشخصي وغير التجاري.</li><li><strong>القيود:</strong> تتعهد بعدم فك ترجمة أو تفكيك أو إجراء هندسة عكسية للتطبيق.</li><li><strong>الملكية الفكرية:</strong> تبقى جميع الحقوق ملكيتنا الحصرية.</li></ul></div>
         <div class="section"><h2>3. استخدام المنتج المادي</h2><ul><li><strong>الاستخدام الصحيح:</strong> وفقاً لتعليمات دليل المستخدم.</li><li><strong>حدود المسؤولية:</strong> لسنا مسؤولين عن الأضرار الناتجة عن الاستخدام غير السليم.</li></ul></div>
-        <div class="section"><h2>4. تحديثات البرنامج الثابت (OTA)</h2><ul><li><strong>الموافقة مطلوبة:</strong> التحديثات الوظيفية تتطلب موافقة صريحة.</li><li><strong>أمان التحديثات:</strong> مشفرة (AES-256-CTR) وموقّعة (ECDSA-256).</li><li><strong>البرنامج الثابت غير الرسمي:</strong> يُبطل الضمان فوراً.</li></ul></div>
+        <div class="section"><h2>4. تحديثات البرنامج الثابت (OTA)</h2><ul><li><strong>الموافقة مطلوبة:</strong> التحديثات الوظيفية تتطلب موافقة صريحة.</li><li><strong>أمان التحديثات:</strong> مشفرة (AES-256) وموقّعة.</li><li><strong>البرنامج الثابت غير الرسمي:</strong> يُبطل الضمان فوراً.</li></ul></div>
         <div class="section"><h2>5. ميزات إنترنت الأشياء</h2><ul><li><strong>اختيارية:</strong> تتطلب اتصالاً بالإنترنت وموافقة.</li><li><strong>التشغيل بدون اتصال:</strong> يعمل المنتج بدون إنترنت.</li></ul></div>
         <div class="section"><h2>6. الضمان والمسؤولية</h2><ul><li><strong>الضمان القانوني:</strong> ضمان المطابقة في بلدك (عادةً سنتان في أوروبا).</li><li><strong>الاستثناءات:</strong> الاستخدام غير السليم، البلى الطبيعي، التعديلات غير المصرح بها.</li><li><strong>التحديد:</strong> المسؤولية محدودة بسعر الشراء.</li></ul></div>
         <div class="section"><h2>7. الدعم الفني</h2><ul><li>5 سنوات كحد أدنى من الدعم منذ الشراء.</li><li>الاتصال: <strong>hello@uniq-luxury.com</strong></li></ul></div>
@@ -226,14 +226,14 @@
       <!-- ========== التراخيص ========== -->
       <div class="doc-content doc-licenses">
         <h1>تراخيص المصدر المفتوح</h1>
-        <p><em>آخر تحديث: 09.02.2026</em></p>
+        <p><em>آخر تحديث: 23.02.2026</em></p>
         <p>يستخدم تطبيق <strong>Uniq Winders</strong> المكتبات والمكونات مفتوحة المصدر التالية.</p>
 
         <div class="section"><h2>الأُطر والمكتبات الرئيسية</h2><h3>Flutter SDK</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>يُستخدم لـ: Cloud Firestore، Firebase Auth، Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>يُستخدم لـ: اتصال Bluetooth Low Energy (BLE)<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
 
         <div class="section"><h2>تبعيات أخرى</h2><p style="margin-right: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
 
-        <div class="section"><h2>البرنامج الثابت (ESP32)</h2><h3>ESP-IDF</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>يُستخدم لـ: التشفير (HMAC-SHA256، AES-256-CTR، TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
+        <div class="section"><h2>البرنامج الثابت</h2><h3>ESP-IDF</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>يُستخدم لـ: التشفير (HMAC-SHA256، AES-256، TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
 
         <div class="section"><h2>الملكية الفكرية</h2><p>جميع العناصر الأخرى في التطبيق (التصميم، واجهة المستخدم، الخوارزميات الخاصة، الشعار) هي ملكية حصرية لـ Uniq Winders ومحمية بموجب قانون حقوق النشر السويسري والدولي.</p></div>
         <div class="section"><h2>الاتصال</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
