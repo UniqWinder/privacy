@@ -18,7 +18,6 @@
     <div class="doc-selector">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Informativa sulla privacy</button>
       <button id="btn-terms" onclick="switchDoc('terms')">Condizioni d'uso</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">Licenze</button>
     </div>
 
     <div class="lang-selector">
@@ -106,7 +105,7 @@
           <h2>6. Condivisione dati e infrastruttura tecnica</h2>
           <ul>
             <li><strong>Infrastruttura svizzera:</strong> L'applicazione comunica esclusivamente con il nostro server backend situato in Svizzera.</li>
-            <li><strong>Subfornitori tecnici:</strong> Il nostro server svizzero utilizza Google Firebase (ospitato negli USA) unicamente per la sincronizzazione tecnica in tempo reale. I dati trasferiti sono esclusivamente tecnici.</li>
+            <li><strong>Subfornitori tecnici:</strong> Il nostro server svizzero utilizza Google Firebase (ospitato negli USA) per l'autenticazione dell'applicazione (App Check) e la sincronizzazione tecnica in tempo reale. I dati trasferiti sono esclusivamente tecnici.</li>
             <li><strong>Protezione dell'applicazione:</strong> L'applicazione è protetta da Firebase App Check con Play Integrity (Android) e App Attest (iOS).</li>
             <li><strong>Natura dei dati:</strong> Le informazioni trasmesse non costituiscono dati personali ai sensi del GDPR/nLPD.</li>
             <li><strong>Nessun uso pubblicitario o commerciale:</strong> Uniq Winders non utilizza alcun dato per finalità di marketing, pubblicità o analisi.</li>
@@ -118,7 +117,7 @@
           <h2>7. Trasferimenti internazionali</h2>
           <ul>
             <li><strong>Sede principale:</strong> Il nostro server backend è ospitato in Svizzera.</li>
-            <li><strong>Servizi di terze parti:</strong> Il nostro server comunica con Firebase (Google LLC, USA) per ragioni di infrastruttura tecnica.</li>
+            <li><strong>Servizi di terze parti:</strong> Il nostro server comunica con Firebase (Google LLC, USA) per l'autenticazione dell'applicazione e la sincronizzazione dei dati.</li>
             <li><strong>Garanzie contrattuali:</strong> I nostri contratti con Google includono le Clausole Contrattuali Tipo (SCC) approvate dalla Commissione Europea.</li>
           </ul>
         </div>
@@ -234,23 +233,6 @@
         <div class="section"><h2>10. Legge applicabile e giurisdizione</h2><ul><li><strong>Diritto svizzero:</strong> Le presenti Condizioni sono regolate dal diritto svizzero.</li><li><strong>Giurisdizione:</strong> I tribunali svizzeri hanno giurisdizione esclusiva, fatto salvo il diritto imperativo del consumatore del vostro paese.</li><li><strong>Diritti dei consumatori:</strong> I consumatori UE/SEE e USA beneficiano delle protezioni imperative del loro paese.</li></ul></div>
 
         <div class="section"><h2>11. Contatto</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders, Svizzera.</p></div>
-      </div>
-
-      <!-- ========== LICENZE ========== -->
-      <div class="doc-content doc-licenses">
-        <h1>Licenze Open Source</h1>
-        <p><em>Ultimo aggiornamento: 23.02.2026</em></p>
-        <p>L'applicazione <strong>Uniq Winders</strong> utilizza le seguenti librerie e componenti open source.</p>
-
-        <div class="section"><h2>Framework e librerie principali</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause License<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause License<br>Usato per: Cloud Firestore, Firebase Auth, Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause License<br>Usato per: Comunicazione Bluetooth Low Energy (BLE)<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
-
-        <div class="section"><h2>Altre dipendenze</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT — Rilevamento connettività<br><strong>provider</strong> — MIT — Gestione dello stato<br><strong>hive / hive_flutter</strong> — Apache 2.0 — Database locale<br><strong>shared_preferences</strong> — BSD 3-Clause — Archiviazione preferenze<br><strong>url_launcher</strong> — BSD 3-Clause — Apertura link esterni<br><strong>package_info_plus</strong> — BSD 3-Clause — Informazioni pacchetto<br><strong>wakelock_plus</strong> — BSD 3-Clause — Schermo attivo durante aggiornamenti<br><strong>flutter_native_splash</strong> — MIT — Schermata di avvio<br><strong>flutter_launcher_icons</strong> — MIT — Generazione icone<br><strong>flutter_dotenv</strong> — MIT — Variabili d'ambiente<br><strong>intl</strong> — BSD 3-Clause — Internazionalizzazione</p></div>
-
-        <div class="section"><h2>Firmware</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache License 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache License 2.0<br>Usato per: Crittografia (HMAC-SHA256, AES-256, TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
-
-        <div class="section"><h2>Proprietà intellettuale</h2><p>Tutti gli altri elementi dell'applicazione (design, interfaccia, algoritmi proprietari, logo) sono proprietà esclusiva di Uniq Winders e protetti dal diritto d'autore svizzero e internazionale.</p></div>
-
-        <div class="section"><h2>Contatto</h2><p>Per domande sulle licenze open source: <strong>hello@uniq-luxury.com</strong></p></div>
       </div>
 
     </div>

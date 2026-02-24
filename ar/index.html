@@ -18,7 +18,6 @@
     <div class="doc-selector">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">سياسة الخصوصية</button>
       <button id="btn-terms" onclick="switchDoc('terms')">شروط الاستخدام</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">التراخيص</button>
     </div>
 
     <div class="lang-selector">
@@ -106,7 +105,7 @@
           <h2>6. مشاركة البيانات والبنية التحتية التقنية</h2>
           <ul>
             <li><strong>البنية التحتية السويسرية:</strong> يتواصل التطبيق حصرياً مع خادمنا الخلفي الموجود في سويسرا.</li>
-            <li><strong>المتعاقدون الفرعيون التقنيون:</strong> يستخدم خادمنا السويسري Google Firebase (الولايات المتحدة) فقط لإدارة المزامنة التقنية في الوقت الفعلي.</li>
+            <li><strong>المتعاقدون الفرعيون التقنيون:</strong> يستخدم خادمنا السويسري Google Firebase (الولايات المتحدة) لمصادقة التطبيق (App Check) والمزامنة التقنية في الوقت الفعلي.</li>
             <li><strong>حماية التطبيق:</strong> محمي بواسطة Firebase App Check (Play Integrity / App Attest).</li>
             <li><strong>بدون استخدام إعلاني:</strong> لا تُستخدم أي بيانات لأغراض تسويقية أو إعلانية أو تحليلية.</li>
             <li><strong>بدون بيع بيانات:</strong> لا نبيع أو نؤجر أو نتبادل البيانات مع أطراف ثالثة.</li>
@@ -117,7 +116,7 @@
           <h2>7. عمليات النقل الدولية</h2>
           <ul>
             <li><strong>الموقع الرئيسي:</strong> خادم خلفي في سويسرا.</li>
-            <li><strong>خدمات الطرف الثالث:</strong> Firebase (Google LLC، الولايات المتحدة) للبنية التحتية التقنية.</li>
+            <li><strong>خدمات الطرف الثالث:</strong> Firebase (Google LLC، الولايات المتحدة) لمصادقة التطبيق ومزامنة البيانات.</li>
             <li><strong>ضمانات تعاقدية:</strong> شروط تعاقدية معيارية (SCC) معتمدة من المفوضية الأوروبية في العقود مع Google.</li>
           </ul>
         </div>
@@ -221,22 +220,6 @@
         <div class="section"><h2>9. الإنهاء</h2><ul><li>يمكن للمستخدم إلغاء تثبيت التطبيق في أي وقت.</li><li>يستمر المنتج في العمل محلياً بعد الإنهاء.</li></ul></div>
         <div class="section"><h2>10. القانون المعمول به</h2><ul><li>القانون السويسري. المحاكم السويسرية لها الاختصاص الحصري، مع مراعاة الأحكام الإلزامية لقانون حماية المستهلك في بلدك.</li></ul></div>
         <div class="section"><h2>11. الاتصال</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders، سويسرا.</p></div>
-      </div>
-
-      <!-- ========== التراخيص ========== -->
-      <div class="doc-content doc-licenses">
-        <h1>تراخيص المصدر المفتوح</h1>
-        <p><em>آخر تحديث: 23.02.2026</em></p>
-        <p>يستخدم تطبيق <strong>Uniq Winders</strong> المكتبات والمكونات مفتوحة المصدر التالية.</p>
-
-        <div class="section"><h2>الأُطر والمكتبات الرئيسية</h2><h3>Flutter SDK</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>يُستخدم لـ: Cloud Firestore، Firebase Auth، Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>يُستخدم لـ: اتصال Bluetooth Low Energy (BLE)<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
-
-        <div class="section"><h2>تبعيات أخرى</h2><p style="margin-right: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
-
-        <div class="section"><h2>البرنامج الثابت</h2><h3>ESP-IDF</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-right: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>يُستخدم لـ: التشفير (HMAC-SHA256، AES-256، TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
-
-        <div class="section"><h2>الملكية الفكرية</h2><p>جميع العناصر الأخرى في التطبيق (التصميم، واجهة المستخدم، الخوارزميات الخاصة، الشعار) هي ملكية حصرية لـ Uniq Winders ومحمية بموجب قانون حقوق النشر السويسري والدولي.</p></div>
-        <div class="section"><h2>الاتصال</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
       </div>
 
     </div>

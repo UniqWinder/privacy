@@ -18,7 +18,6 @@
     <div class="doc-selector">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">プライバシーポリシー</button>
       <button id="btn-terms" onclick="switchDoc('terms')">利用規約</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">ライセンス</button>
     </div>
 
     <div class="lang-selector">
@@ -105,7 +104,7 @@
           <h2>6. データ共有と技術インフラ</h2>
           <ul>
             <li><strong>スイスのインフラ：</strong>アプリケーションはスイスにあるバックエンドサーバーとのみ通信します。</li>
-            <li><strong>技術下請業者：</strong>スイスサーバーはGoogle Firebase（米国）を技術的リアルタイム同期管理にのみ使用します。</li>
+            <li><strong>技術下請業者：</strong>スイスサーバーはGoogle Firebase（米国）をアプリ認証（App Check）と技術的リアルタイム同期に使用します。</li>
             <li><strong>アプリケーション保護：</strong>Firebase App Check（Play Integrity / App Attest）により保護されています。</li>
             <li><strong>広告や商業利用なし：</strong>マーケティング、広告、分析のためにデータを使用しません。</li>
             <li><strong>データの販売なし：</strong>第三者へのデータの販売、貸し出し、交換は行いません。</li>
@@ -116,7 +115,7 @@
           <h2>7. 国際的な移転</h2>
           <ul>
             <li><strong>主要拠点：</strong>スイスのバックエンドサーバー。</li>
-            <li><strong>第三者サービス：</strong>Firebase（Google LLC、米国）との技術的通信。</li>
+            <li><strong>第三者サービス：</strong>Firebase（Google LLC、米国）とのアプリ認証およびデータ同期のための技術的通信。</li>
             <li><strong>契約上の保証：</strong>欧州委員会承認の標準契約条項（SCC）をGoogleとの契約に含んでいます。</li>
           </ul>
         </div>
@@ -220,22 +219,6 @@
         <div class="section"><h2>9. 終了</h2><ul><li>ユーザーはいつでもアンインストールできます。</li><li>製品はクラウドサービス終了後もローカルで動作します。</li></ul></div>
         <div class="section"><h2>10. 準拠法</h2><ul><li>スイス法。スイスの裁判所が専属管轄権を有します（消費者保護法の強行規定に従います）。</li></ul></div>
         <div class="section"><h2>11. お問い合わせ</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders、スイス。</p></div>
-      </div>
-
-      <!-- ========== ライセンス ========== -->
-      <div class="doc-content doc-licenses">
-        <h1>オープンソースライセンス</h1>
-        <p><em>最終更新日：2026年2月23日</em></p>
-        <p><strong>Uniq Winders</strong>アプリケーションは以下のオープンソースライブラリおよびコンポーネントを使用しています。</p>
-
-        <div class="section"><h2>主要フレームワークとライブラリ</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>用途：Cloud Firestore、Firebase Auth、Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>用途：Bluetooth Low Energy（BLE）通信<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
-
-        <div class="section"><h2>その他の依存関係</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
-
-        <div class="section"><h2>ファームウェア</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>用途：暗号化（HMAC-SHA256、AES-256、TLS）<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
-
-        <div class="section"><h2>知的財産権</h2><p>アプリケーションのその他すべての要素（デザイン、UI、独自アルゴリズム、ロゴ）はUniq Windersの独占的財産であり、スイスおよび国際著作権法により保護されています。</p></div>
-        <div class="section"><h2>お問い合わせ</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
       </div>
 
     </div>

@@ -18,7 +18,6 @@
     <div class="doc-selector">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">隐私政策</button>
       <button id="btn-terms" onclick="switchDoc('terms')">使用条款</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">许可证</button>
     </div>
 
     <div class="lang-selector">
@@ -106,7 +105,7 @@
           <h2>6. 数据共享和技术基础设施</h2>
           <ul>
             <li><strong>瑞士基础设施：</strong>应用程序仅与位于瑞士的后端服务器通信。</li>
-            <li><strong>技术分包商：</strong>瑞士服务器仅将Google Firebase（美国）用于技术实时同步管理。</li>
+            <li><strong>技术分包商：</strong>瑞士服务器将Google Firebase（美国）用于应用认证（App Check）和技术实时同步。</li>
             <li><strong>应用程序保护：</strong>通过Firebase App Check（Play Integrity / App Attest）保护。</li>
             <li><strong>无广告或商业用途：</strong>不将数据用于营销、广告或分析目的。</li>
             <li><strong>不出售数据：</strong>不向第三方出售、出租或交换数据。</li>
@@ -117,7 +116,7 @@
           <h2>7. 国际传输</h2>
           <ul>
             <li><strong>主要位置：</strong>瑞士后端服务器。</li>
-            <li><strong>第三方服务：</strong>出于技术原因与Firebase（Google LLC，美国）通信。</li>
+            <li><strong>第三方服务：</strong>与Firebase（Google LLC，美国）进行应用认证和数据同步通信。</li>
             <li><strong>合同保障：</strong>与Google的合同包含欧盟委员会批准的标准合同条款（SCC）。</li>
           </ul>
         </div>
@@ -221,22 +220,6 @@
         <div class="section"><h2>9. 终止</h2><ul><li>用户可随时卸载应用。</li><li>产品在云服务终止后仍可本地运行。</li></ul></div>
         <div class="section"><h2>10. 适用法律</h2><ul><li>适用瑞士法律。瑞士法院拥有专属管辖权（受消费者保护法强制性规定约束）。</li></ul></div>
         <div class="section"><h2>11. 联系方式</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders，瑞士。</p></div>
-      </div>
-
-      <!-- ========== 许可证 ========== -->
-      <div class="doc-content doc-licenses">
-        <h1>开源许可证</h1>
-        <p><em>最后更新：2026年2月23日</em></p>
-        <p><strong>Uniq Winders</strong>应用程序使用以下开源库和组件。</p>
-
-        <div class="section"><h2>主要框架和库</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>用于：Cloud Firestore、Firebase Auth、Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>用于：蓝牙低功耗（BLE）通信<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
-
-        <div class="section"><h2>其他依赖</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
-
-        <div class="section"><h2>固件</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>用于：加密（HMAC-SHA256、AES-256、TLS）<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
-
-        <div class="section"><h2>知识产权</h2><p>应用程序的所有其他元素（设计、用户界面、专有算法、标志）均为Uniq Winders的独家财产，受瑞士和国际版权法保护。</p></div>
-        <div class="section"><h2>联系方式</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
       </div>
 
     </div>

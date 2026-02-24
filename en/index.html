@@ -19,7 +19,6 @@
     <div class="doc-selector">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Privacy Policy</button>
       <button id="btn-terms" onclick="switchDoc('terms')">Terms of Service</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">Licenses</button>
     </div>
 
     <!-- Language Selector -->
@@ -110,7 +109,7 @@
           <h2>6. Data Sharing and Technical Infrastructure</h2>
           <ul>
             <li><strong>Swiss infrastructure:</strong> The application communicates exclusively with our backend server located in Switzerland. All requests from your device pass through this Swiss infrastructure.</li>
-            <li><strong>Technical subcontractors:</strong> Our Swiss server uses Google Firebase (hosted in the United States) solely for technical real-time synchronization management. Data transferred is exclusively technical (hardware identifier, configuration parameters, battery level, firmware version).</li>
+            <li><strong>Technical subcontractors:</strong> Our Swiss server uses Google Firebase (hosted in the United States) for application authentication (App Check) and technical real-time synchronization. Data transferred is exclusively technical (hardware identifier, configuration parameters, battery level, firmware version).</li>
             <li><strong>Application protection:</strong> The mobile application is protected by Firebase App Check using Play Integrity (Android) and App Attest (iOS), preventing unauthorized access to our infrastructure.</li>
             <li><strong>Nature of data:</strong> The information transmitted does not constitute personal data under GDPR/nFADP as it does not allow identification of a natural person. It is solely technical information related to device operation.</li>
             <li><strong>No advertising or commercial use:</strong> Uniq Winders does not use any data for marketing, advertising, or analytics purposes. Google Firebase is configured in strictly technical mode without sharing with other Google services.</li>
@@ -122,7 +121,7 @@
           <h2>7. International Transfers</h2>
           <ul>
             <li><strong>Primary location:</strong> Our backend server is hosted in Switzerland.</li>
-            <li><strong>Third-party services:</strong> For technical infrastructure reasons (real-time synchronization), our Swiss server communicates with Firebase (Google LLC, United States).</li>
+            <li><strong>Third-party services:</strong> Our Swiss server communicates with Firebase (Google LLC, United States) for application authentication and data synchronization.</li>
             <li><strong>Risk minimization:</strong> In accordance with the principle of data minimization, only non-personal technical information is transmitted. The absence of personal data in these flows makes this transfer GDPR-compliant.</li>
             <li><strong>Contractual safeguards:</strong> Our contracts with Google include Standard Contractual Clauses (SCCs) approved by the European Commission to govern data transfers.</li>
           </ul>
@@ -327,95 +326,6 @@
           <p>For any questions regarding these Terms of Service:</p>
           <p><strong>hello@uniq-luxury.com</strong></p>
           <p>Uniq Winders, Switzerland.</p>
-        </div>
-      </div>
-
-      <!-- ========== OPEN SOURCE LICENSES ========== -->
-      <div class="doc-content doc-licenses">
-        <h1>Open Source Licenses</h1>
-        <p><em>Last updated: February 23, 2026</em></p>
-
-        <p>The <strong>Uniq Winders</strong> application uses the following open source libraries and components. We thank their authors for their work.</p>
-
-        <div class="section">
-          <h2>Main Frameworks and Libraries</h2>
-
-          <h3>Flutter SDK</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
-          License: BSD 3-Clause License<br>
-          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank">https://github.com/flutter/flutter</a></p>
-
-          <h3>Firebase Flutter Plugins</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
-          License: BSD 3-Clause License<br>
-          Used for: Cloud Firestore, Firebase Auth, Firebase App Check<br>
-          <a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p>
-
-          <h3>Flutter Blue Plus</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors<br>
-          License: BSD 3-Clause License<br>
-          Used for: Bluetooth Low Energy (BLE) communication<br>
-          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p>
-        </div>
-
-        <div class="section">
-          <h2>Other Dependencies</h2>
-
-          <p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT License — Network connectivity detection<br>
-          <strong>provider</strong> — MIT License — State management<br>
-          <strong>hive / hive_flutter</strong> — Apache 2.0 — Local database<br>
-          <strong>shared_preferences</strong> — BSD 3-Clause — Local preferences storage<br>
-          <strong>url_launcher</strong> — BSD 3-Clause — Opening external links<br>
-          <strong>package_info_plus</strong> — BSD 3-Clause — Package information<br>
-          <strong>wakelock_plus</strong> — BSD 3-Clause — Keeping screen awake during updates<br>
-          <strong>flutter_native_splash</strong> — MIT License — Native splash screen<br>
-          <strong>flutter_launcher_icons</strong> — MIT License — Application icon generation<br>
-          <strong>flutter_dotenv</strong> — MIT License — Environment variables<br>
-          <strong>intl</strong> — BSD 3-Clause — Internationalization</p>
-        </div>
-
-        <div class="section">
-          <h2>Firmware</h2>
-
-          <h3>ESP-IDF</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
-          License: Apache License 2.0<br>
-          <a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p>
-
-          <h3>Arduino Core for ESP32</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
-          License: LGPL 2.1<br>
-          <a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p>
-
-          <h3>mbedTLS</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors<br>
-          License: Apache License 2.0<br>
-          Used for: Cryptography (HMAC-SHA256, AES-256, TLS)<br>
-          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
-        </div>
-
-        <div class="section">
-          <h2>Full Licenses</h2>
-          <p>The full text of each license is available in the application via the "About" menu or on the respective GitHub repositories.</p>
-
-          <h3>BSD 3-Clause License (Summary)</h3>
-          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">This license allows redistribution and use in source and binary forms, with or without modification, under certain conditions including retention of copyright notices.</p>
-
-          <h3>MIT License (Summary)</h3>
-          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">A permissive license that allows reuse with few restrictions, while preserving copyright and license notices.</p>
-
-          <h3>Apache License 2.0 (Summary)</h3>
-          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">A permissive license that includes express provisions regarding patents and contributions.</p>
-        </div>
-
-        <div class="section">
-          <h2>Intellectual Property</h2>
-          <p>All other elements of the application (design, user interface, proprietary algorithms, logo) are the exclusive property of Uniq Winders and protected by Swiss and international copyright law.</p>
-        </div>
-
-        <div class="section">
-          <h2>Contact</h2>
-          <p>For any questions regarding the open source licenses used: <strong>hello@uniq-luxury.com</strong></p>
         </div>
       </div>
 

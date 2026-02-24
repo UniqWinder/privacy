@@ -19,7 +19,6 @@
     <div class="doc-selector">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Politique de confidentialité</button>
       <button id="btn-terms" onclick="switchDoc('terms')">Conditions d'utilisation</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">Licences</button>
     </div>
 
     <!-- Language Selector -->
@@ -110,7 +109,7 @@
           <h2>6. Partage des données et infrastructure technique</h2>
           <ul>
             <li><strong>Infrastructure suisse :</strong> L'application communique exclusivement avec notre serveur backend situé en Suisse. Toutes les requêtes provenant de votre appareil transitent par cette infrastructure suisse.</li>
-            <li><strong>Sous-traitants techniques :</strong> Notre serveur suisse utilise Google Firebase (hébergé aux États-Unis) uniquement pour la gestion technique de la synchronisation en temps réel. Les données transférées sont exclusivement techniques (identifiant matériel, paramètres de configuration, niveau de batterie, version firmware).</li>
+            <li><strong>Sous-traitants techniques :</strong> Notre serveur suisse utilise Google Firebase (hébergé aux États-Unis) pour l'authentification de l'application (App Check) et la synchronisation technique en temps réel. Les données transférées sont exclusivement techniques (identifiant matériel, paramètres de configuration, niveau de batterie, version firmware).</li>
             <li><strong>Protection de l'application :</strong> L'application mobile est protégée par Firebase App Check utilisant Play Integrity (Android) et App Attest (iOS), empêchant tout accès non autorisé à notre infrastructure.</li>
             <li><strong>Nature des données :</strong> Les informations transmises ne constituent pas des données personnelles au sens du RGPD/nLPD car elles ne permettent pas l'identification d'une personne physique. Il s'agit uniquement d'informations techniques relatives au fonctionnement de l'appareil.</li>
             <li><strong>Aucun usage publicitaire ou commercial :</strong> Uniq Winders n'utilise aucune donnée à des fins marketing, publicitaires ou analytiques. Google Firebase est configuré en mode strictement technique, sans partage avec d'autres services Google.</li>
@@ -122,7 +121,7 @@
           <h2>7. Transferts internationaux</h2>
           <ul>
             <li><strong>Localisation principale :</strong> Notre serveur backend est hébergé en Suisse.</li>
-            <li><strong>Services tiers :</strong> Pour des raisons d'infrastructure technique (synchronisation en temps réel), notre serveur suisse communique avec Firebase (Google LLC, États-Unis).</li>
+            <li><strong>Services tiers :</strong> Notre serveur suisse communique avec Firebase (Google LLC, États-Unis) pour l'authentification de l'application et la synchronisation des données.</li>
             <li><strong>Minimisation du risque :</strong> Conformément au principe de minimisation des données, seules des informations techniques non personnelles sont transmises. L'absence de données personnelles dans ces flux rend ce transfert conforme au RGPD.</li>
             <li><strong>Garanties contractuelles :</strong> Nos contrats avec Google incluent les clauses contractuelles types (SCC) approuvées par la Commission européenne pour encadrer les transferts de données.</li>
           </ul>
@@ -327,95 +326,6 @@
           <p>Pour toute question concernant ces Conditions Générales d'Utilisation :</p>
           <p><strong>hello@uniq-luxury.com</strong></p>
           <p>Uniq Winders, Suisse.</p>
-        </div>
-      </div>
-
-      <!-- ========== OPEN SOURCE LICENSES ========== -->
-      <div class="doc-content doc-licenses">
-        <h1>Licences Open Source</h1>
-        <p><em>Dernière mise à jour : 23.02.2026</em></p>
-
-        <p>L'application <strong>Uniq Winders</strong> utilise les bibliothèques et composants open source suivants. Nous remercions leurs auteurs pour leur travail.</p>
-
-        <div class="section">
-          <h2>Frameworks et librairies principales</h2>
-
-          <h3>Flutter SDK</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
-          Licence : BSD 3-Clause License<br>
-          <a href="https://github.com/flutter/flutter/blob/master/LICENSE" target="_blank">https://github.com/flutter/flutter</a></p>
-
-          <h3>Firebase Flutter Plugins</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC<br>
-          Licence : BSD 3-Clause License<br>
-          Utilisé pour : Cloud Firestore, Firebase Auth, Firebase App Check<br>
-          <a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p>
-
-          <h3>Flutter Blue Plus</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors<br>
-          Licence : BSD 3-Clause License<br>
-          Utilisé pour : Communication Bluetooth Low Energy (BLE)<br>
-          <a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p>
-        </div>
-
-        <div class="section">
-          <h2>Autres dépendances</h2>
-
-          <p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT License — Détection de la connectivité réseau<br>
-          <strong>provider</strong> — MIT License — Gestion d'état<br>
-          <strong>hive / hive_flutter</strong> — Apache 2.0 — Base de données locale<br>
-          <strong>shared_preferences</strong> — BSD 3-Clause — Stockage local de préférences<br>
-          <strong>url_launcher</strong> — BSD 3-Clause — Ouverture de liens externes<br>
-          <strong>package_info_plus</strong> — BSD 3-Clause — Informations sur le package<br>
-          <strong>wakelock_plus</strong> — BSD 3-Clause — Maintien de l'écran allumé pendant les mises à jour<br>
-          <strong>flutter_native_splash</strong> — MIT License — Écran de démarrage natif<br>
-          <strong>flutter_launcher_icons</strong> — MIT License — Génération d'icônes d'application<br>
-          <strong>flutter_dotenv</strong> — MIT License — Variables d'environnement<br>
-          <strong>intl</strong> — BSD 3-Clause — Internationalisation</p>
-        </div>
-
-        <div class="section">
-          <h2>Firmware</h2>
-
-          <h3>ESP-IDF</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
-          Licence : Apache License 2.0<br>
-          <a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p>
-
-          <h3>Arduino Core for ESP32</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems<br>
-          Licence : LGPL 2.1<br>
-          <a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p>
-
-          <h3>mbedTLS</h3>
-          <p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors<br>
-          Licence : Apache License 2.0<br>
-          Utilisé pour : Cryptographie (HMAC-SHA256, AES-256, TLS)<br>
-          <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p>
-        </div>
-
-        <div class="section">
-          <h2>Licences complètes</h2>
-          <p>Le texte complet de chaque licence est disponible dans l'application via le menu « À propos » ou sur les dépôts GitHub respectifs des projets.</p>
-
-          <h3>BSD 3-Clause License (Résumé)</h3>
-          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">Cette licence permet la redistribution et l'utilisation sous forme source et binaire, avec ou sans modification, sous certaines conditions incluant la conservation des mentions de copyright.</p>
-
-          <h3>MIT License (Résumé)</h3>
-          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">Une licence permissive qui autorise la réutilisation avec peu de restrictions, en conservant les mentions de copyright et de licence.</p>
-
-          <h3>Apache License 2.0 (Résumé)</h3>
-          <p style="margin-left: 32px; margin-top: 12px; font-size: 15px; color: #666666;">Une licence permissive qui inclut des dispositions expresses concernant les brevets et les contributions.</p>
-        </div>
-
-        <div class="section">
-          <h2>Propriété intellectuelle</h2>
-          <p>Tous les autres éléments de l'application (design, interface utilisateur, algorithmes propriétaires, logo) sont la propriété exclusive de Uniq Winders et protégés par le droit d'auteur suisse et international.</p>
-        </div>
-
-        <div class="section">
-          <h2>Contact</h2>
-          <p>Pour toute question concernant les licences open source utilisées : <strong>hello@uniq-luxury.com</strong></p>
         </div>
       </div>
 

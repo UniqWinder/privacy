@@ -18,7 +18,6 @@
     <div class="doc-selector">
       <button id="btn-privacy" class="active" onclick="switchDoc('privacy')">Политика конфиденциальности</button>
       <button id="btn-terms" onclick="switchDoc('terms')">Условия использования</button>
-      <button id="btn-licenses" onclick="switchDoc('licenses')">Лицензии</button>
     </div>
 
     <div class="lang-selector">
@@ -106,7 +105,7 @@
           <h2>6. Обмен данными и техническая инфраструктура</h2>
           <ul>
             <li><strong>Швейцарская инфраструктура:</strong> Приложение взаимодействует исключительно с нашим бэкенд-сервером, расположенным в Швейцарии.</li>
-            <li><strong>Технические субподрядчики:</strong> Наш швейцарский сервер использует Google Firebase (США) исключительно для технического управления синхронизацией в реальном времени.</li>
+            <li><strong>Технические субподрядчики:</strong> Наш швейцарский сервер использует Google Firebase (США) для аутентификации приложения (App Check) и технического управления синхронизацией в реальном времени.</li>
             <li><strong>Защита приложения:</strong> Приложение защищено Firebase App Check (Play Integrity / App Attest).</li>
             <li><strong>Отсутствие рекламного использования:</strong> Никакие данные не используются в маркетинговых, рекламных или аналитических целях.</li>
             <li><strong>Данные не продаются:</strong> Мы не продаём, не сдаём в аренду и не обмениваем данные с третьими лицами.</li>
@@ -117,7 +116,7 @@
           <h2>7. Международные передачи данных</h2>
           <ul>
             <li><strong>Основное местоположение:</strong> Бэкенд-сервер в Швейцарии.</li>
-            <li><strong>Сторонние сервисы:</strong> Firebase (Google LLC, США) для технической инфраструктуры.</li>
+            <li><strong>Сторонние сервисы:</strong> Firebase (Google LLC, США) для аутентификации приложения и синхронизации данных.</li>
             <li><strong>Договорные гарантии:</strong> Стандартные договорные условия (SCC), одобренные Европейской комиссией, включены в договоры с Google.</li>
           </ul>
         </div>
@@ -221,22 +220,6 @@
         <div class="section"><h2>9. Прекращение</h2><ul><li>Пользователь может удалить приложение в любое время.</li><li>Продукт продолжает работать локально после прекращения.</li></ul></div>
         <div class="section"><h2>10. Применимое право</h2><ul><li>Швейцарское право. Швейцарские суды обладают исключительной юрисдикцией с учётом обязательных норм защиты прав потребителей вашей страны.</li></ul></div>
         <div class="section"><h2>11. Контактная информация</h2><p><strong>hello@uniq-luxury.com</strong></p><p>Uniq Winders, Швейцария.</p></div>
-      </div>
-
-      <!-- ========== ЛИЦЕНЗИИ ========== -->
-      <div class="doc-content doc-licenses">
-        <h1>Лицензии открытого кода</h1>
-        <p><em>Последнее обновление: 23.02.2026</em></p>
-        <p>Приложение <strong>Uniq Winders</strong> использует следующие библиотеки и компоненты с открытым исходным кодом.</p>
-
-        <div class="section"><h2>Основные фреймворки и библиотеки</h2><h3>Flutter SDK</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br><a href="https://github.com/flutter/flutter" target="_blank">https://github.com/flutter/flutter</a></p><h3>Firebase Flutter Plugins</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Google LLC — BSD 3-Clause<br>Используется для: Cloud Firestore, Firebase Auth, Firebase App Check<br><a href="https://github.com/firebase/flutterfire" target="_blank">https://github.com/firebase/flutterfire</a></p><h3>Flutter Blue Plus</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Flutter Blue Plus contributors — BSD 3-Clause<br>Используется для: связи Bluetooth Low Energy (BLE)<br><a href="https://github.com/boskokg/flutter_blue_plus" target="_blank">https://github.com/boskokg/flutter_blue_plus</a></p></div>
-
-        <div class="section"><h2>Другие зависимости</h2><p style="margin-left: 32px;"><strong>connectivity_plus</strong> — MIT<br><strong>provider</strong> — MIT<br><strong>hive / hive_flutter</strong> — Apache 2.0<br><strong>shared_preferences</strong> — BSD 3-Clause<br><strong>url_launcher</strong> — BSD 3-Clause<br><strong>package_info_plus</strong> — BSD 3-Clause<br><strong>wakelock_plus</strong> — BSD 3-Clause<br><strong>flutter_native_splash</strong> — MIT<br><strong>flutter_launcher_icons</strong> — MIT<br><strong>flutter_dotenv</strong> — MIT<br><strong>intl</strong> — BSD 3-Clause</p></div>
-
-        <div class="section"><h2>Прошивка</h2><h3>ESP-IDF</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — Apache 2.0<br><a href="https://github.com/espressif/esp-idf" target="_blank">https://github.com/espressif/esp-idf</a></p><h3>Arduino Core for ESP32</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Espressif Systems — LGPL 2.1<br><a href="https://github.com/espressif/arduino-esp32" target="_blank">https://github.com/espressif/arduino-esp32</a></p><h3>mbedTLS</h3><p style="margin-left: 32px; margin-top: 12px;">Copyright © Mbed TLS Contributors — Apache 2.0<br>Используется для: криптографии (HMAC-SHA256, AES-256, TLS)<br><a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">https://github.com/Mbed-TLS/mbedtls</a></p></div>
-
-        <div class="section"><h2>Интеллектуальная собственность</h2><p>Все остальные элементы приложения (дизайн, пользовательский интерфейс, проприетарные алгоритмы, логотип) являются исключительной собственностью Uniq Winders и защищены швейцарским и международным авторским правом.</p></div>
-        <div class="section"><h2>Контактная информация</h2><p><strong>hello@uniq-luxury.com</strong></p></div>
       </div>
 
     </div>
